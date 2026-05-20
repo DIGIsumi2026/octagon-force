@@ -448,11 +448,11 @@ button {
   height: 14px;
   border-radius: 50%;
   background: #A67212;
-  box-shadow: 0 0 0 8px rgba(7, 152, 183, 0.12);
+  box-shadow: 0 0 0 8px #a6721234;
 }
 
 .eyebrow--light {
-  color: rgba(255, 255, 255, 0.82);
+  color: #a6721294;
 }
 
 .section-header {
@@ -651,25 +651,25 @@ button {
 
 .marquee {
   overflow: hidden;
-  background: var(--primary);
+  background: #A67212;
   color: var(--white);
-  padding: 42px 0;
+  padding: 18px 0;
 }
 
 .marquee__track {
   display: flex;
   width: max-content;
   gap: 54px;
-  animation: marquee 28s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marquee__track span {
   display: inline-flex;
   align-items: center;
   gap: 54px;
-  font-size: clamp(3rem, 6vw, 5.8rem);
+  font-size: clamp(22px, 6vw, 5.8rem);
   line-height: 1;
-  font-weight: 800;
+  font-weight: 50;
   letter-spacing: -0.07em;
   white-space: nowrap;
 }

@@ -1,4 +1,4 @@
-const words = ["Camera", "Security", "Smart Home", "Monitoring", "Access Control"];
+const words = ["Integrity", "Excellence", "Innovation", "Customer Focus"];
 
 export default function Marquee() {
   return (
