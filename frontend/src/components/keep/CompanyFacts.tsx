@@ -1,6 +1,10 @@
+
 import { CheckCircle2, LockKeyhole, ShieldCheck, Smartphone } from "lucide-react";
 import Reveal from "../common/Reveal";
 import { images } from "../../data/imageAssets";
+
+
+
 
 const companyFacts = [
   {

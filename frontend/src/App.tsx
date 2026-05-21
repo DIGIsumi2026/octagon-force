@@ -5,12 +5,15 @@ import Footer from "./components/common/Footer";
 import ScrollTop from "./components/common/ScrollTop";
 import CustomCursor from "./components/common/CustomCursor";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Projects from "./pages/Projects";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
-import About from "./pages/About";
+
+//Remove later 
+import Templates from "./pages/Templates";
 
 import "./App.css";
 
@@ -25,11 +28,6 @@ export default function App() {
           element={
             <main>
               <Home />
-              <Services />
-              <Products />
-              <Projects />
-              <Reviews />
-              <Contact />
             </main>
           }
         />
@@ -42,14 +40,61 @@ export default function App() {
             </main>
           }
         />
+
         <Route
-             path="/services"
-             element={
-           <main>
-             <Services />
-           </main>
-            }
-/>
+          path="/services"
+          element={
+            <main>
+              <Services />
+            </main>
+          }
+        />
+
+        <Route
+          path="/products"
+          element={
+            <main>
+              <Products />
+            </main>
+          }
+        />
+
+        <Route
+          path="/projects"
+          element={
+            <main>
+              <Projects />
+            </main>
+          }
+        />
+
+        <Route
+          path="/reviews"
+          element={
+            <main>
+              <Reviews />
+            </main>
+          }
+        />
+
+        //Remve later 
+        <Route
+          path="/templates"
+          element={
+        <main>
+         <Templates />
+        </main>
+         }
+        />
+
+        <Route
+          path="/contact"
+          element={
+            <main>
+              <Contact />
+            </main>
+          }
+        />
       </Routes>
 
       <Footer />

@@ -23,6 +23,11 @@ import heroH5 from "../assets/images/header-bg5.jpg";
 import heroH6 from "../assets/images/header-bg6.jpg";
 import heroH7 from "../assets/images/header-bg7.jpg";
 import heroH8 from "../assets/images/header-bg8.jpg";
+import serviceSecurity from "../assets/images/services/security-service.jpg";
+import serviceCleaning from "../assets/images/services/cleaning-service.jpg";
+import serviceCashTransport from "../assets/images/services/cash-transport.jpg";
+import serviceSupplyChain from "../assets/images/services/supply-chain.jpg";
+import serviceSolidWaste from "../assets/images/services/solid-waste.jpg";
 
 
 
@@ -42,6 +47,14 @@ export const images = {
     H8: heroH8,
   },
 
+  services: {
+  security: serviceSecurity,
+  cleaning: serviceCleaning,
+  cashTransport: serviceCashTransport,
+  supplyChain: serviceSupplyChain,
+  solidWaste: serviceSolidWaste,
+},
+
   about: {
     videoThumbnail: aboutvideoThumbnail,
   },
@@ -49,7 +62,7 @@ export const images = {
   home: {
     aboutBanner: "https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=1800&q=80"
   },
-  services: {
+  /*services: {
     smartCamera: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1300&q=80",
     connectedApp: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=900&q=80",
     repair: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80",
@@ -58,6 +71,7 @@ export const images = {
     accessControl: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1400&q=80",
     businessSecurity: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80"
   },
+  */
   products: {
     indoor: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80",
     outdoor: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1800&q=80",
