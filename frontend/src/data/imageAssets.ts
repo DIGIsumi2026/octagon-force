@@ -10,8 +10,11 @@
  *    import heroHome from "../assets/images/hero-home.jpg";
  * 3. Replace the URL value with the imported variable.
  */
-
+//logos
 import companyLogo from "../assets/images/company-logo.png";
+import aboutvideoThumbnail from "../assets/images/about-video-thumbnail.png";
+
+//images 
 import heroH1 from "../assets/images/header-bg1.jpg";
 import heroH2 from "../assets/images/header-bg2.jpg";
 import heroH3 from "../assets/images/header-bg3.jpg";
@@ -20,6 +23,8 @@ import heroH5 from "../assets/images/header-bg5.jpg";
 import heroH6 from "../assets/images/header-bg6.jpg";
 import heroH7 from "../assets/images/header-bg7.jpg";
 import heroH8 from "../assets/images/header-bg8.jpg";
+
+
 
 export const images = {
   brand: {
@@ -36,6 +41,11 @@ export const images = {
     H7: heroH7,
     H8: heroH8,
   },
+
+  about: {
+    videoThumbnail: aboutvideoThumbnail,
+  },
+
   home: {
     aboutBanner: "https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=1800&q=80"
   },
@@ -76,3 +86,4 @@ export const images = {
     questions: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=900&q=80"
   }
 } as const;
+

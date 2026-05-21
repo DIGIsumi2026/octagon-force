@@ -7,7 +7,7 @@ export default function BenefitCards() {
     <section className="section muted-section">
       <div className="container">
         <SectionHeader
-          eyebrow="Why Choose OpenHome"
+          eyebrow="Our Services"
           title="Our Experience Spans Every Security Need."
           description="Use this area for your portfolio service highlights, technology strengths, or product benefits."
         />
