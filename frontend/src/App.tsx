@@ -42,6 +42,14 @@ export default function App() {
             </main>
           }
         />
+        <Route
+             path="/services"
+             element={
+           <main>
+             <Services />
+           </main>
+            }
+/>
       </Routes>
 
       <Footer />
