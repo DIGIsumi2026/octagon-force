@@ -23,11 +23,16 @@ import heroH5 from "../assets/images/header-bg5.jpg";
 import heroH6 from "../assets/images/header-bg6.jpg";
 import heroH7 from "../assets/images/header-bg7.jpg";
 import heroH8 from "../assets/images/header-bg8.jpg";
-import serviceSecurity from "../assets/images/services/security-service.jpg";
-import serviceCleaning from "../assets/images/services/cleaning-service.jpg";
-import serviceCashTransport from "../assets/images/services/cash-transport.jpg";
-import serviceSupplyChain from "../assets/images/services/supply-chain.jpg";
-import serviceSolidWaste from "../assets/images/services/solid-waste.jpg";
+import serviceSecurity from "../assets/images/security-service.jpg";
+import serviceCleaning from "../assets/images/cleaning-service.jpg";
+import serviceCashTransport from "../assets/images/cash-transport.jpg";
+import serviceSupplyChain from "../assets/images/supply-chain.jpg";
+import serviceSolidWaste from "../assets/images/solid-waste.jpg";
+
+import projectSecurity from "../assets/images/projects/security-project.png";
+import projectCash from "../assets/images/projects/cash-project.png";
+import projectFacility from "../assets/images/projects/facility-project.png";
+import projectLogistics from "../assets/images/projects/logistics-project.png";
 
 
 
@@ -55,6 +60,13 @@ export const images = {
   solidWaste: serviceSolidWaste,
 },
 
+
+projects: {
+    security: projectSecurity,
+    cash: projectCash,
+    facility: projectFacility,
+    logistics: projectLogistics,
+  },
   about: {
     videoThumbnail: aboutvideoThumbnail,
   },
@@ -85,12 +97,13 @@ export const images = {
     indoorCamera: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80",
     videoPreview: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1800&q=80"
   },
-  projects: {
+   /*projects: {
     residential: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1400&q=80",
     airport: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
     campus: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=80",
     energy: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80"
-  },
+  }, */
+  
   reviews: {
     ctaTechnician: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=1800&q=80"
   },

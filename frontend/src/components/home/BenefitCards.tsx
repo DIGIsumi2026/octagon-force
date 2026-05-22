@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef } from "react";
+import type React from "react";
 import { Link } from "react-router-dom";
 import {
   ShieldCheck,
@@ -9,10 +10,31 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "motion/react";
+
 import Reveal from "../common/Reveal";
 import { images } from "../../data/imageAssets";
 
-const octagonServices = [
+type StatService = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+};
+
+type VisualService = {
+  number: string;
+  title: string;
+  caption: string;
+  image: string;
+  points: string[];
+};
+
+const octagonServices: StatService[] = [
   {
     icon: <ShieldCheck />,
     title: "Security Service",
@@ -45,76 +67,56 @@ const octagonServices = [
   },
 ];
 
-const visualServices = [
+const visualServices: VisualService[] = [
   {
     number: "01",
     title: "Security Service",
     caption:
-      "Trained security teams for properties, personnel, VIP protection, events, and high-responsibility environments.",
+      "Disciplined security teams for properties, personnel, VIP protection, special events, and high-responsibility environments.",
     image: images.services.security,
-    points: [
-      "Property security",
-      "Personnel protection",
-      "VIP security",
-      "Special event security",
-    ],
+    points: ["Property security", "VIP protection", "Event security"],
   },
   {
     number: "02",
     title: "Cleaning Services",
     caption:
-      "Professional cleaning and maintenance support for homes, offices, commercial locations, and managed facilities.",
+      "Professional cleaning and maintenance support for homes, offices, commercial spaces, and managed facilities.",
     image: images.services.cleaning,
-    points: [
-      "House cleaning",
-      "Office cleaning",
-      "Maintenance",
-      "Facility cleaning",
-    ],
+    points: ["House cleaning", "Office cleaning", "Maintenance"],
   },
   {
     number: "03",
-    title: "Cash Transport Service",
+    title: "Cash Transport",
     caption:
-      "Secure cash movement handled with confidentiality, discipline, route planning, and professional care.",
+      "Secure cash movement handled with confidentiality, route discipline, trained personnel, and professional care.",
     image: images.services.cashTransport,
-    points: [
-      "Secure transport",
-      "Confidential handling",
-      "Trained personnel",
-      "Reliable delivery",
-    ],
+    points: ["Cash in transit", "Secure handling", "Reliable delivery"],
   },
   {
     number: "04",
     title: "Supply Chain & Logistics",
     caption:
-      "Storage, monitoring, coordination, and transportation support from the origin point to final delivery.",
+      "Storage, monitoring, transport coordination, and logistics support from origin point to final delivery.",
     image: images.services.supplyChain,
-    points: [
-      "Storage support",
-      "Goods monitoring",
-      "Transport coordination",
-      "Logistics management",
-    ],
+    points: ["Storage support", "Goods monitoring", "Logistics planning"],
   },
   {
     number: "05",
     title: "Solid Waste Management",
     caption:
-      "Responsible waste collection, sorting, treatment, and disposal services for cleaner and safer communities.",
+      "Responsible waste collection, sorting, treatment, and disposal support for cleaner and safer communities.",
     image: images.services.solidWaste,
-    points: [
-      "Waste collection",
-      "Waste sorting",
-      "Treatment support",
-      "Safe disposal",
-    ],
+    points: ["Waste collection", "Sorting support", "Safe disposal"],
   },
 ];
 
 export default function BenefitCards() {
-  const [activeCard, setActiveCard] = useState(0);
+  const stackRef = useRef<HTMLDivElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: stackRef,
+    offset: ["start 80%", "end 20%"],
+  });
 
   return (
     <section className="section benefit-services-section" id="services">
@@ -165,66 +167,104 @@ export default function BenefitCards() {
           </div>
         </Reveal>
 
-        <div className="visual-services-block">
+        <div className="visual-stack-section">
           <Reveal>
-            <div className="visual-services-header">
+            <div className="visual-stack-header">
               <span className="eyebrow eyebrow--light">
                 <span />
-                Service Details
+                 Our Expertise
               </span>
 
-              <h2>Explore Our Core Services Visually.</h2>
+              <h2>Reliable Service Solutions For Every Operation.</h2>
 
               <p>
-                Each service is designed to support people, businesses, and
-                organizations with dependable field teams, structured workflows,
-                and professional execution.
+                 Explore Octagon Force services across security, cleaning, cash transport,
+    logistics, and solid waste management through a focused visual service
+    experience.
               </p>
             </div>
           </Reveal>
 
-          <div className="visual-services-stack">
+          <div className="visual-stack-list" ref={stackRef}>
             {visualServices.map((service, index) => (
-              <article
+              <VisualStackCard
                 key={service.title}
-                className={`visual-service-card ${
-                  activeCard === index ? "is-active" : ""
-                }`}
-                style={{ "--card-index": index } as React.CSSProperties}
-                onMouseEnter={() => setActiveCard(index)}
-              >
-                <div className="visual-service-card__content">
-                  <span className="visual-service-card__number">
-                    {service.number}
-                  </span>
-
-                  <h3>{service.title}</h3>
-
-                  <p>{service.caption}</p>
-
-                  <ul>
-                    {service.points.map((point) => (
-                      <li key={point}>
-                        <CheckCircle2 />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link to="/services" className="visual-service-card__link">
-                    Learn More
-                    <ArrowRight />
-                  </Link>
-                </div>
-
-                <div className="visual-service-card__image">
-                  <img src={service.image} alt={service.title} />
-                </div>
-              </article>
+                service={service}
+                index={index}
+                total={visualServices.length}
+                scrollYProgress={scrollYProgress}
+              />
             ))}
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+type VisualStackCardProps = {
+  service: VisualService;
+  index: number;
+  total: number;
+  scrollYProgress: MotionValue<number>;
+};
+
+function VisualStackCard({
+  service,
+  index,
+  total,
+  scrollYProgress,
+}: VisualStackCardProps) {
+  const start = index / total;
+  const middle = Math.min(start + 0.16, 1);
+  const end = Math.min(start + 0.34, 1);
+
+  const y = useTransform(
+    scrollYProgress,
+    [Math.max(start - 0.12, 0), middle, end],
+    [160, 0, index * 12]
+  );
+
+  const scale = useTransform(
+    scrollYProgress,
+    [start, 1],
+    [1, 1 - (total - index - 1) * 0.018]
+  );
+
+
+  const cardStyle = {
+    "--card-index": index,
+    y,
+    scale,
+  } as unknown as React.ComponentProps<typeof motion.article>["style"];
+
+  return (
+    <motion.article className="visual-stack-card" style={cardStyle}>
+      <div className="visual-stack-card__content">
+        <span className="visual-stack-card__number">{service.number}</span>
+
+        <h3>{service.title}</h3>
+
+        <p>{service.caption}</p>
+
+        <ul>
+          {service.points.map((point) => (
+            <li key={point}>
+              <CheckCircle2 />
+              {point}
+            </li>
+          ))}
+        </ul>
+
+        <Link to="/services" className="visual-stack-card__link">
+          Learn More
+          <ArrowRight />
+        </Link>
+      </div>
+
+      <div className="visual-stack-card__image">
+        <img src={service.image} alt={service.title} />
+      </div>
+    </motion.article>
   );
 }
