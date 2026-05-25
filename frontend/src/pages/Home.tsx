@@ -3,6 +3,7 @@ import Marquee from "../components/home/Marquee";
 import AboutBanner from "../components/home/AboutBanner";
 import BenefitCards from "../components/home/BenefitCards";
 import ProjectShowcase from "../components/home/ProjectShowcase";
+import ClientsBanner from "../components/home/ClientsBanner";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutBanner />
       <BenefitCards />
       <ProjectShowcase />
+      <ClientsBanner/>
     </>
   );
 }

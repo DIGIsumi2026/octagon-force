@@ -34,6 +34,26 @@ import projectCash from "../assets/images/projects/cash-project.png";
 import projectFacility from "../assets/images/projects/facility-project.png";
 import projectLogistics from "../assets/images/projects/logistics-project.png";
 
+import clientLogo1 from "../assets/images/clients/sumathi-universal.jpg";
+import clientLogo2 from "../assets/images/clients/leisure-sports.jpg";
+import clientLogo3 from "../assets/images/clients/napco.jpg";
+import clientLogo4 from "../assets/images/clients/sumathi-printers.jpg";
+import clientLogo5 from "../assets/images/clients/cool-planet.jpg";
+import clientLogo6 from "../assets/images/clients/kapri-market.jpg";
+import clientLogo7 from "../assets/images/clients/fingara-club.jpg";
+import clientLogo8 from "../assets/images/clients/food-city.jpg";
+import clientLogo9 from "../assets/images/clients/rush-residence.jpg";
+import clientLogo10 from "../assets/images/clients/petals-shop.jpg";
+import clientLogo11 from "../assets/images/clients/dfcc-bank.jpg";
+import clientLogo12 from "../assets/images/clients/gowmark.jpg";
+import clientLogo13 from "../assets/images/clients/kids-walk.jpg";
+import clientLogo14 from "../assets/images/clients/lakpohora.jpg";
+import clientLogo15 from "../assets/images/clients/dep-meteology.jpg";
+import clientLogo16 from "../assets/images/clients/inst-archeology.jpg";
+import clientLogo17 from "../assets/images/clients/business-school.jpg";
+import clientLogo18 from "../assets/images/clients/hindu-collage.jpg";
+
+
 
 
 export const images = {
@@ -69,6 +89,27 @@ projects: {
   },
   about: {
     videoThumbnail: aboutvideoThumbnail,
+  },
+
+  clients: {
+    client1: clientLogo1,
+    client2: clientLogo2,
+    client3: clientLogo3,
+    client4: clientLogo4,
+    client5: clientLogo5,
+    client6: clientLogo6,
+    client7: clientLogo7,
+    client8: clientLogo8,
+    client9: clientLogo9,
+    client10: clientLogo10,
+    client11: clientLogo11,
+    client12: clientLogo12,
+    client13: clientLogo13,
+    client14: clientLogo14,
+    client15: clientLogo15,
+    client16: clientLogo16,
+    client17: clientLogo17,
+    client18: clientLogo18,
   },
 
   home: {
