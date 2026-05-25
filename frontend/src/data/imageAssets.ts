@@ -53,6 +53,9 @@ import clientLogo16 from "../assets/images/clients/inst-archeology.jpg";
 import clientLogo17 from "../assets/images/clients/business-school.jpg";
 import clientLogo18 from "../assets/images/clients/hindu-collage.jpg";
 
+import aboutHero from "../assets/images/about us/about-hero.png";
+import aboutEntry from "../assets/images/about us/about-entry.png";
+import sumathiLogo from "../assets/images/about us/sumathilogo.png";
 
 
 
@@ -88,7 +91,9 @@ projects: {
     logistics: projectLogistics,
   },
   about: {
-    videoThumbnail: aboutvideoThumbnail,
+    hero: aboutHero,
+    entry: aboutEntry,
+    sumathiLogo: sumathiLogo,
   },
 
   clients: {
