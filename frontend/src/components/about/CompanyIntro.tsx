@@ -1,97 +1,85 @@
-import { useRef, type ReactNode } from "react";
+import { useRef} from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import {
-  ShieldCheck,
-  Wrench,
-  Truck,
-  HardHat,
-  Sparkles,
-} from "lucide-react";
-
 import Reveal from "../common/Reveal";
 import { images } from "../../data/imageAssets";
 
-type ServiceArea = {
-  title: string;
-  icon: ReactNode;
-};
 
-const serviceAreas: ServiceArea[] = [
-  {
-    title: "Security",
-    icon: <ShieldCheck />,
-  },
-  {
-    title: "Technical & Maintenance",
-    icon: <Wrench />,
-  },
-  {
-    title: "Transport",
-    icon: <Truck />,
-  },
-  {
-    title: "Construction",
-    icon: <HardHat />,
-  },
-  {
-    title: "Housekeeping",
-    icon: <Sparkles />,
-  },
-];
 
 export default function CompanyIntro() {
   const sectionRef = useRef<HTMLElement | null>(null);
-
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const hoverTimerRef = useRef<number | null>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
 
-  /*
-    Important:
-    - Image remains clear until the white section fully covers it.
-    - Blur starts only after progress 0.63.
-  */
   const imageScale = useTransform(
-  scrollYProgress,
-  [0, 0.78, 1],
-  [1.02, 1.02, 1]
-);
+    scrollYProgress,
+    [0, 0.78, 1],
+    [1.02, 1.02, 1]
+  );
 
   const imageOpacity = useTransform(
-  scrollYProgress,
-  [0, 0.78, 0.9, 1],
-  [1, 1, 0.78, 0.58]
-);
+    scrollYProgress,
+    [0, 0.78, 0.9, 1],
+    [1, 1, 0.82, 0.64]
+  );
 
-  const imageFilter = useTransform(
-  scrollYProgress,
-  [0, 1],
-  [
-    "blur(0px) saturate(1.06) contrast(1.05)",
-    "blur(0px) saturate(1.06) contrast(1.05)",
-  ]
-);
-  /*
-    White section starts below the image.
-    It moves up and fully covers the image at around 0.63.
-  */
   const cardY = useTransform(
-  scrollYProgress,
-  [0.08, 0.78, 1],
-  ["106vh", "0vh", "0vh"]
-);
+    scrollYProgress,
+    [0.08, 0.78, 1],
+    ["106vh", "0vh", "0vh"]
+  );
 
   const cardRadius = useTransform(
-  scrollYProgress,
-  [0.08, 0.78],
-  ["46px", "0px"]
-);
+    scrollYProgress,
+    [0.08, 0.78],
+    ["46px", "0px"]
+  );
+
+  const playVideo = () => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  if (hoverTimerRef.current) {
+    window.clearTimeout(hoverTimerRef.current);
+  }
+
+  hoverTimerRef.current = window.setTimeout(async () => {
+    try {
+      video.muted = true;
+      video.currentTime = 0;
+      await video.play();
+    } catch (error) {
+      console.error("About intro video failed to play:", error);
+    }
+  }, 2000);
+};
+
+
+  const stopVideo = () => {
+  const video = videoRef.current;
+
+  if (hoverTimerRef.current) {
+    window.clearTimeout(hoverTimerRef.current);
+    hoverTimerRef.current = null;
+  }
+
+  if (!video) return;
+
+  video.pause();
+  video.currentTime = 0;
+};
 
   return (
     <section className="about-company-intro" ref={sectionRef}>
       <div className="about-company-intro__sticky">
-        <div className="container about-company-intro__image-container">
+        <div
+          className="about-company-intro__media-stage"
+          onMouseEnter={playVideo}
+          onMouseLeave={stopVideo}
+        >
           <motion.img
             src={images.about.entry}
             alt="Octagon Force employees representing company services"
@@ -99,11 +87,24 @@ export default function CompanyIntro() {
             style={{
               scale: imageScale,
               opacity: imageOpacity,
-              filter: imageFilter,
             }}
           />
 
+          <video
+            ref={videoRef}
+            className="about-company-intro__video"
+            src={images.about.companyIntroVideo}
+            muted
+            playsInline
+            loop
+            preload="auto"
+          />
+
           <div className="about-company-intro__image-shade" />
+
+          <div className="about-company-intro__hover-badge">
+            Hover To Play
+          </div>
         </div>
       </div>
 
@@ -147,37 +148,200 @@ export default function CompanyIntro() {
         </motion.article>
 
         <Reveal delay={0.12}>
-          <div className="about-company-services">
-            <div className="about-company-services__heading">
-              <span className="eyebrow">
-                <span />
-                What We Do
-              </span>
+  <section className="about-vision-mission-section">
+  <div className="about-vision-mission-header">
+    <span className="eyebrow eyebrow--light">
+      <span />
+      Vision & Mission
+    </span>
 
-              <h3>Dedicated To Serving The Country In Five Key Areas.</h3>
-            </div>
+    <h2>Guided By Purpose. Driven By Service.</h2>
 
-            <div className="about-company-services__grid">
-              {serviceAreas.map((service, index) => (
-                <motion.article
-                  key={service.title}
-                  className="about-company-service-pill"
-                  initial={{ opacity: 0, y: 28 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.35 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.07,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                >
-                  <span>{service.icon}</span>
-                  <strong>{service.title}</strong>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        </Reveal>
+    <p>
+      Our vision and mission reflect the standards, discipline, and service
+      commitment that guide every Octagon Force operation.
+    </p>
+  </div>
+
+  <div className="about-vm-swipe-list">
+    {/* Vision */}
+    <motion.article
+      className="about-vm-swipe-card about-vm-swipe-card--vision"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.62 }}
+    >
+      <motion.div
+        className="about-vm-swipe-card__content about-vm-swipe-card__content--left"
+        variants={{
+          hidden: { opacity: 0, x: -70, filter: "blur(10px)" },
+          show: { opacity: 1, x: 0, filter: "blur(0px)" },
+        }}
+        transition={{
+          duration: 0.9,
+          ease: [0.22, 1, 0.36, 1],
+          delay: 0.2,
+        }}
+      >
+
+        <span className="eyebrow eyebrow--light">
+          <span />
+          Our Vision
+        </span>
+        <p>
+          To become a dominant force in every industry we operate in, 
+          while contributing towards the development of our nation and its citizens.
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="about-vm-swipe-card__media"
+        variants={{
+          hidden: {
+            left: "0%",
+            width: "100%",
+            borderRadius: "0px",
+          },
+          show: {
+            left: "50%",
+            width: "50%",
+            borderRadius: "34px",
+          },
+        }}
+        transition={{
+          duration: 1.15,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+        <motion.img
+          src={images.about.visionImage}
+          alt="Octagon Force company vision"
+          variants={{
+            hidden: {
+              filter: "blur(8px) saturate(0.9) contrast(0.9)",
+              scale: 1.08,
+            },
+            show: {
+              filter: "blur(0px) saturate(1.06) contrast(1.04)",
+              scale: 1.02,
+            },
+          }}
+          transition={{
+            duration: 1.1,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+
+        <motion.div
+          className="about-vm-swipe-card__intro-label"
+          variants={{
+            hidden: { opacity: 1, y: 0, filter: "blur(0px)" },
+            show: { opacity: 0, y: -18, filter: "blur(8px)" },
+          }}
+          transition={{
+            duration: 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <span className="eyebrow eyebrow--light">
+            <span />
+            Our Vision
+          </span>
+        </motion.div>
+      </motion.div>
+    </motion.article>
+
+    {/* Mission */}
+    <motion.article
+      className="about-vm-swipe-card about-vm-swipe-card--mission"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.62 }}
+    >
+      <motion.div
+        className="about-vm-swipe-card__content about-vm-swipe-card__content--right"
+        variants={{
+          hidden: { opacity: 0, x: 70, filter: "blur(10px)" },
+          show: { opacity: 1, x: 0, filter: "blur(0px)" },
+        }}
+        transition={{
+          duration: 0.9,
+          ease: [0.22, 1, 0.36, 1],
+          delay: 0.2,
+        }}
+      >
+
+        <span className="eyebrow eyebrow--light">
+          <span />
+          Our Mission
+        </span>
+        <p>
+          To become a sustainable business that brings merits and profitability to the entire society, 
+          while remaining true to our beliefs and the highest level of integrity. 
+          We strive to achieve product and service excellence to become the strongest, 
+          most innovative, and diversified group in the region.
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="about-vm-swipe-card__media"
+        variants={{
+          hidden: {
+            left: "0%",
+            width: "100%",
+            borderRadius: "0px",
+          },
+          show: {
+            left: "0%",
+            width: "50%",
+            borderRadius: "34px",
+          },
+        }}
+        transition={{
+          duration: 1.15,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+        <motion.img
+          src={images.about.missionImage}
+          alt="Octagon Force company mission"
+          variants={{
+            hidden: {
+              filter: "blur(8px) saturate(0.9) contrast(0.9)",
+              scale: 1.08,
+            },
+            show: {
+              filter: "blur(0px) saturate(1.06) contrast(1.04)",
+              scale: 1.02,
+            },
+          }}
+          transition={{
+            duration: 1.1,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+
+        <motion.div
+          className="about-vm-swipe-card__intro-label"
+          variants={{
+            hidden: { opacity: 1, y: 0, filter: "blur(0px)" },
+            show: { opacity: 0, y: -18, filter: "blur(8px)" },
+          }}
+          transition={{
+            duration: 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <span className="eyebrow eyebrow--light">
+            <span />
+            Our Mission
+          </span>
+        </motion.div>
+      </motion.div>
+    </motion.article>
+  </div>
+   </section>
+   </Reveal>
       </div>
     </section>
   );

@@ -103,7 +103,7 @@ export default function AboutBanner() {
               {!isVideoActive && (
                 <div className="about-preview__thumbnail">
                   <img
-                    src={images.about.videoThumbnail}
+                    src={images.about.aboutVideoThumbnail}
                     alt="Octagon Force logo video preview"
                   />
                   <span className="about-preview__thumbnail-badge">

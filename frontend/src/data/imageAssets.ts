@@ -12,7 +12,7 @@
  */
 //logos
 import companyLogo from "../assets/images/company-logo.png";
-import aboutvideoThumbnail from "../assets/images/about-video-thumbnail.png";
+import aboutVideoThumbnail from "../assets/images/about-video-thumbnail.png";
 
 //images 
 import heroH1 from "../assets/images/header-bg1.jpg";
@@ -56,7 +56,16 @@ import clientLogo18 from "../assets/images/clients/hindu-collage.jpg";
 import aboutHero from "../assets/images/about us/about-hero.png";
 import aboutEntry from "../assets/images/about us/about-entry.png";
 import sumathiLogo from "../assets/images/about us/sumathilogo.png";
+import aboutVisionImage from "../assets/images/about us/vision-image.png";
+import aboutMissionImage from "../assets/images/about us/mission-image.png";
 
+import aboutCompanyIntroVideo from "../assets/videos/about us/about-company-intro.mp4";
+
+/* management */
+import thilangaSumathipala from "../assets/images/about us/management/thilanga.png";
+import samadaraSumathipala from "../assets/images/about us/management/samadara.png";
+import dulanthaSumathipala from "../assets/images/about us/management/dulantha.png";
+import sajanthaSumathipala from "../assets/images/about us/management/sajantha.png"; 
 
 
 export const images = {
@@ -93,7 +102,12 @@ projects: {
   about: {
     hero: aboutHero,
     entry: aboutEntry,
+    aboutVideoThumbnail: aboutVideoThumbnail,
     sumathiLogo: sumathiLogo,
+    companyIntroVideo: aboutCompanyIntroVideo,
+    visionImage: aboutVisionImage,
+    missionImage: aboutMissionImage,
+
   },
 
   clients: {
@@ -116,6 +130,13 @@ projects: {
     client17: clientLogo17,
     client18: clientLogo18,
   },
+
+  management: {
+  thilanga: thilangaSumathipala,
+  samadara: samadaraSumathipala,
+  dulantha: dulanthaSumathipala,
+  sajantha: sajanthaSumathipala,
+},
 
   home: {
     aboutBanner: "https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=1800&q=80"
