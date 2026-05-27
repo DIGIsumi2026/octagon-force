@@ -6825,3 +6825,385 @@ button,
     text-align: center;
   }
 }
+
+/* =========================================================
+   Services page 
+   ========================================================= */
+
+/* Hero section */
+
+.services-page {
+  background: #ffffff;
+  color: #07101d;
+  overflow: hidden;
+}
+
+.services-hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #07101d;
+  color: #ffffff;
+  isolation: isolate;
+}
+
+.services-hero__video-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #07101d;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.services-hero__video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) contrast(1.04) brightness(1.08);
+}
+
+/* Lighter overlay so video stays visible */
+.services-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 72% 36%, rgba(201, 148, 31, 0.11), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.54) 0%,
+      rgba(3, 8, 17, 0.3) 44%,
+      rgba(3, 8, 17, 0.08) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(3, 8, 17, 0.38),
+      rgba(3, 8, 17, 0.02)
+    );
+  pointer-events: none;
+}
+
+.services-hero__grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 58px 58px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.services-hero__content {
+  position: relative;
+  z-index: 4;
+  width: var(--container);
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 145px 0 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.services-hero__content h1 {
+  max-width: 720px;
+  margin: 18px 0 18px;
+  color: #ffffff;
+  font-size: clamp(2.55rem, 5vw, 5.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.075em;
+  text-shadow: 0 14px 44px rgba(0, 0, 0, 0.36);
+}
+
+.services-hero__content p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(0.94rem, 1vw, 1.02rem);
+  line-height: 1.78;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.28);
+}
+
+.services-hero__content .eyebrow,
+.services-hero__actions,
+.services-hero__button {
+  pointer-events: auto;
+}
+
+.services-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.services-hero__button {
+  min-width: 170px;
+  height: 56px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #07101d;
+  background: #c79527;
+  font-weight: 900;
+  box-shadow: 0 22px 54px rgba(201, 148, 31, 0.24);
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+.services-hero__button svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.32s ease;
+}
+
+.services-hero__button:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: 0 24px 58px rgba(255, 255, 255, 0.16);
+}
+
+.services-hero__button:hover svg {
+  transform: translateX(5px);
+}
+
+/* Centered service strip after video ends */
+.services-hero__service-strip {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 7;
+  width: min(100% - 52px, 1120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(7, 16, 29, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  scrollbar-width: none;
+}
+
+.services-hero__service-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.services-hero__service-strip span {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 0.78rem;
+  font-weight: 850;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Bottom center swipe arrow */
+.services-hero__scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 8;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(7, 16, 29, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.services-hero__scroll-cue:hover {
+  color: #07101d;
+  background: #c79527;
+  box-shadow:
+    0 20px 48px rgba(201, 148, 31, 0.28),
+    0 0 0 8px rgba(201, 148, 31, 0.12);
+}
+
+.services-hero__scroll-cue svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Overview section starts directly after video. No white gap. */
+.services-overview-section {
+  position: relative;
+  margin-top: 0;
+  padding: clamp(82px, 8vw, 118px) 0;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(201, 148, 31, 0.09), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f8f6f0 100%);
+}
+
+.services-overview-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(7, 16, 29, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 16, 29, 0.035) 1px, transparent 1px);
+  background-size: 58px 58px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.services-overview-header {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.services-overview-header .eyebrow {
+  justify-content: center;
+}
+
+.services-overview-header h2 {
+  margin: 20px auto 16px;
+  color: #07101d;
+  font-size: clamp(2.8rem, 5.8vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+}
+
+.services-overview-header p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #747b88;
+  font-size: 1.04rem;
+  line-height: 1.82;
+}
+
+@media (max-width: 980px) {
+  .services-hero__content {
+    padding: 136px 0 150px;
+  }
+
+  .services-hero__content h1 {
+    max-width: 680px;
+    font-size: clamp(2.7rem, 8vw, 4.6rem);
+  }
+
+  .services-hero__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 8, 17, 0.46) 0%,
+        rgba(3, 8, 17, 0.24) 46%,
+        rgba(3, 8, 17, 0.64) 100%
+      );
+  }
+
+  .services-hero__service-strip {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero__content {
+    padding: 126px 0 150px;
+  }
+
+  .services-hero__content h1 {
+    font-size: 2.75rem;
+    line-height: 0.98;
+  }
+
+  .services-hero__content p {
+    font-size: 0.93rem;
+  }
+
+  .services-hero__actions {
+    display: grid;
+    width: 100%;
+  }
+
+  .services-hero__button {
+    width: 100%;
+  }
+  .services-hero__service-strip {
+    bottom: 22px;
+    width: min(100% - 28px, 1120px);
+    border-radius: 24px;
+    justify-content: flex-start;
+  }
+
+  .services-hero__scroll-cue {
+    bottom: 104px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .services-overview-header {
+    text-align: left;
+  }
+
+  .services-overview-header .eyebrow {
+    justify-content: flex-start;
+  }
+
+  .services-overview-header h2 {
+    font-size: 2.8rem;
+  }
+}
+/* Thumbnail shown after service hero video ends */
+.services-hero__thumbnail {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) contrast(1.04) brightness(1.08);
+  transform-origin: center;
+}
+
+.services-hero__video {
+  transition:
+    opacity 0.7s ease,
+    filter 0.7s ease,
+    transform 0.7s ease;
+}
+
+.services-hero__video.is-ended {
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(1.03);
+  pointer-events: none;
+}

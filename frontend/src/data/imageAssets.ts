@@ -1,15 +1,3 @@
-/**
- * Central image registry.
- *
- * Change image URLs here only. Every section imports from this file, so you do not
- * need to search inside component JSX when replacing demo images with your own.
- *
- * For local images:
- * 1. Place files inside src/assets/images/
- * 2. Import them here, for example:
- *    import heroHome from "../assets/images/hero-home.jpg";
- * 3. Replace the URL value with the imported variable.
- */
 //logos
 import companyLogo from "../assets/images/company-logo.png";
 import aboutVideoThumbnail from "../assets/images/about-video-thumbnail.png";
@@ -87,6 +75,10 @@ import company13Logo from "../assets/images/about us/companyLogo/company13.png";
 import company14Logo from "../assets/images/about us/companyLogo/company14.png";
 import company15Logo from "../assets/images/about us/companyLogo/company15.png";
 
+//services page imports
+import serviceHeroVideo from "../assets/images/service/service-hero.mp4";
+import serviceHeroThumbnail from "../assets/images/service/service-hero-thumbnail.png";
+
 
 
 export const images = {
@@ -111,6 +103,9 @@ export const images = {
   cashTransport: serviceCashTransport,
   supplyChain: serviceSupplyChain,
   solidWaste: serviceSolidWaste,
+  heroVideo: serviceHeroVideo,
+  heroThumbnail: serviceHeroThumbnail,
+
 },
 
 
@@ -180,16 +175,7 @@ companyLogos: {
   home: {
     aboutBanner: "https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=1800&q=80"
   },
-  /*services: {
-    smartCamera: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1300&q=80",
-    connectedApp: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=900&q=80",
-    repair: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80",
-    smarterHome: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=80",
-    videoVerification: "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=1400&q=80",
-    accessControl: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1400&q=80",
-    businessSecurity: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80"
-  },
-  */
+
   products: {
     indoor: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80",
     outdoor: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1800&q=80",
