@@ -1,4 +1,4 @@
-import { experienceItems } from "../../data/siteData";
+/* import { experienceItems } from "../../data/siteData";
 import Reveal from "../common/Reveal";
 import SectionHeader from "../common/SectionHeader";
 
@@ -30,4 +30,4 @@ export default function ExperienceTimeline() {
       </div>
     </section>
   );
-}
+} */

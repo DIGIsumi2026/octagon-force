@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { images } from "../data/imageAssets";
+import ServicesShowcase from "../components/services/ServicesShowcase";
 
 const serviceHighlights = [
   "Security Services",
@@ -14,7 +15,16 @@ const serviceHighlights = [
 
 export default function Services() {
   const [videoEnded, setVideoEnded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
+  const handleVideoEnded = () => {
+    setVideoEnded(true);
+
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+  
   const scrollToServices = () => {
     const target = document.querySelector("#service-overview");
     target?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -30,6 +40,7 @@ export default function Services() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <video
+            ref={videoRef}
             className={`services-hero__video ${videoEnded ? "is-ended" : ""}`}
             src={images.services.heroVideo}
             poster={images.services.heroThumbnail}
@@ -37,21 +48,21 @@ export default function Services() {
             muted
             playsInline
             preload="auto"
-            onEnded={() => setVideoEnded(true)}
+            onEnded={handleVideoEnded}
         />
 
-        <AnimatePresence>
-        {videoEnded && (
-    <motion.img
-      src={images.services.heroThumbnail}
-      alt="Octagon Force service overview"
-      className="services-hero__thumbnail"
-      initial={{ opacity: 0, scale: 1.04, filter: "blur(8px)" }}
-      animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-    />
-  )}
+       <AnimatePresence>
+         {videoEnded && (
+         <motion.img
+         src={images.services.heroThumbnail}
+         alt="Octagon Force service overview"
+         className="services-hero__thumbnail"
+         initial={{ opacity: 0, scale: 1.04, filter: "blur(8px)" }}
+         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+         exit={{ opacity: 0 }}
+         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+       />
+        )}
        </AnimatePresence>
 
           <div className="services-hero__overlay" />
@@ -158,30 +169,9 @@ export default function Services() {
           <ArrowDown />
         </motion.button>
       </section>
+      
+      <ServicesShowcase />
 
-      <section id="service-overview" className="services-overview-section">
-        <div className="container">
-          <motion.div
-            className="services-overview-header"
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span className="eyebrow">
-              <span />
-              What We Cover
-            </span>
-
-            <h2>Core Service Areas Designed For Dependable Operations.</h2>
-
-            <p>
-              This main service page introduces the full service capability of
-              Octagon Force. Sub-service pages can be connected from here later.
-            </p>
-          </motion.div>
-        </div>
-      </section>
     </main>
   );
 }

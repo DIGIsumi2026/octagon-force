@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { companyLogos } from "../../data/companyLogos";
-
 export default function AboutCompanyLogos() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);

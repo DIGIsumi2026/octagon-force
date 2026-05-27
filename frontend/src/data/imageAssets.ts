@@ -79,6 +79,12 @@ import company15Logo from "../assets/images/about us/companyLogo/company15.png";
 import serviceHeroVideo from "../assets/images/service/service-hero.mp4";
 import serviceHeroThumbnail from "../assets/images/service/service-hero-thumbnail.png";
 
+import cardSecurity from "../assets/images/service/service-security.jpg";
+import cardCleaning from "../assets/images/service/service-cleaning.jpg";
+import cardCashTransport from "../assets/images/service/service-cash-transport.jpg";
+import cardTrasport from "../assets/images/service/service-transport.png";
+import cardLogistics from "../assets/images/service/service-logistics.jpg";
+import cardWaste from "../assets/images/service/service-waste-management.jpg";
 
 
 export const images = {
@@ -98,14 +104,22 @@ export const images = {
   },
 
   services: {
-  security: serviceSecurity,
-  cleaning: serviceCleaning,
-  cashTransport: serviceCashTransport,
-  supplyChain: serviceSupplyChain,
-  solidWaste: serviceSolidWaste,
-  heroVideo: serviceHeroVideo,
-  heroThumbnail: serviceHeroThumbnail,
+    security: serviceSecurity,
+    cleaning: serviceCleaning,
+    cashTransport: serviceCashTransport,
+    supplyChain: serviceSupplyChain,
+    solidWaste: serviceSolidWaste,
+    heroVideo: serviceHeroVideo,
+    heroThumbnail: serviceHeroThumbnail,
 
+  cards: {
+  securityCard: cardSecurity,
+  cleaningCrad: cardCleaning,
+  cashTrasportCard: cardCashTransport,
+  transportCard: cardTrasport,
+  logisticsCard: cardLogistics,
+  wasteCard: cardWaste,
+  },
 },
 
 

@@ -1,4 +1,4 @@
-import { Camera, CheckCircle2, LockKeyhole, Smartphone } from "lucide-react";
+/*import { Camera, CheckCircle2, LockKeyhole, Smartphone } from "lucide-react";
 import { motion } from "motion/react";
 import { factCards } from "../../data/siteData";
 import Reveal from "../common/Reveal";
@@ -67,4 +67,4 @@ export default function FeatureCollage() {
       </div>
     </section>
   );
-}
+} */
