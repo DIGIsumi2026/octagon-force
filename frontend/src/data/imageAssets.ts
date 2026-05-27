@@ -34,6 +34,7 @@ import projectCash from "../assets/images/projects/cash-project.png";
 import projectFacility from "../assets/images/projects/facility-project.png";
 import projectLogistics from "../assets/images/projects/logistics-project.png";
 
+/* clients */
 import clientLogo1 from "../assets/images/clients/sumathi-universal.jpg";
 import clientLogo2 from "../assets/images/clients/leisure-sports.jpg";
 import clientLogo3 from "../assets/images/clients/napco.jpg";
@@ -66,6 +67,24 @@ import thilangaSumathipala from "../assets/images/about us/management/thilanga.p
 import samadaraSumathipala from "../assets/images/about us/management/samadara.png";
 import dulanthaSumathipala from "../assets/images/about us/management/dulantha.png";
 import sajanthaSumathipala from "../assets/images/about us/management/sajantha.png"; 
+
+/* companies */
+import company1Logo from "../assets/images/about us/companyLogo/company1.png";
+import company2Logo from "../assets/images/about us/companyLogo/company2.png";
+import company3Logo from "../assets/images/about us/companyLogo/company3.png";
+import company4Logo from "../assets/images/about us/companyLogo/company4.png";
+import company5Logo from "../assets/images/about us/companyLogo/company5.png";
+import company6Logo from "../assets/images/about us/companyLogo/company6.png";
+import company7Logo from "../assets/images/about us/companyLogo/company7.png";
+import company8Logo from "../assets/images/about us/companyLogo/company8.png";
+import company9Logo from "../assets/images/about us/companyLogo/company9.png";
+import company10Logo from "../assets/images/about us/companyLogo/company10.png";
+import company11Logo from "../assets/images/about us/companyLogo/company11.png";
+import company12Logo from "../assets/images/about us/companyLogo/company12.png";
+import company13Logo from "../assets/images/about us/companyLogo/company13.png";
+import company14Logo from "../assets/images/about us/companyLogo/company14.png";
+import company15Logo from "../assets/images/about us/companyLogo/company15.png";
+
 
 
 export const images = {
@@ -136,6 +155,24 @@ projects: {
   samadara: samadaraSumathipala,
   dulantha: dulanthaSumathipala,
   sajantha: sajanthaSumathipala,
+},
+
+companyLogos: {
+  company1: company1Logo,
+  company2: company2Logo,
+  company3: company3Logo,
+  company4: company4Logo,
+  company5: company5Logo,
+  company6: company6Logo,
+  company7: company7Logo,
+  company8: company8Logo,
+  company9: company9Logo,
+  company10: company10Logo,
+  company11: company11Logo,
+  company12: company12Logo,
+  company13: company13Logo,
+  company14: company14Logo,
+  company15: company15Logo,
 },
 
   home: {
