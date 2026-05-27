@@ -34,6 +34,8 @@ import projectCash from "../assets/images/projects/cash-project.png";
 import projectFacility from "../assets/images/projects/facility-project.png";
 import projectLogistics from "../assets/images/projects/logistics-project.png";
 
+import aboutContactBanner from "../assets/images/about us/contact_us.png";
+
 /* clients */
 import clientLogo1 from "../assets/images/clients/sumathi-universal.jpg";
 import clientLogo2 from "../assets/images/clients/leisure-sports.jpg";
@@ -126,7 +128,7 @@ projects: {
     companyIntroVideo: aboutCompanyIntroVideo,
     visionImage: aboutVisionImage,
     missionImage: aboutMissionImage,
-
+    contactBanner: aboutContactBanner,
   },
 
   clients: {

@@ -3,6 +3,7 @@ import CompanyIntro from "../components/about/CompanyIntro";
 import BoardManagement from "../components/about/BoardManagement";
 import { motion } from "motion/react";
 import AboutCompanyLogos from "../components/about/AboutCompanyLogos";
+import AboutContactBanner from "../components/about/AboutContactBanner";
 import {
   ArrowRight,
   BadgeCheck,
@@ -129,72 +130,7 @@ export default function About() {
 
       <BoardManagement />
       <AboutCompanyLogos/>
-      
-      <section className="about-values-v2">
-        <div className="container">
-          <Reveal>
-            <div className="about-values-v2__layout">
-              <div className="about-values-v2__copy">
-                <span className="eyebrow eyebrow--light">
-                  <span />
-                  Our Standard
-                </span>
-
-                <h2>
-                  Built On Discipline, Trust, And Reliable Service Delivery.
-                </h2>
-
-                <p>
-                  Every Octagon Force service should feel organized,
-                  professional, and accountable — from the first client
-                  conversation to the final field execution.
-                </p>
-              </div>
-
-              <div className="about-values-v2__cards">
-                {values.map((value, index) => (
-                  <Reveal key={value.title} delay={index * 0.08}>
-                    <article className="about-value-card-v2">
-                      <span>{value.icon}</span>
-                      <div>
-                        <h3>{value.title}</h3>
-                        <p>{value.description}</p>
-                      </div>
-                    </article>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="about-cta-v2">
-        <div className="container">
-          <Reveal>
-            <div className="about-cta-v2__box">
-              <div>
-                <span className="eyebrow eyebrow--light">
-                  <span />
-                  Work With Us
-                </span>
-
-                <h2>Need A Reliable Service Partner?</h2>
-
-                <p>
-                  Talk to Octagon Force about security, cleaning, transport,
-                  logistics, maintenance, and operational support services.
-                </p>
-              </div>
-
-              <Link to="/contact" className="about-primary-link">
-                Get In Touch
-                <ArrowRight />
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <AboutContactBanner />
     </main>
   );
 }

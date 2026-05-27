@@ -1,23 +1,73 @@
-import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
 
 export default function ScrollTop() {
-  const [visible, setVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 650);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const currentProgress =
+        scrollableHeight > 0 ? (scrollTop / scrollableHeight) * 100 : 0;
+
+      setIsVisible(scrollTop > 320);
+      setProgress(Math.min(100, Math.max(0, currentProgress)));
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <button
-      className={`scroll-top ${visible ? "scroll-top--visible" : ""}`}
+      type="button"
+      className={`scroll-top ${isVisible ? "scroll-top--visible" : ""}`}
+      onClick={scrollToTop}
       aria-label="Scroll to top"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
-      <ArrowUp />
+      <svg className="scroll-top__progress" viewBox="0 0 48 48">
+        <circle
+          className="scroll-top__progress-bg"
+          cx="24"
+          cy="24"
+          r="21"
+          pathLength="100"
+        />
+
+        <circle
+          className="scroll-top__progress-bar"
+          cx="24"
+          cy="24"
+          r="21"
+          pathLength="100"
+          style={{
+            strokeDashoffset: 100 - progress,
+          }}
+        />
+      </svg>
+
+      <span className="scroll-top__icon">
+        <ArrowUp />
+      </span>
     </button>
   );
 }
