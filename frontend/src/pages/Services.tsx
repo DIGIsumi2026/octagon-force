@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { images } from "../data/imageAssets";
 import ServicesShowcase from "../components/services/ServicesShowcase";
+import WhyChooseUs from "../components/services/WhyChooseUs";
 
 const serviceHighlights = [
   "Security Services",
@@ -171,6 +172,7 @@ export default function Services() {
       </section>
       
       <ServicesShowcase />
+      <WhyChooseUs />
 
     </main>
   );

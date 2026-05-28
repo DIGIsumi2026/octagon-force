@@ -86,6 +86,8 @@ import cardTrasport from "../assets/images/service/service-transport.png";
 import cardLogistics from "../assets/images/service/service-logistics.jpg";
 import cardWaste from "../assets/images/service/service-waste-management.jpg";
 
+import whyChooseUsVideo from "../assets/images/service/why-choose-us.mp4";
+
 
 export const images = {
   brand: {
@@ -111,6 +113,7 @@ export const images = {
     solidWaste: serviceSolidWaste,
     heroVideo: serviceHeroVideo,
     heroThumbnail: serviceHeroThumbnail,
+    whyChooseUsVideo,
 
   cards: {
   securityCard: cardSecurity,
