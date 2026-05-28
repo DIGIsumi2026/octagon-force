@@ -5,6 +5,7 @@ import { images } from "../data/imageAssets";
 import ServicesShowcase from "../components/services/ServicesShowcase";
 import WhyChooseUs from "../components/services/WhyChooseUs";
 
+
 const serviceHighlights = [
   "Security Services",
   "Cleaning & Housekeeping",
