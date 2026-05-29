@@ -4,6 +4,7 @@ import { ArrowDown, ArrowRight } from "lucide-react";
 import { images } from "../data/imageAssets";
 import ServicesShowcase from "../components/services/ServicesShowcase";
 import WhyChooseUs from "../components/services/WhyChooseUs";
+import ServicesContactCta from "../components/services/ServicesContactCta";
 
 
 const serviceHighlights = [
@@ -174,6 +175,7 @@ export default function Services() {
       
       <ServicesShowcase />
       <WhyChooseUs />
+      <ServicesContactCta />
 
     </main>
   );

@@ -85,6 +85,7 @@ import cardCashTransport from "../assets/images/service/service-cash-transport.j
 import cardTrasport from "../assets/images/service/service-transport.png";
 import cardLogistics from "../assets/images/service/service-logistics.jpg";
 import cardWaste from "../assets/images/service/service-waste-management.jpg";
+import serviceContactCta from "../assets/images/service/service-contact-cta.png";
 
 import whyChooseUsVideo from "../assets/images/service/why-choose-us.mp4";
 
@@ -114,6 +115,7 @@ export const images = {
     heroVideo: serviceHeroVideo,
     heroThumbnail: serviceHeroThumbnail,
     whyChooseUsVideo,
+    contactCta: serviceContactCta,
 
   cards: {
   securityCard: cardSecurity,

@@ -40,6 +40,71 @@ body {
   overflow-x: hidden;
 }
 
+/* 
+   Global Custom Scrollbar
+   Applies to all pages */
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c79527 #07101d;
+}
+
+/* Chrome, Edge, Safari scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    linear-gradient(180deg, #07101d 0%, #0b1728 100%);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(180deg, #ffd36a 0%, #c79527 45%, #9f741b 100%);
+  border-radius: 999px;
+  border: 3px solid #07101d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 0 14px rgba(199, 149, 39, 0.28);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(180deg, #ffe08b 0%, #d8a32f 45%, #b7831d 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 0 18px rgba(199, 149, 39, 0.42);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background:
+    linear-gradient(180deg, #c79527 0%, #9f741b 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: #07101d;
+}
+
+/* thinner scrollbar on mobile/tablet */
+@media (max-width: 760px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-width: 2px;
+  }
+}
+
 /* Text selection color */
 ::selection {
   color: #07101d;
@@ -8440,5 +8505,218 @@ button,
     filter: none !important;
     opacity: 1 !important;
     animation: none !important;
+  }
+}
+
+/* =========================================================
+   Services Page - Contact CTA Section
+   ========================================================= */
+
+.services-contact-cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #ffffff;
+  background: #07101d;
+}
+
+.services-contact-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #07101d;
+}
+
+.services-contact-cta-bg img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) contrast(1.04) brightness(0.94);
+  transform-origin: center;
+}
+
+.services-contact-cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 76% 24%, rgba(201, 148, 31, 0.2), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.92) 0%,
+      rgba(3, 8, 17, 0.72) 42%,
+      rgba(3, 8, 17, 0.38) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 17, 0.12),
+      rgba(3, 8, 17, 0.72)
+    );
+  pointer-events: none;
+}
+
+.services-contact-cta-shell {
+  position: relative;
+  z-index: 2;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+}
+
+.services-contact-cta-content {
+  width: min(720px, 100%);
+  padding: clamp(38px, 5vw, 64px) 0;
+}
+
+.services-contact-cta-content h2 {
+  max-width: 720px;
+  margin: 20px 0 20px;
+  color: #ffffff;
+  font-size: clamp(3rem, 5.8vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.078em;
+  text-shadow: 0 18px 56px rgba(0, 0, 0, 0.42);
+}
+
+.services-contact-cta-content p {
+  max-width: 650px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.88;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+}
+
+.services-contact-cta-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.services-contact-cta-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 760;
+}
+
+.services-contact-cta-point svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  color: #c79527;
+}
+
+.services-contact-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.services-contact-cta-button,
+.services-contact-cta-secondary {
+  min-height: 56px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.32s ease,
+    border-color 0.32s ease,
+    color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+.services-contact-cta-button {
+  color: #07101d;
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%);
+  border: 1px solid rgba(255, 211, 106, 0.65);
+  box-shadow:
+    0 20px 48px rgba(201, 148, 31, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.services-contact-cta-secondary {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+}
+
+.services-contact-cta-button svg,
+.services-contact-cta-secondary svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.32s ease;
+}
+
+.services-contact-cta-button:hover,
+.services-contact-cta-secondary:hover {
+  transform: translateY(-4px);
+}
+
+.services-contact-cta-button:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 24px 54px rgba(255, 255, 255, 0.16);
+}
+
+.services-contact-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.services-contact-cta-button:hover svg {
+  transform: translateX(5px);
+}
+
+@media (max-width: 760px) {
+  .services-contact-cta-section,
+  .services-contact-cta-shell,
+  .services-contact-cta-bg img {
+    min-height: 640px;
+  }
+
+  .services-contact-cta-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 8, 17, 0.86) 0%,
+        rgba(3, 8, 17, 0.66) 48%,
+        rgba(3, 8, 17, 0.9) 100%
+      );
+  }
+
+  .services-contact-cta-content h2 {
+    font-size: 3rem;
+    line-height: 0.98;
+  }
+
+  .services-contact-cta-content p {
+    font-size: 0.96rem;
+  }
+
+  .services-contact-cta-actions {
+    display: grid;
+  }
+
+  .services-contact-cta-button,
+  .services-contact-cta-secondary {
+    width: 100%;
   }
 }
