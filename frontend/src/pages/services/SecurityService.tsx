@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { images } from "../../data/imageAssets";
+import SecurityServicesAccordion from "../services/SecurityServicesAccordion";
+import SecuritySolutionsHighlight from "../services/SecuritySolutionsHighlight";
 
 export default function SecurityService() {
   return (
@@ -51,6 +53,8 @@ export default function SecurityService() {
           </motion.div>
         </div>
       </section>
+      <SecurityServicesAccordion />
+      <SecuritySolutionsHighlight />
     </main>
   );
 }

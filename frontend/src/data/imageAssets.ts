@@ -91,6 +91,11 @@ import whyChooseUsVideo from "../assets/images/service/why-choose-us.mp4";
 
 //security service page
 import heroImage from "../assets/images/service/security/security-hero.jpg";
+import securityBouncers from "../assets/images/service/security/security-bouncers.png";
+import privateSecurity from "../assets/images/service/security/private-security.png";
+import vipProtection from "../assets/images/service/security/vip-protection.png";
+import armedUnarmedGuards from "../assets/images/service/security/armed-unarmed-guards.png";
+import staticSecurity from "../assets/images/service/security/static-security.png";
 
 
 export const images = {
@@ -131,6 +136,14 @@ export const images = {
   logisticsCard: cardLogistics,
   wasteCard: cardWaste,
   },
+
+  securityServices: {
+  bouncers: securityBouncers,
+  privateSecurity,
+  vipProtection,
+  armedUnarmedGuards,
+  staticSecurity,
+},
 },
 
 
