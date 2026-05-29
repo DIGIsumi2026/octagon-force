@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { motion } from "motion/react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { images } from "../../data/imageAssets";
+
+const serviceSubItems = [
+  { label: "All Services", path: "/services" },
+  { label: "Security Services", path: "/services/security" },
+  { label: "Cleaning & Housekeeping", path: "/services" },
+  { label: "Cash Transport", path: "/services" },
+  { label: "Transport Operations", path: "/services" },
+  { label: "Logistics Support", path: "/services" },
+  { label: "Solid Waste Management", path: "/services" },
+];
 
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
-  { label: "Services", path: "/services" },
   { label: "Projects", path: "/projects" },
   { label: "Contact", path: "/contact" },
 ];
@@ -15,6 +24,9 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isServicesActive = location.pathname.startsWith("/services");
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
@@ -45,11 +57,48 @@ export default function Navbar() {
         </Link>
 
         <nav className="desktop-links" aria-label="Main navigation">
-          {navItems.map((item) => (
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            About Us
+          </NavLink>
+
+          <div className="nav-dropdown">
+            <NavLink
+              to="/services"
+              className={`nav-dropdown__trigger ${isServicesActive ? "active" : ""}`}
+            >
+              Services
+              <ChevronDown />
+            </NavLink>
+
+            <div className="nav-dropdown__menu">
+              {serviceSubItems.map((item) => (
+                <NavLink
+                  key={item.label}
+                  to={item.path}
+                  end={item.path === "/services"}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+
+          {navItems.slice(2).map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
-              end={item.path === "/"}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               {item.label}
@@ -93,17 +142,63 @@ export default function Navbar() {
           </Link>
 
           <nav className="mobile-menu__links" aria-label="Mobile navigation">
-            {navItems.map((item) => (
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              About Us
+            </NavLink>
+
+            <div className="mobile-menu__service-group">
               <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.path === "/"}
-                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/services"
+                className={isServicesActive ? "active" : ""}
                 onClick={closeMenu}
               >
-                {item.label}
+                Services
               </NavLink>
-            ))}
+
+              <div className="mobile-menu__sub-links">
+                {serviceSubItems.slice(1).map((item) => (
+                  <NavLink
+                    key={item.label}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      isActive ? "mobile-sub-link active" : "mobile-sub-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Projects
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Contact
+            </NavLink>
           </nav>
         </div>
       </div>

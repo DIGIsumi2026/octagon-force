@@ -89,6 +89,9 @@ import serviceContactCta from "../assets/images/service/service-contact-cta.png"
 
 import whyChooseUsVideo from "../assets/images/service/why-choose-us.mp4";
 
+//security service page
+import heroImage from "../assets/images/service/security/security-hero.jpg";
+
 
 export const images = {
   brand: {
@@ -116,6 +119,9 @@ export const images = {
     heroThumbnail: serviceHeroThumbnail,
     whyChooseUsVideo,
     contactCta: serviceContactCta,
+
+    securityHero: heroImage,
+
 
   cards: {
   securityCard: cardSecurity,

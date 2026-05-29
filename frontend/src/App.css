@@ -240,6 +240,123 @@ button {
   }
 }
 
+/* =========================================================
+   Navbar Services Dropdown
+   ========================================================= */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-dropdown__trigger svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.4;
+  transition: transform 0.24s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown__trigger svg,
+.nav-dropdown:focus-within .nav-dropdown__trigger svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  z-index: 130;
+  min-width: 270px;
+  padding: 14px;
+  display: grid;
+  gap: 4px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(201, 148, 31, 0.14), transparent 36%),
+    rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(7, 16, 29, 0.08);
+  box-shadow:
+    0 26px 72px rgba(7, 16, 29, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  transform: translateX(-50%) translateY(12px) scale(0.96);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.28s ease,
+    visibility 0.28s ease,
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.nav-dropdown__menu a {
+  padding: 12px 14px;
+  border-radius: 16px;
+  color: rgba(7, 16, 34, 0.84);
+  font-size: 0.88rem;
+  font-weight: 800;
+  white-space: nowrap;
+  transition:
+    background 0.24s ease,
+    color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.nav-dropdown__menu a::after {
+  display: none;
+}
+
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a.active {
+  color: #07101d;
+  background: rgba(201, 148, 31, 0.14);
+  transform: translateX(4px);
+}
+
+.mobile-menu__service-group {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-menu__sub-links {
+  display: grid;
+  gap: 10px;
+  padding: 4px 0 6px 18px;
+  border-left: 2px solid rgba(201, 148, 31, 0.32);
+}
+
+.mobile-sub-link {
+  color: rgba(7, 16, 34, 0.68) !important;
+  font-size: 1rem !important;
+  font-weight: 750 !important;
+}
+
+.mobile-sub-link:hover,
+.mobile-sub-link.active {
+  color: #a67212 !important;
+}
+
+@media (max-width: 1180px) {
+  .nav-dropdown__menu {
+    display: none;
+  }
+}
+
 .desktop-links {
   display: flex;
   align-items: center;
@@ -8717,6 +8834,202 @@ button,
 
   .services-contact-cta-button,
   .services-contact-cta-secondary {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   Security Service Page Hero
+   ========================================================= */
+
+.security-service-page {
+  background: #ffffff;
+  color: #07101d;
+  overflow: hidden;
+}
+
+.security-service-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #ffffff;
+  background: #07101d;
+}
+
+.security-service-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #07101d;
+}
+
+.security-service-hero__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.08) contrast(1.05) brightness(0.92);
+  transform-origin: center;
+}
+
+.security-service-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(201, 148, 31, 0.18), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.92) 0%,
+      rgba(3, 8, 17, 0.74) 44%,
+      rgba(3, 8, 17, 0.36) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 17, 0.16),
+      rgba(3, 8, 17, 0.64)
+    );
+  pointer-events: none;
+}
+
+.security-service-hero__content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.4fr);
+  align-items: center;
+  gap: clamp(34px, 6vw, 80px);
+  padding: 160px 0 90px;
+}
+
+.security-service-hero__copy {
+  max-width: 820px;
+}
+
+.security-service-hero__copy h1 {
+  margin: 20px 0 22px;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 6.8vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.078em;
+  text-shadow: 0 20px 62px rgba(0, 0, 0, 0.42);
+}
+
+.security-service-hero__copy p {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.34);
+}
+
+.security-service-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.security-service-hero__button,
+.security-service-hero__secondary {
+  min-height: 56px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.32s ease,
+    color 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+.security-service-hero__button {
+  color: #07101d;
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%);
+  border: 1px solid rgba(255, 211, 106, 0.65);
+  box-shadow:
+    0 20px 48px rgba(201, 148, 31, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.security-service-hero__secondary {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.security-service-hero__button:hover,
+.security-service-hero__secondary:hover {
+  transform: translateY(-4px);
+}
+
+.security-service-hero__button:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.security-service-hero__button svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.32s ease;
+}
+
+.security-service-hero__button:hover svg {
+  transform: translateX(5px);
+}
+
+.security-service-hero__secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+
+@media (max-width: 980px) {
+  .security-service-hero__content {
+    grid-template-columns: 1fr;
+    padding: 140px 0 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .security-service-hero {
+    min-height: auto;
+  }
+
+  .security-service-hero__content {
+    min-height: auto;
+    padding: 132px 0 70px;
+  }
+
+  .security-service-hero__copy h1 {
+    font-size: 3.2rem;
+    line-height: 0.98;
+  }
+
+  .security-service-hero__copy p {
+    font-size: 0.96rem;
+  }
+
+  .security-service-hero__actions {
+    display: grid;
+  }
+
+  .security-service-hero__button,
+  .security-service-hero__secondary {
     width: 100%;
   }
 }

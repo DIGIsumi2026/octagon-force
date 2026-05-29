@@ -7,6 +7,7 @@ import CustomCursor from "./components/common/CustomCursor";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+  import SecurityService from "./pages/services/SecurityService";
 import Products from "./pages/Products";
 import Projects from "./pages/Projects";
 import Reviews from "./pages/Reviews";
@@ -49,6 +50,7 @@ export default function App() {
             </main>
           }
         />
+            <Route path="/services/security" element={<SecurityService />} />
 
         <Route
           path="/products"
@@ -100,6 +102,6 @@ export default function App() {
       <Footer />
       <ScrollTop />
       <CustomCursor/>
-    </BrowserRouter>
+      </BrowserRouter>
   );
 }
