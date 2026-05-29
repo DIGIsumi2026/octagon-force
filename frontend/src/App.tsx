@@ -13,6 +13,10 @@ import Projects from "./pages/Projects";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 
+
+
+import WhatsAppButton from "./components/common/WhatsAppButton";
+
 //Remove later 
 import Templates from "./pages/Templates";
 
@@ -98,6 +102,7 @@ export default function App() {
           }
         />
       </Routes>
+      <WhatsAppButton />
 
       <Footer />
       <ScrollTop />
