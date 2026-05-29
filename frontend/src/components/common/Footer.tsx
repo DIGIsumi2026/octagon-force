@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="brand-mark">
               <ShieldCheck size={21} />
             </span>
-            <span>OpenHome</span>
+            <span>octagon force</span>
           </a>
           <p>Smart security portfolio website for modern homes and businesses.</p>
         </div>
