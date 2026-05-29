@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { images } from "../../data/imageAssets";
 import SecurityServicesAccordion from "../services/SecurityServicesAccordion";
 import SecuritySolutionsHighlight from "../services/SecuritySolutionsHighlight";
+import ServicePillMarquee from "../services/ServicePillMarquee";
 
 export default function SecurityService() {
   return (
@@ -55,6 +56,8 @@ export default function SecurityService() {
       </section>
       <SecurityServicesAccordion />
       <SecuritySolutionsHighlight />
+      <ServicePillMarquee />
+
     </main>
   );
 }

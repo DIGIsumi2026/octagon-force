@@ -10022,3 +10022,167 @@ button,
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================================================
+   Service Pill Marquee Banner
+   Small moving service navigation bar
+   ========================================================= */
+
+.service-pill-marquee-section {
+  position: relative;
+  z-index: 5;
+  padding: 22px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(201, 148, 31, 0.08), transparent 28%),
+    linear-gradient(180deg, #07101d 0%, #081726 100%);
+}
+
+.service-pill-marquee-shell {
+  position: relative;
+}
+
+.service-pill-marquee-window {
+  position: relative;
+  width: min(100%, 1060px);
+  min-height: 58px;
+  margin: 0 auto;
+  padding: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035)),
+    rgba(7, 16, 29, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 22px 64px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.service-pill-marquee-window::before,
+.service-pill-marquee-window::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 90px;
+  pointer-events: none;
+}
+
+.service-pill-marquee-window::before {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 16, 29, 0.98),
+    rgba(7, 16, 29, 0)
+  );
+}
+
+.service-pill-marquee-window::after {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(7, 16, 29, 0.98),
+    rgba(7, 16, 29, 0)
+  );
+}
+
+.service-pill-marquee-track {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 9px;
+  animation: servicePillMarqueeMove 32s linear infinite;
+  will-change: transform;
+}
+
+.service-pill-marquee-window:hover .service-pill-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes servicePillMarqueeMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.service-pill-marquee-item {
+  min-height: 38px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.86);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.055));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  font-weight: 900;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: -0.015em;
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.26s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.26s ease,
+    color 0.26s ease,
+    border-color 0.26s ease,
+    box-shadow 0.26s ease;
+}
+
+.service-pill-marquee-item:hover,
+.service-pill-marquee-item.is-active {
+  transform: translateY(-2px);
+  color: #07101d;
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%);
+  border-color: rgba(255, 211, 106, 0.62);
+  box-shadow:
+    0 16px 34px rgba(201, 148, 31, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+@media (max-width: 760px) {
+  .service-pill-marquee-section {
+    padding: 16px 0;
+  }
+
+  .service-pill-marquee-window {
+    width: 100%;
+    min-height: 54px;
+    padding: 8px;
+  }
+
+  .service-pill-marquee-window::before,
+  .service-pill-marquee-window::after {
+    width: 44px;
+  }
+
+  .service-pill-marquee-track {
+    gap: 8px;
+    animation-duration: 24s;
+  }
+
+  .service-pill-marquee-item {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-pill-marquee-track {
+    animation: none !important;
+  }
+}
