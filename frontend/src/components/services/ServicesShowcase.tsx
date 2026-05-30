@@ -123,11 +123,6 @@ export default function ServicesShowcase() {
                   <div className="service-flip-card__front-content">
                     <span>{service.tag}</span>
                     <h3>{service.title}</h3>
-
-                    <Link to={service.href} className="service-card-button">
-                      Read More
-                      <ArrowRight />
-                    </Link>
                   </div>
                 </div>
 
