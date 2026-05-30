@@ -97,6 +97,12 @@ import vipProtection from "../assets/images/service/security/vip-protection.png"
 import armedUnarmedGuards from "../assets/images/service/security/armed-unarmed-guards.png";
 import staticSecurity from "../assets/images/service/security/static-security.png";
 
+//cleaning & housekeeping page 
+import cleaningHero from "../assets/images/service/cleaning/cleaningHero.jpg"
+import cleaningSanitizing from "../assets/images//service/cleaning/sanitizing.png";
+import cleaningHouses from "../assets/images//service/cleaning/cleaning-houses.png";
+import cleaningOffices from "../assets/images/service/cleaning/cleaning-offices.png";
+import cleaningGardensLandscaping from "../assets/images/service/cleaning/gardens-landscaping.png";
 
 export const images = {
   brand: {
@@ -144,6 +150,14 @@ export const images = {
   armedUnarmedGuards,
   staticSecurity,
 },
+
+  cleaningServices: {
+    cleaningHero,
+    sanitizing: cleaningSanitizing,
+    houses: cleaningHouses,
+    offices: cleaningOffices,
+    gardensLandscaping: cleaningGardensLandscaping,
+  },
 },
 
 

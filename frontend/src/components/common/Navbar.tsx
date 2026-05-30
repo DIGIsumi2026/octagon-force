@@ -7,7 +7,7 @@ import { images } from "../../data/imageAssets";
 const serviceSubItems = [
   { label: "All Services", path: "/services" },
   { label: "Security Services", path: "/services/security" },
-  { label: "Cleaning & Housekeeping", path: "/services" },
+  { label: "Cleaning & Housekeeping", path: "/services/cleaning-housekeeping" },
   { label: "Cash Transport", path: "/services" },
   { label: "Transport Operations", path: "/services" },
   { label: "Logistics Support", path: "/services" },
