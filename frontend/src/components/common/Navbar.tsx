@@ -8,7 +8,7 @@ const serviceSubItems = [
   { label: "All Services", path: "/services" },
   { label: "Security Services", path: "/services/security" },
   { label: "Cleaning & Housekeeping", path: "/services/cleaning-housekeeping" },
-  { label: "Cash Transport", path: "/services" },
+  { label: "Cash Transport", path: "/services/cash-transport" },
   { label: "Transport Operations", path: "/services" },
   { label: "Logistics Support", path: "/services" },
   { label: "Solid Waste Management", path: "/services" },

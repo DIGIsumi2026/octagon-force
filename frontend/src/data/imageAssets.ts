@@ -104,6 +104,15 @@ import cleaningHouses from "../assets/images//service/cleaning/cleaning-houses.p
 import cleaningOffices from "../assets/images/service/cleaning/cleaning-offices.png";
 import cleaningGardensLandscaping from "../assets/images/service/cleaning/gardens-landscaping.png";
 
+//cash transport page
+import cashHero from "../assets/images/service/cash-transport/service-cash-transport.jpg";
+import cashRiskManagement from "../assets/images/service/cash-transport/risk-management.png";
+import cashArmedPersonnel from "../assets/images/service/cash-transport/armed-personnel.png";
+import cashSecureVehicles from "../assets/images/service/cash-transport/secure-vehicles.png";
+import cashSafeStorage from "../assets/images/service/cash-transport/safe-storage.png";
+
+
+
 export const images = {
   brand: {
     logo:companyLogo,
@@ -158,6 +167,14 @@ export const images = {
     offices: cleaningOffices,
     gardensLandscaping: cleaningGardensLandscaping,
   },
+
+  cashTransportServices: {
+  cashTransportHero: cashHero,
+  riskManagement: cashRiskManagement,
+  armedPersonnel: cashArmedPersonnel,
+  secureVehicles: cashSecureVehicles,
+  safeStorage: cashSafeStorage,
+},
 },
 
 

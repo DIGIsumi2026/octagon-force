@@ -10393,3 +10393,74 @@ button,
     flex: initial !important;
   }
 }
+
+/* =========================================================
+   Cash Transport Service Page
+   ========================================================= */
+
+.cash-transport-page {
+  background: #ffffff;
+}
+
+/* Hero */
+.cash-transport-hero__overlay {
+  background:
+    radial-gradient(circle at 76% 24%, rgba(201, 148, 31, 0.2), transparent 34%),
+    radial-gradient(circle at 14% 86%, rgba(120, 20, 28, 0.24), transparent 38%),
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.92) 0%,
+      rgba(3, 8, 17, 0.72) 44%,
+      rgba(3, 8, 17, 0.34) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 17, 0.12),
+      rgba(3, 8, 17, 0.68)
+    ) !important;
+}
+
+.cash-transport-hero__badge svg {
+  color: #c79527;
+}
+
+/* Accordion tuning for 4 cards */
+.cash-transport-accordion-section .security-accordion {
+  max-width: none !important;
+}
+
+.cash-transport-accordion-section .security-accordion-card {
+  flex: 1.15 1 0 !important;
+}
+
+.cash-transport-accordion-section .security-accordion-card.is-active {
+  flex: 2.65 1 0 !important;
+}
+
+.cash-transport-accordion-card__icon {
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%) !important;
+}
+
+/* Slightly stronger cinematic tone */
+.cash-transport-accordion-section .security-accordion-card img {
+  filter: grayscale(0.12) saturate(0.98) contrast(1.04) brightness(0.86) !important;
+}
+
+.cash-transport-accordion-section .security-accordion-card.is-active img {
+  filter: grayscale(0) saturate(1.06) contrast(1.05) brightness(0.96) !important;
+}
+
+/* Cash highlight background */
+.cash-transport-solutions-highlight__bg {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(201, 148, 31, 0.22), transparent 34%),
+    radial-gradient(circle at 14% 84%, rgba(120, 20, 28, 0.18), transparent 36%),
+    linear-gradient(180deg, #07101d 0%, #081726 100%) !important;
+}
+
+@media (max-width: 1100px) {
+  .cash-transport-accordion-section .security-accordion-card,
+  .cash-transport-accordion-section .security-accordion-card.is-active {
+    flex: initial !important;
+  }
+}
