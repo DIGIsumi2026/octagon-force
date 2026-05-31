@@ -37,6 +37,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", menuOpen);
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
+  }, [menuOpen]);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -121,8 +129,12 @@ export default function Navbar() {
       <div
         className={`mobile-menu ${menuOpen ? "mobile-menu--open" : ""}`}
         aria-hidden={!menuOpen}
+        onClick={closeMenu}
       >
-        <div className="mobile-menu__panel">
+        <div
+          className="mobile-menu__panel"
+          onClick={(event) => event.stopPropagation()}
+        >
           <button
             className="icon-button mobile-menu__close"
             type="button"
