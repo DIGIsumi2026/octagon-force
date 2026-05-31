@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -134,7 +134,12 @@ export default function Navbar() {
         <div
           className="mobile-menu__panel"
           onClick={(event) => event.stopPropagation()}
-        >
+          style={
+             {
+               "--sidebar-bg": `url(${images.navigation.sidebarBg})`,
+              } as CSSProperties
+          }
+          >
           <button
             className="icon-button mobile-menu__close"
             type="button"

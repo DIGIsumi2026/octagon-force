@@ -3,6 +3,7 @@ import companyLogo from "../assets/images/company-logo.png";
 import aboutVideoThumbnail from "../assets/images/about-video-thumbnail.png";
 
 //images 
+import sidebarBg from "../assets/images/navigation/sidebar-bg.png";
 import heroH1 from "../assets/images/header-bg1.jpg";
 import heroH2 from "../assets/images/header-bg2.jpg";
 import heroH3 from "../assets/images/header-bg3.jpg";
@@ -125,6 +126,10 @@ export const images = {
   brand: {
     logo:companyLogo,
   },
+
+  navigation: {
+  sidebarBg,
+},
 
   hero: {
     H1: heroH1,
