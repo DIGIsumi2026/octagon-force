@@ -111,6 +111,14 @@ import cashArmedPersonnel from "../assets/images/service/cash-transport/armed-pe
 import cashSecureVehicles from "../assets/images/service/cash-transport/secure-vehicles.png";
 import cashSafeStorage from "../assets/images/service/cash-transport/safe-storage.png";
 
+//transport service 
+import transportHero from "../assets/images/transport/transportHero.jpg";
+import transportAssetBased from "../assets/images/transport/asset-based-transport.png";
+import transportProfessionalDrivers from "../assets/images/transport/professional-drivers.png"
+import transportTopLineEquipment from "../assets/images/transport/top-line-equipment.png";
+import transportFleetMaintenance from "../assets/images/transport/fleet-maintenance.png";
+import transportCustomerSupport from "../assets/images/transport/customer-support.png";
+
 
 
 export const images = {
@@ -169,12 +177,22 @@ export const images = {
   },
 
   cashTransportServices: {
-  cashTransportHero: cashHero,
-  riskManagement: cashRiskManagement,
-  armedPersonnel: cashArmedPersonnel,
-  secureVehicles: cashSecureVehicles,
-  safeStorage: cashSafeStorage,
+   cashTransportHero: cashHero,
+   riskManagement: cashRiskManagement,
+   armedPersonnel: cashArmedPersonnel,
+   secureVehicles: cashSecureVehicles,
+   safeStorage: cashSafeStorage,
 },
+
+transportServices: {
+  transportHero,
+  assetBased: transportAssetBased,
+  professionalDrivers: transportProfessionalDrivers,
+  topLineEquipment: transportTopLineEquipment,
+  fleetMaintenance: transportFleetMaintenance,
+  customerSupport: transportCustomerSupport,
+},
+
 },
 
 

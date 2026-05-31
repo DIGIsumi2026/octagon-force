@@ -10465,3 +10465,77 @@ button,
   }
 }
 
+/* =========================================================
+   Transport Operations Service Page
+   ========================================================= */
+
+.transport-operations-page {
+  background: #ffffff;
+}
+
+/* Hero */
+.transport-operations-hero__overlay {
+  background:
+    radial-gradient(circle at 76% 24%, rgba(201, 148, 31, 0.16), transparent 34%),
+    radial-gradient(circle at 14% 86%, rgba(7, 152, 183, 0.16), transparent 38%),
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.9) 0%,
+      rgba(3, 8, 17, 0.7) 44%,
+      rgba(3, 8, 17, 0.28) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 17, 0.12),
+      rgba(3, 8, 17, 0.62)
+    ) !important;
+}
+
+.transport-operations-hero__badge svg {
+  color: #c79527;
+}
+
+.transport-operations-hero .security-service-hero__image img {
+  object-position: center right;
+}
+
+/* Accordion tuning */
+.transport-operations-accordion-section .security-accordion {
+  max-width: none !important;
+}
+
+.transport-operations-accordion-section .security-accordion-card {
+  flex: 1.12 1 0 !important;
+}
+
+.transport-operations-accordion-section .security-accordion-card.is-active {
+  flex: 2.85 1 0 !important;
+}
+
+.transport-operations-accordion-card__icon {
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%) !important;
+}
+
+/* Transport images: clear but still cinematic */
+.transport-operations-accordion-section .security-accordion-card img {
+  filter: grayscale(0.1) saturate(0.98) contrast(1.04) brightness(0.88) !important;
+}
+
+.transport-operations-accordion-section .security-accordion-card.is-active img {
+  filter: grayscale(0) saturate(1.06) contrast(1.04) brightness(0.98) !important;
+}
+
+/* Highlight background */
+.transport-operations-solutions-highlight__bg {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(201, 148, 31, 0.2), transparent 34%),
+    radial-gradient(circle at 14% 84%, rgba(7, 152, 183, 0.15), transparent 36%),
+    linear-gradient(180deg, #07101d 0%, #081726 100%) !important;
+}
+
+@media (max-width: 1100px) {
+  .transport-operations-accordion-section .security-accordion-card,
+  .transport-operations-accordion-section .security-accordion-card.is-active {
+    flex: initial !important;
+  }
+}
