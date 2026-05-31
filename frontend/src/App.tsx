@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import ScrollTop from "./components/common/ScrollTop";
+import ScrollToHash from "./components/common/ScrollToHash";
 import CustomCursor from "./components/common/CustomCursor";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -29,6 +30,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToHash />
 
       <Routes>
         <Route
