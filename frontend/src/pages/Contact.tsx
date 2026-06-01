@@ -396,7 +396,10 @@ export default function Contact() {
             </div>
 
             <a
-              href={activeBranch.mapUrl}
+               href={activeBranch.mapUrl}
+               target="_blank"
+               rel="noreferrer"
+               className="contact-map-info__button"
             >
               Open In Google Maps
               <ArrowRight />
