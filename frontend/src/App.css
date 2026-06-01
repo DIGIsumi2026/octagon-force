@@ -10870,3 +10870,78 @@ button,
     flex: initial !important;
   }
 }
+
+/* =========================================================
+   Solid Waste Management Service Page
+   ========================================================= */
+
+.solid-waste-page {
+  background: #ffffff;
+}
+
+/* Hero */
+.solid-waste-hero__overlay {
+  background:
+    radial-gradient(circle at 76% 24%, rgba(201, 148, 31, 0.16), transparent 34%),
+    radial-gradient(circle at 14% 86%, rgba(37, 163, 92, 0.18), transparent 38%),
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.91) 0%,
+      rgba(3, 8, 17, 0.72) 44%,
+      rgba(3, 8, 17, 0.3) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 8, 17, 0.12),
+      rgba(3, 8, 17, 0.64)
+    ) !important;
+}
+
+.solid-waste-hero__badge svg {
+  color: #c79527;
+}
+
+.solid-waste-hero .security-service-hero__image img {
+  object-position: center right;
+}
+
+/* Accordion tuning for 4 cards */
+.solid-waste-accordion-section .security-accordion {
+  max-width: none !important;
+}
+
+.solid-waste-accordion-section .security-accordion-card {
+  flex: 1.15 1 0 !important;
+}
+
+.solid-waste-accordion-section .security-accordion-card.is-active {
+  flex: 2.65 1 0 !important;
+}
+
+.solid-waste-accordion-card__icon {
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%) !important;
+}
+
+/* Image tone */
+.solid-waste-accordion-section .security-accordion-card img {
+  filter: grayscale(0.08) saturate(0.98) contrast(1.04) brightness(0.88) !important;
+}
+
+.solid-waste-accordion-section .security-accordion-card.is-active img {
+  filter: grayscale(0) saturate(1.08) contrast(1.04) brightness(0.98) !important;
+}
+
+/* Highlight background */
+.solid-waste-solutions-highlight__bg {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(201, 148, 31, 0.2), transparent 34%),
+    radial-gradient(circle at 14% 84%, rgba(37, 163, 92, 0.18), transparent 36%),
+    linear-gradient(180deg, #07101d 0%, #081726 100%) !important;
+}
+
+@media (max-width: 1100px) {
+  .solid-waste-accordion-section .security-accordion-card,
+  .solid-waste-accordion-section .security-accordion-card.is-active {
+    flex: initial !important;
+  }
+}

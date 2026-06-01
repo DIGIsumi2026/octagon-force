@@ -13,6 +13,7 @@ import Services from "./pages/Services";
   import CashTransportService from "./pages/services/CashTransportService";
   import TransportOperationsService from "./pages/services/TransportOperationsService";
   import LogisticsService from "./pages/services/LogisticsService";
+  import SolidWasteManagementService from "./pages/services/SolidWasteManagementService";
 import Products from "./pages/Products";
 import Projects from "./pages/Projects";
 import Reviews from "./pages/Reviews";
@@ -64,7 +65,8 @@ export default function App() {
             <Route path="/services/cleaning-housekeeping" element={<CleaningHousekeepingService />} />
             <Route path="/services/cash-transport" element={<CashTransportService />} /> 
             <Route path="/services/transport" element={<TransportOperationsService />} />     
-            <Route path="/services/logistics" element={<LogisticsService />} />      
+            <Route path="/services/logistics" element={<LogisticsService />} /> 
+            <Route path="/services/solid-waste-management" element={<SolidWasteManagementService />}/>     
         <Route
           path="/products"
           element={

@@ -127,6 +127,14 @@ import logisticsFleetPositioning from "../assets/images/service/logistics/fleet-
 import logisticsRapidCoordination from "../assets/images/service/logistics/rapid-coordination.png";
 import logisticsCustomizedConsultancy from "../assets/images/service/logistics/customized-consultancy.png";
 
+//solid waste service page
+import solidHero from "../assets/images/service/solid-waste/solid-hero.jpg";
+import wasteRemovalCleanup from "../assets/images/service/solid-waste/waste-removal-cleanup.png";
+import residentialWasteHandling from "../assets/images/service/solid-waste/residential-waste-handling.png";
+import officeJanitorialWaste from "../assets/images/service/solid-waste/office-janitorial-waste.png";
+import gardenWasteCleaning from "../assets/images/service/solid-waste/garden-waste-cleaning.png";
+
+
 
 
 export const images = {
@@ -211,6 +219,14 @@ logisticsServices: {
   fleetPositioning: logisticsFleetPositioning,
   rapidCoordination: logisticsRapidCoordination,
   customizedConsultancy: logisticsCustomizedConsultancy,
+},
+
+solidWasteServices: {
+  solidHero,
+  wasteRemoval: wasteRemovalCleanup,
+  residentialWaste: residentialWasteHandling,
+  officeWaste: officeJanitorialWaste,
+  gardenWaste: gardenWasteCleaning,
 },
 },
 
