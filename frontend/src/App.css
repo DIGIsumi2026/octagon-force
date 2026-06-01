@@ -10946,20 +10946,16 @@ button,
   }
 }
 
-/* =========================================================
-   Projects Page
-   Hero + Queue Presentation + Brief + CTA
-   ========================================================= */
+/* project page  */
 
 .projects-page {
+  position: relative;
+  overflow: hidden;
   background:
     linear-gradient(180deg, #ffffff 0%, #f8f4ea 100%);
-  overflow: hidden;
 }
 
-/* =========================
-   Projects Hero
-   ========================= */
+/* hero section  */
 
 .projects-hero {
   position: relative;
@@ -10970,18 +10966,41 @@ button,
   background: #07101d;
 }
 
+/* Hero image */
+.projects-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.projects-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  filter: saturate(1.03) contrast(1.05) brightness(0.82);
+}
+
+/* Hero overlay */
 .projects-hero__bg {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       90deg,
-      rgba(3, 8, 17, 0.94) 0%,
-      rgba(3, 8, 17, 0.76) 42%,
-      rgba(3, 8, 17, 0.38) 100%
+      rgba(3, 8, 17, 0.96) 0%,
+      rgba(3, 8, 17, 0.84) 40%,
+      rgba(3, 8, 17, 0.52) 68%,
+      rgba(3, 8, 17, 0.28) 100%
     ),
-    radial-gradient(circle at 78% 24%, rgba(201, 149, 39, 0.24), transparent 34%),
-    linear-gradient(135deg, #07101d 0%, #0e1726 58%, #02050a 100%);
+    radial-gradient(
+      circle at 78% 24%,
+      rgba(201, 149, 39, 0.26),
+      transparent 36%
+    );
+  pointer-events: none;
 }
 
 .projects-hero__bg::after {
@@ -10995,10 +11014,12 @@ button,
   background-size: 46px 46px;
 }
 
+/* Hero content */
 .projects-hero__content {
   position: relative;
   z-index: 2;
   padding-top: 130px;
+  padding-bottom: 72px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 390px;
   gap: 56px;
@@ -11006,13 +11027,14 @@ button,
 }
 
 .projects-hero__copy {
-  max-width: 850px;
+  max-width: 900px;
   color: #ffffff;
 }
 
 .projects-hero__copy h1 {
   margin: 18px 0 24px;
-  font-size: clamp(4.2rem, 8vw, 8.5rem);
+  max-width: 980px;
+  font-size: clamp(4rem, 8vw, 8.5rem);
   line-height: 0.9;
   letter-spacing: -0.09em;
 }
@@ -11020,7 +11042,7 @@ button,
 .projects-hero__copy p {
   max-width: 720px;
   margin: 0 0 34px;
-  color: rgba(255, 255, 255, 0.74);
+  color: rgba(255, 255, 255, 0.76);
   font-size: clamp(1rem, 1.4vw, 1.18rem);
   line-height: 1.72;
 }
@@ -11039,6 +11061,7 @@ button,
   color: #07101d;
   background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%);
   font-weight: 900;
+  text-decoration: none;
   box-shadow: 0 18px 42px rgba(201, 149, 39, 0.24);
   transition:
     transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
@@ -11059,6 +11082,7 @@ button,
   height: 18px;
 }
 
+/* Hero stats */
 .projects-hero__stats {
   display: grid;
   gap: 18px;
@@ -11070,7 +11094,11 @@ button,
   border-radius: 28px;
   color: #ffffff;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.04)
+    ),
     rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(18px);
@@ -11090,19 +11118,26 @@ button,
   margin-top: 12px;
   color: rgba(255, 255, 255, 0.72);
   font-weight: 700;
+  line-height: 1.35;
 }
 
-/* =========================
-   Project Presentation
-   ========================= */
+/* project presentation */
 
 .project-presentation-section {
   position: relative;
   padding: clamp(90px, 8vw, 135px) 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 12% 18%, rgba(201, 149, 39, 0.14), transparent 34%),
-    radial-gradient(circle at 88% 82%, rgba(7, 16, 29, 0.08), transparent 38%),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(201, 149, 39, 0.14),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(7, 16, 29, 0.08),
+      transparent 38%
+    ),
     linear-gradient(180deg, #fffaf0 0%, #ffffff 50%, #f8f0df 100%);
 }
 
@@ -11115,12 +11150,20 @@ button,
     linear-gradient(rgba(7, 16, 29, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(7, 16, 29, 0.045) 1px, transparent 1px);
   background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, transparent, #000 16%, #000 84%, transparent);
+  mask-image: linear-gradient(
+    180deg,
+    transparent,
+    #000 16%,
+    #000 84%,
+    transparent
+  );
 }
 
 .project-presentation-container {
-  width: min(100% - 42px, 1520px);
-  max-width: 1520px;
+  position: relative;
+  z-index: 2;
+  width: min(100% - 42px, 1640px) !important;
+  max-width: 1640px !important;
 }
 
 .project-presentation-header {
@@ -11146,12 +11189,11 @@ button,
   line-height: 1.75;
 }
 
-/* Main single showcase container */
 .project-queue-showcase {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: clamp(700px, 82vh, 860px);
+  min-height: clamp(720px, 82vh, 880px);
   border-radius: clamp(34px, 4vw, 58px);
   overflow: hidden;
   background: #07101d;
@@ -11163,7 +11205,6 @@ button,
   isolation: isolate;
 }
 
-/* Active image fills full container */
 .project-queue-showcase__active-bg {
   position: absolute;
   inset: 0;
@@ -11174,9 +11215,12 @@ button,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  transition:
+    transform 0.48s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.38s ease;
 }
 
-/* Stronger overlay so headings always readable */
 .project-queue-showcase__shade {
   position: absolute;
   inset: 0;
@@ -11184,16 +11228,16 @@ button,
   background:
     linear-gradient(
       90deg,
-      rgba(3, 8, 17, 0.95) 0%,
-      rgba(3, 8, 17, 0.86) 34%,
-      rgba(3, 8, 17, 0.52) 62%,
-      rgba(3, 8, 17, 0.22) 100%
+      rgba(3, 8, 17, 0.96) 0%,
+      rgba(3, 8, 17, 0.88) 34%,
+      rgba(3, 8, 17, 0.58) 62%,
+      rgba(3, 8, 17, 0.24) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(3, 8, 17, 0.12) 0%,
-      rgba(3, 8, 17, 0.2) 46%,
-      rgba(3, 8, 17, 0.82) 100%
+      rgba(3, 8, 17, 0.16) 0%,
+      rgba(3, 8, 17, 0.22) 44%,
+      rgba(3, 8, 17, 0.84) 100%
     );
   pointer-events: none;
 }
@@ -11203,15 +11247,22 @@ button,
   inset: 0;
   z-index: 2;
   background:
-    radial-gradient(circle at 18% 22%, rgba(201, 149, 39, 0.2), transparent 30%),
-    radial-gradient(circle at 82% 80%, rgba(7, 152, 183, 0.12), transparent 34%);
+    radial-gradient(
+      circle at 18% 22%,
+      rgba(201, 149, 39, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 82% 80%,
+      rgba(7, 152, 183, 0.12),
+      transparent 34%
+    );
   pointer-events: none;
 }
 
-/* Active project text */
 .project-queue-showcase__content {
   position: absolute;
-  left: clamp(30px, 5vw, 76px);
+  left: clamp(32px, 5vw, 78px);
   top: 46%;
   z-index: 5;
   width: min(610px, 44vw);
@@ -11228,26 +11279,25 @@ button,
   line-height: 1;
 }
 
-/* No white card behind logo */
 .project-queue-showcase__logo {
-  width: clamp(170px, 15vw, 245px);
+  width: clamp(170px, 15vw, 250px);
   min-height: 92px;
   margin-bottom: 22px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: transparent;
-  box-shadow: none;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .project-queue-showcase__logo img {
   width: 100%;
-  max-height: 92px;
+  max-height: 94px;
   object-fit: contain;
   object-position: left center;
   filter:
-    drop-shadow(0 16px 26px rgba(0, 0, 0, 0.34))
-    drop-shadow(0 0 18px rgba(255, 255, 255, 0.12));
+    drop-shadow(0 16px 26px rgba(0, 0, 0, 0.36))
+    drop-shadow(0 0 18px rgba(255, 255, 255, 0.14));
 }
 
 .project-queue-showcase__category {
@@ -11285,7 +11335,11 @@ button,
   border-radius: 16px;
   color: rgba(255, 255, 255, 0.86);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.115), rgba(255, 255, 255, 0.05));
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.115),
+      rgba(255, 255, 255, 0.05)
+    );
   border: 1px solid rgba(255, 255, 255, 0.13);
   font-size: 0.88rem;
   font-weight: 780;
@@ -11315,7 +11369,6 @@ button,
   padding: 0 24px;
 }
 
-/* Floating active icon */
 .project-queue-showcase__badge {
   position: absolute;
   right: clamp(24px, 3vw, 48px);
@@ -11338,7 +11391,6 @@ button,
   height: 30px;
 }
 
-/* Thumbnail queue */
 .project-queue-showcase__thumb-queue {
   position: absolute;
   right: clamp(22px, 3vw, 44px);
@@ -11347,17 +11399,21 @@ button,
   display: flex;
   align-items: flex-end;
   gap: 14px;
-  max-width: min(760px, 58vw);
+  max-width: min(780px, 58vw);
   padding: 16px;
   border-radius: 32px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.045));
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.045)
+    );
   border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
-/* Thumbnail cards */
+/* Preview cards */
 .project-queue-thumb {
   position: relative;
   width: clamp(92px, 8vw, 128px);
@@ -11374,21 +11430,22 @@ button,
     inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   transform-origin: bottom center;
   transition:
-    width 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-    height 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.25s ease,
-    opacity 0.2s ease;
+    width 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.34s ease,
+    opacity 0.28s ease;
 }
 
 .project-queue-thumb::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
-    linear-gradient(180deg, transparent 28%, rgba(3, 8, 17, 0.84)),
-    linear-gradient(90deg, rgba(3, 8, 17, 0.12), transparent);
-  transition: opacity 0.25s ease;
+    linear-gradient(180deg, transparent 28%, rgba(3, 8, 17, 0.86)),
+    linear-gradient(90deg, rgba(3, 8, 17, 0.14), transparent);
+  pointer-events: none;
 }
 
 .project-queue-thumb img {
@@ -11398,8 +11455,8 @@ button,
   transform: scale(1.06);
   filter: saturate(0.95) contrast(1.04) brightness(0.84);
   transition:
-    transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.24s ease;
+    transform 0.52s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.34s ease;
 }
 
 .project-queue-thumb:hover,
@@ -11418,35 +11475,14 @@ button,
   filter: saturate(1.08) contrast(1.06) brightness(0.98);
 }
 
-/* No white chip behind preview logos */
 .project-queue-thumb__logo {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  z-index: 3;
-  width: 64px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.project-queue-thumb__logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter:
-    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.48))
-    drop-shadow(0 0 8px rgba(255, 255, 255, 0.18));
-  transform: none;
+  display: none !important;
 }
 
 .project-queue-thumb__number {
   position: absolute;
   right: 12px;
-  top: 11px;
+  top: 12px;
   z-index: 3;
   color: rgba(255, 255, 255, 0.84);
   font-size: 0.8rem;
@@ -11466,9 +11502,7 @@ button,
   text-align: left;
 }
 
-/* =========================
-   Brief Section
-   ========================= */
+/* project breif section */
 
 .projects-brief-section {
   position: relative;
@@ -11482,8 +11516,16 @@ button,
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 80% 20%, rgba(201, 149, 39, 0.22), transparent 36%),
-    radial-gradient(circle at 16% 78%, rgba(7, 152, 183, 0.12), transparent 34%),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(201, 149, 39, 0.22),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 16% 78%,
+      rgba(7, 152, 183, 0.12),
+      transparent 34%
+    ),
     linear-gradient(180deg, #07101d 0%, #081726 100%);
 }
 
@@ -11520,7 +11562,11 @@ button,
   padding: 28px;
   border-radius: 28px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.04)
+    ),
     rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -11542,49 +11588,183 @@ button,
 .projects-brief-section__cards p {
   margin: 0;
   color: rgba(255, 255, 255, 0.64);
+  line-height: 1.6;
 }
 
-/* =========================
-   Contact CTA
-   ========================= */
+/* contact cta */
 
 .projects-contact-cta {
-  padding: 120px 0;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(201, 149, 39, 0.16), transparent 32%),
-    linear-gradient(180deg, #ffffff 0%, #fff8ea 100%);
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #07101d !important;
+}
+
+.projects-contact-cta__container {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .projects-contact-cta__panel {
-  min-height: 460px;
-  padding: clamp(36px, 5vw, 70px);
-  border-radius: 44px;
+  position: relative;
+  width: 100%;
+  min-height: 100svh !important;
+  padding:
+    clamp(130px, 13vw, 180px)
+    clamp(24px, 8vw, 128px)
+    clamp(90px, 9vw, 130px) !important;
+
+  display: grid;
+  align-content: center;
+
+  border-radius: 0 !important;
+  overflow: hidden;
   color: #ffffff;
+
   background:
-    linear-gradient(90deg, rgba(3, 8, 17, 0.92), rgba(3, 8, 17, 0.58)),
-    radial-gradient(circle at 80% 28%, rgba(201, 149, 39, 0.28), transparent 38%),
-    linear-gradient(135deg, #07101d 0%, #101b2b 100%);
-  box-shadow: 0 34px 90px rgba(7, 16, 29, 0.18);
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.9) 0%,
+      rgba(3, 8, 17, 0.72) 42%,
+      rgba(3, 8, 17, 0.42) 67%,
+      rgba(3, 8, 17, 0.22) 100%
+    ),
+    radial-gradient(
+      circle at 68% 34%,
+      rgba(201, 149, 39, 0.3),
+      transparent 34%
+    ),
+    var(--projects-cta-bg);
+
+  background-size: cover !important;
+  background-position: center right !important;
+  background-repeat: no-repeat !important;
+
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Grid texture overlay */
+.projects-contact-cta__panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+/* Optional dark left fade for text readability */
+.projects-contact-cta__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.82) 0%,
+      rgba(3, 8, 17, 0.38) 48%,
+      transparent 100%
+    );
+  pointer-events: none;
+}
+
+/* Keep content above overlays */
+.projects-contact-cta__panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Text layout */
+.projects-contact-cta__panel .eyebrow {
+  margin-bottom: 18px;
 }
 
 .projects-contact-cta__panel h2 {
-  max-width: 840px;
-  margin: 18px 0 18px;
-  font-size: clamp(2.8rem, 5.6vw, 6rem);
-  line-height: 0.95;
-  letter-spacing: -0.08em;
+  max-width: 760px;
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-size: clamp(3rem, 5.8vw, 6.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.085em;
 }
 
 .projects-contact-cta__panel p {
-  max-width: 760px;
+  max-width: 700px;
   margin: 0 0 34px;
-  color: rgba(255, 255, 255, 0.72);
-  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1rem, 1.15vw, 1.12rem);
+  line-height: 1.75;
 }
 
-/* =========================
-   Responsive
-   ========================= */
+/* CTA button */
+.projects-contact-cta__button {
+  width: fit-content;
+  min-height: 58px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 999px;
+  color: #07101d;
+  background: linear-gradient(135deg, #ffd36a 0%, #c79527 100%);
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow:
+    0 20px 50px rgba(201, 149, 39, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.46);
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
+}
+
+.projects-contact-cta__button:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 28px 68px rgba(201, 149, 39, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.52);
+}
+
+.projects-contact-cta__button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .projects-contact-cta,
+  .projects-contact-cta__panel {
+    min-height: 92svh !important;
+  }
+
+  .projects-contact-cta__panel {
+    padding:
+      120px 24px
+      84px !important;
+    background-position: center !important;
+  }
+
+  .projects-contact-cta__panel h2 {
+    font-size: 3.2rem;
+    line-height: 0.94;
+  }
+
+  .projects-contact-cta__panel p {
+    font-size: 0.96rem;
+  }
+}
+
+/* responsive*/
 
 @media (max-width: 1180px) {
   .projects-hero__content,
@@ -11597,7 +11777,7 @@ button,
   }
 
   .project-queue-showcase {
-    min-height: 880px;
+    min-height: 900px;
   }
 
   .project-queue-showcase__content {
@@ -11624,6 +11804,7 @@ button,
 @media (max-width: 760px) {
   .projects-hero__content {
     padding-top: 120px;
+    padding-bottom: 60px;
   }
 
   .projects-hero__copy h1 {
@@ -11641,8 +11822,9 @@ button,
     padding: 78px 0;
   }
 
-  .project-presentation-container {
-    width: min(100% - 24px, 1520px);
+  .project-presentation-container,
+  .projects-contact-cta__container {
+    width: min(100% - 24px, 1640px) !important;
   }
 
   .project-presentation-header h2 {
@@ -11650,7 +11832,7 @@ button,
   }
 
   .project-queue-showcase {
-    min-height: 900px;
+    min-height: 930px;
     border-radius: 30px;
   }
 
@@ -11664,6 +11846,10 @@ button,
     width: 150px;
     min-height: 70px;
     margin-bottom: 16px;
+  }
+
+  .project-queue-showcase__logo img {
+    max-height: 72px;
   }
 
   .project-queue-showcase__content h3 {
@@ -11707,17 +11893,12 @@ button,
     transform: translateY(-10px);
   }
 
-  .project-queue-thumb__logo {
-    width: 48px;
-    height: 34px;
-  }
-
   .project-queue-thumb__title {
     font-size: 0.72rem;
   }
 
   .projects-contact-cta__panel {
     border-radius: 30px;
+    background-position: center;
   }
 }
-
