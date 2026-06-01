@@ -134,6 +134,22 @@ import residentialWasteHandling from "../assets/images/service/solid-waste/resid
 import officeJanitorialWaste from "../assets/images/service/solid-waste/office-janitorial-waste.png";
 import gardenWasteCleaning from "../assets/images/service/solid-waste/garden-waste-cleaning.png";
 
+//projects page
+import projectHero from "../assets/images/projects/project-hero.png";
+import projectCta from "../assets/images\/projects/project-cta.png";
+
+import foodCityLogo from "../assets/images/projects/food-city.jpg";
+import coolPlanetLogo from "../assets/images/projects/cool-planet.jpg";
+import kapriLogo from "../assets/images/projects/kapri-market.jpg";
+import calamansiLogo from "../assets/images/projects/calamansi-villas.jpg";
+import dfccLogo from "../assets/images/projects/dfcc-bank.jpg";
+
+import foodCityProject from "../assets/images/projects/cargills-food-city-project.png";
+import coolPlanetProject from "../assets/images/projects/cool-planet-project.png";
+import kapriProject from "../assets/images/projects/kapri-project.png";
+import calamansiProject  from "../assets/images/projects/calamansi-cove-project.png";
+import dfccProject from "../assets/images/projects/dfcc-bank.png";
+
 
 
 
@@ -232,10 +248,24 @@ solidWasteServices: {
 
 
 projects: {
-    security: projectSecurity,
-    cash: projectCash,
-    facility: projectFacility,
-    logistics: projectLogistics,
+  hero: projectHero,
+  contactCta: projectCta,
+  
+    logos: {
+    foodCity: foodCityLogo,
+    coolPlanet: coolPlanetLogo,
+    kapri: kapriLogo,
+    calamansi: calamansiLogo,
+    dfcc: dfccLogo,
+  },
+  showcase: {
+    foodCity: foodCityProject,
+    coolPlanet: coolPlanetProject,
+    kapri: kapriProject,
+    calamansi: calamansiProject,
+    dfcc: dfccProject,
+  },
+  
   },
   about: {
     hero: aboutHero,
