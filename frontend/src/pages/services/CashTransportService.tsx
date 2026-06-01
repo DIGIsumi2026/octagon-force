@@ -58,18 +58,6 @@ export default function CashTransportService() {
               </Link>
             </div>
           </motion.div>
-
-          <motion.div
-            className="security-service-hero__badge cash-transport-hero__badge"
-            initial={{ opacity: 0, scale: 0.86, y: 28 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{
-              duration: 0.75,
-              delay: 0.55,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-          </motion.div>
         </div>
       </section>
 

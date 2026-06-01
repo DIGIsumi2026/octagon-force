@@ -120,6 +120,13 @@ import transportTopLineEquipment from "../assets/images/transport/top-line-equip
 import transportFleetMaintenance from "../assets/images/transport/fleet-maintenance.png";
 import transportCustomerSupport from "../assets/images/transport/customer-support.png";
 
+//logistic service page 
+import logisticHero from "../assets/images/service/logistics/logisticHero.jpg";
+import logisticsProfessionalStaff from "../assets/images/service/logistics/professional-logistics-staff.png";
+import logisticsFleetPositioning from "../assets/images/service/logistics/fleet-positioning.png";
+import logisticsRapidCoordination from "../assets/images/service/logistics/rapid-coordination.png";
+import logisticsCustomizedConsultancy from "../assets/images/service/logistics/customized-consultancy.png";
+
 
 
 export const images = {
@@ -129,7 +136,7 @@ export const images = {
 
   navigation: {
   sidebarBg,
-},
+  },
 
   hero: {
     H1: heroH1,
@@ -171,7 +178,7 @@ export const images = {
   vipProtection,
   armedUnarmedGuards,
   staticSecurity,
-},
+  },
 
   cleaningServices: {
     cleaningHero,
@@ -196,8 +203,15 @@ transportServices: {
   topLineEquipment: transportTopLineEquipment,
   fleetMaintenance: transportFleetMaintenance,
   customerSupport: transportCustomerSupport,
-},
+  },
 
+logisticsServices: {
+  logisticHero,
+  professionalStaff: logisticsProfessionalStaff,
+  fleetPositioning: logisticsFleetPositioning,
+  rapidCoordination: logisticsRapidCoordination,
+  customizedConsultancy: logisticsCustomizedConsultancy,
+},
 },
 
 

@@ -12,6 +12,7 @@ import Services from "./pages/Services";
   import CleaningHousekeepingService from "./pages/services/CleaningHousekeepingService";
   import CashTransportService from "./pages/services/CashTransportService";
   import TransportOperationsService from "./pages/services/TransportOperationsService";
+  import LogisticsService from "./pages/services/LogisticsService";
 import Products from "./pages/Products";
 import Projects from "./pages/Projects";
 import Reviews from "./pages/Reviews";
@@ -62,7 +63,8 @@ export default function App() {
             <Route path="/services/security" element={<SecurityService />} />
             <Route path="/services/cleaning-housekeeping" element={<CleaningHousekeepingService />} />
             <Route path="/services/cash-transport" element={<CashTransportService />} /> 
-            <Route path="/services/transport" element={<TransportOperationsService />} />           
+            <Route path="/services/transport" element={<TransportOperationsService />} />     
+            <Route path="/services/logistics" element={<LogisticsService />} />      
         <Route
           path="/products"
           element={

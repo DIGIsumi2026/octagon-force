@@ -10,7 +10,7 @@ const serviceSubItems = [
   { label: "Cleaning & Housekeeping", path: "/services/cleaning-housekeeping" },
   { label: "Cash Transport", path: "/services/cash-transport" },
   { label: "Transport Operations", path: "/services/transport" },
-  { label: "Logistics Support", path: "/services" },
+  { label: "Logistics Support", path: "/services/logistics" },
   { label: "Solid Waste Management", path: "/services" },
 ];
 
