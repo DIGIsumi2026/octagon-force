@@ -115,34 +115,6 @@ export const benefits: IconCard[] = [
   }
 ];
 
-export const experienceItems: ImageCard[] = [
-  {
-    title: "Repair & Service",
-    description: "Maintenance support for cameras, hubs, smart locks, alarms, and existing security devices.",
-    image: images.services.repair
-  },
-  {
-    title: "Smarter Home",
-    description: "Automation packages for residential spaces with app control and real-time monitoring.",
-    image: images.services.smarterHome
-  },
-  {
-    title: "Video Verification",
-    description: "High-quality footage helps users confirm activity before making decisions.",
-    image: images.services.videoVerification
-  },
-  {
-    title: "Access Control",
-    description: "Manage visitors, staff access, doors, gates, and business areas from one platform.",
-    image: images.services.accessControl
-  },
-  {
-    title: "Business Security",
-    description: "Get notifications when people, packages, animals, or vehicles are detected.",
-    image: images.services.businessSecurity
-  }
-];
-
 export const locationScenes: LocationScene[] = [
   {
     key: "indoor",
@@ -181,29 +153,6 @@ export const categories: ImageCard[] = [
     title: "Doorbells",
     description: "See visitors, greet guests, and monitor packages from anywhere.",
     image: images.products.doorbells
-  }
-];
-
-export const projectCards: ImageCard[] = [
-  {
-    title: "Residential",
-    description: "Remote monitoring and smart alerts for family homes and apartment complexes.",
-    image: images.projects.residential
-  },
-  {
-    title: "Airport",
-    description: "Surveillance planning for passenger safety, crowd control, and restricted spaces.",
-    image: images.projects.airport
-  },
-  {
-    title: "Campus",
-    description: "Integrated monitoring for educational properties, entrances, and open areas.",
-    image: images.projects.campus
-  },
-  {
-    title: "Energy",
-    description: "Remote protection for critical infrastructure and industrial installations.",
-    image: images.projects.energy
   }
 ];
 

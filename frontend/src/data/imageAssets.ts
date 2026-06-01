@@ -150,6 +150,8 @@ import kapriProject from "../assets/images/projects/kapri-project.png";
 import calamansiProject  from "../assets/images/projects/calamansi-cove-project.png";
 import dfccProject from "../assets/images/projects/dfcc-bank.png";
 
+//contact page 
+import contactHero from "../assets/images/contact/contact-hero.png";
 
 
 
@@ -248,9 +250,13 @@ solidWasteServices: {
 
 
 projects: {
+  security: projectSecurity,
+  cash: projectCash,
+  facility: projectFacility,
+  logistics: projectLogistics,
   hero: projectHero,
   contactCta: projectCta,
-  
+
     logos: {
     foodCity: foodCityLogo,
     coolPlanet: coolPlanetLogo,
@@ -352,9 +358,7 @@ companyLogos: {
     ctaTechnician: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=1800&q=80"
   },
   contact: {
-    diy: "https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?auto=format&fit=crop&w=900&q=80",
-    unsure: "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=900&q=80",
-    questions: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=900&q=80"
+    hero: contactHero,
   }
 } as const;
 
