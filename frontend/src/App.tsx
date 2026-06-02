@@ -13,9 +13,7 @@ import Services from "./pages/Services";
   import TransportOperationsService from "./pages/services/TransportOperationsService";
   import LogisticsService from "./pages/services/LogisticsService";
   import SolidWasteManagementService from "./pages/services/SolidWasteManagementService";
-import Products from "./pages/Products";
 import Projects from "./pages/Projects";
-import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 
 
@@ -66,29 +64,12 @@ export default function App() {
             <Route path="/services/transport" element={<TransportOperationsService />} />     
             <Route path="/services/logistics" element={<LogisticsService />} /> 
             <Route path="/services/solid-waste-management" element={<SolidWasteManagementService />}/>     
-        <Route
-          path="/products"
-          element={
-            <main>
-              <Products />
-            </main>
-          }
-        />
 
         <Route
           path="/projects"
           element={
             <main>
               <Projects />
-            </main>
-          }
-        />
-
-        <Route
-          path="/reviews"
-          element={
-            <main>
-              <Reviews />
             </main>
           }
         />

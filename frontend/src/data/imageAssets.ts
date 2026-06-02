@@ -2,6 +2,9 @@
 import companyLogo from "../assets/images/company-logo.png";
 import aboutVideoThumbnail from "../assets/images/about-video-thumbnail.png";
 
+//footer logo
+import footerLogo from "../assets/images/logo-white.png";
+
 //images 
 import sidebarBg from "../assets/images/navigation/sidebar-bg.png";
 import heroH1 from "../assets/images/header-bg1.jpg";
@@ -158,6 +161,7 @@ import contactHero from "../assets/images/contact/contact-hero.png";
 export const images = {
   brand: {
     logo:companyLogo,
+    footerLogo: footerLogo,
   },
 
   navigation: {
@@ -330,33 +334,6 @@ companyLogos: {
   company15: company15Logo,
 },
 
-  home: {
-    aboutBanner: "https://images.unsplash.com/photo-1581091226825-c6a89e7e4801?auto=format&fit=crop&w=1800&q=80"
-  },
-
-  products: {
-    indoor: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80",
-    outdoor: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1800&q=80",
-    frontdoor: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=80",
-    pool: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1800&q=80",
-    accessories: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=1200&q=80",
-    cameras: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
-    doorbells: "https://images.unsplash.com/photo-1600370104048-404955cd18e4?auto=format&fit=crop&w=1200&q=80",
-    doorbellCamera: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
-    outdoorCamera: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
-    indoorCamera: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80",
-    videoPreview: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1800&q=80"
-  },
-   /*projects: {
-    residential: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1400&q=80",
-    airport: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
-    campus: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=80",
-    energy: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80"
-  }, */
-  
-  reviews: {
-    ctaTechnician: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=1800&q=80"
-  },
   contact: {
     hero: contactHero,
   }
