@@ -12,6 +12,7 @@ import {
   Send,
 } from "lucide-react";
 import { images } from "../data/imageAssets";
+import ServicePillMarquee from "../pages/services/ServicePillMarquee";
 
 const branches = [
   {
@@ -427,6 +428,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+      <ServicePillMarquee/>
     </main>
   );
 }

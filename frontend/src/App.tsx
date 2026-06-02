@@ -74,16 +74,6 @@ export default function App() {
           }
         />
 
-        //Remve later 
-        <Route
-          path="/templates"
-          element={
-        <main>
-         <Templates />
-        </main>
-         }
-        />
-
         <Route
           path="/contact"
           element={
@@ -94,7 +84,6 @@ export default function App() {
         />
       </Routes>
       <WhatsAppButton />
-
       <Footer />
       <ScrollTop />
       <CustomCursor/>

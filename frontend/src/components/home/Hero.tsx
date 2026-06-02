@@ -4,6 +4,15 @@ import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { heroSlides } from "../../data/siteData";
 
+const WHATSAPP_NUMBER = "94777660021"; 
+
+const WHATSAPP_MESSAGE =
+  "Hello Octagon Force, I would like to know more about your services.";
+
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    WHATSAPP_MESSAGE
+  )}`;
+
 export default function Hero() {
   return (
     <section id="home" className="hero-section">
@@ -35,10 +44,10 @@ export default function Hero() {
                   <h1>{slide.title}</h1>
                   <p>{slide.copy}</p>
                   <div className="hero-actions">
-                    <a className="primary-button" href="#contact">
-                      Let&apos;s Chat <ArrowRight size={19} />
+                    <a className="primary-button" href={whatsappUrl}>
+                      Chat with Us <ArrowRight size={19} />
                     </a>
-                    <a className="secondary-button" href="#process">
+                    <a className="secondary-button" href="/about">
                       How It Works <ArrowRight size={19} />
                     </a>
                   </div>
@@ -51,3 +60,4 @@ export default function Hero() {
     </section>
   );
 }
+
