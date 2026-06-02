@@ -18,7 +18,7 @@ const branches = [
     id: "grandpass",
     name: "Grandpass Head Office",
     type: "Head Office",
-    address: "445/1 Sirimavo Bandaranayaka Mw, Colombo-14",
+    address: "445/1 Sirimavo Bandaranayaka Mawatha, Colombo 14",
     phones: ["+94 11 242 1294", "+94 11 234 4444", "+94 77 766 0021"],
      mapUrl: "https://maps.app.goo.gl/Nw17Q4kt9Z8kUKok9",
   mapEmbed:
@@ -29,14 +29,14 @@ const branches = [
     name: "Kandy Branch",
     type: "Branch Office",
     address: "Polgahamula Junction, Peradeniya",
-    phones: ["011 369 0209"],
+    phones: ["+94 11 369 0209"],
   },
   {
     id: "galle",
     name: "Galle Branch",
     type: "Branch Office",
     address: "Arachchigewaththa, Mihirithanna, Thalpe, Galle",
-    phones: ["091 225 0100"],
+    phones: ["+94 91 225 0100"],
   },
 ];
 
@@ -114,7 +114,7 @@ export default function Contact() {
 
             <p>
               Reach Octagon Force for security, facility support, cleaning,
-              logistics, transport, and operational deployment inquiries across
+              logistics, transport and operational deployment inquiries across
               Sri Lanka.
             </p>
 
@@ -169,7 +169,7 @@ export default function Contact() {
 
             <p>
               Contact our head office or nearest branch to discuss service
-              requirements, deployment support, quotations, or operational
+              requirements, deployment support, quotations  or operational
               assistance.
             </p>
           </motion.div>
@@ -275,7 +275,7 @@ export default function Contact() {
             <h2>Send Your Requirement To Our Team.</h2>
 
             <p>
-              Share your service requirement, location, and contact information.
+              Share your service requirement, location  and contact information.
               Our team can review your inquiry and coordinate the next step.
             </p>
 
@@ -317,13 +317,13 @@ export default function Contact() {
 
               <label>
                 Phone Number
-                <input type="tel" name="phone" placeholder="+94..." required />
+                <input type="tel" name="phone" placeholder="Enter Phone number" required />
               </label>
             </div>
 
             <label>
               Email Address
-              <input type="email" name="email" placeholder="you@example.com" required />
+              <input type="email" name="email" placeholder="Email Adress" required />
             </label>
 
             <label>
@@ -347,7 +347,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows={6}
-                placeholder="Tell us about your requirement, site location, expected service, or deployment needs..."
+                placeholder="Tell us about your requirement, site location, expected service or deployment needs"
                 required
               />
             </label>

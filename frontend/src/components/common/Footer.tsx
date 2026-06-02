@@ -43,7 +43,6 @@ export default function Footer() {
       </div>
       <div className="container footer-bottom">
         <p>© 2026 Octagon Force All rights reserved.</p>
-        <span>Terms and Conditions · Privacy Policy</span>
       </div>
     </footer>
   );
