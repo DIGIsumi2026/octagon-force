@@ -20,17 +20,17 @@ const quickLinks = [
 const socialLinks = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/share/18Vy6BGqUg/?mibextid=wwXIfr",
     icon: Facebook,
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/octagon_force_pvt?igsh=aHhteGFyaHZoOGVm",
     icon: Instagram,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/company/octagon-force/",
     icon: Linkedin,
   },
 ];
