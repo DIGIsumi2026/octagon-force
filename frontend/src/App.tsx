@@ -16,13 +16,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
-
-
 import WhatsAppButton from "./components/common/WhatsAppButton";
-
-//Remove later 
-import Templates from "./pages/Templates";
-
 import "./App.css";
 
 export default function App() {
