@@ -263,7 +263,12 @@ function VisualStackCard({
       </div>
 
       <div className="visual-stack-card__image">
-        <img src={service.image} alt={service.title} />
+        <img
+          src={service.image}
+          alt={service.title}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </motion.article>
   );

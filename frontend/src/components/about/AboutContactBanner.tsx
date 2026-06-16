@@ -17,6 +17,8 @@ export default function AboutContactBanner() {
       src={images.about.contactBanner}
       alt="Octagon Force contact and service coordination"
       className="about-contact-banner__image"
+      loading="lazy"
+      decoding="async"
       initial={{ scale: 1.08 }}
       whileInView={{ scale: 1.02 }}
       viewport={{ once: true }}
@@ -26,6 +28,8 @@ export default function AboutContactBanner() {
           src={images.about.contactBanner}
           alt="Octagon Force contact and service coordination"
           className="about-contact-banner__image"
+          loading="lazy"
+          decoding="async"
       />
 
         <div className="about-contact-banner__overlay" />

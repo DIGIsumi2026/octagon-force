@@ -84,6 +84,8 @@ export default function CompanyIntro() {
             src={images.about.entry}
             alt="Octagon Force employees representing company services"
             className="about-company-intro__image"
+            loading="lazy"
+            decoding="async"
             style={{
               scale: imageScale,
               opacity: imageOpacity,
@@ -121,6 +123,8 @@ export default function CompanyIntro() {
               <img
                 src={images.about.sumathiLogo}
                 alt="Sumathi Universal Management and Investment Private Limited logo"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -216,6 +220,8 @@ export default function CompanyIntro() {
         <motion.img
           src={images.about.visionImage}
           alt="Octagon Force company vision"
+          loading="lazy"
+          decoding="async"
           variants={{
             hidden: {
               filter: "blur(8px) saturate(0.9) contrast(0.9)",
@@ -305,6 +311,8 @@ export default function CompanyIntro() {
         <motion.img
           src={images.about.missionImage}
           alt="Octagon Force company mission"
+          loading="lazy"
+          decoding="async"
           variants={{
             hidden: {
               filter: "blur(8px) saturate(0.9) contrast(0.9)",

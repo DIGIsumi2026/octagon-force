@@ -135,7 +135,12 @@ export default function KeepDetailedServices() {
                 </div>
 
                 <div className="keep-detailed-card__image">
-                  <img src={service.image} alt={service.title} />
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </article>
             </Reveal>

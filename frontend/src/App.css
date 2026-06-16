@@ -40,6 +40,41 @@ body {
   overflow-x: hidden;
 }
 
+.page-loader {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  align-content: center;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(201, 149, 39, 0.2), transparent 32%),
+    linear-gradient(180deg, #07101d 0%, #040912 100%);
+}
+
+.page-loader__mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  border-top-color: #c79527;
+  animation: pageLoaderSpin 0.9s linear infinite;
+}
+
+.page-loader__text {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@keyframes pageLoaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* =========================================================
    Floating WhatsApp Button
    ========================================================= */

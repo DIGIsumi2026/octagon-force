@@ -53,6 +53,8 @@ export default function ProjectShowcase() {
             key={selectedProject.image}
             src={selectedProject.image}
             alt={selectedProject.title}
+            loading="lazy"
+            decoding="async"
             initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.03 }}

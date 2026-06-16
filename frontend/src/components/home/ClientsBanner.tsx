@@ -144,7 +144,12 @@ export default function ClientsBanner() {
                           },
                         }}
                       >
-                        <img src={client.logo} alt={`${client.name} logo`} />
+                        <img
+                          src={client.logo}
+                          alt={`${client.name} logo`}
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </motion.article>
                     );
                   })}

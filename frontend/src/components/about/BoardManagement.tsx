@@ -66,7 +66,12 @@ export default function BoardManagement() {
               }}
             >
               <div className="about-board-card__image">
-                <img src={member.image} alt={member.name} />
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
               <div className="about-board-card__body">

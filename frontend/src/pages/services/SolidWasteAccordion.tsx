@@ -91,7 +91,12 @@ export default function SolidWasteAccordion() {
                 onFocus={() => setActiveIndex(index)}
                 tabIndex={0}
               >
-                <img src={service.image} alt={service.title} />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  decoding="async"
+                />
 
                 <div className="security-accordion-card__shade" />
 

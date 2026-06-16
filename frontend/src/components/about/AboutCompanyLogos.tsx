@@ -116,7 +116,12 @@ export default function AboutCompanyLogos() {
                       ease: [0.22, 1, 0.36, 1],
                     }}
                   >
-                    <img src={company.logo} alt={`${company.name} logo`} />
+                    <img
+                      src={company.logo}
+                      alt={`${company.name} logo`}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </motion.article>
                 ))}
               </AnimatePresence>

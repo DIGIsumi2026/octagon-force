@@ -105,6 +105,8 @@ export default function AboutBanner() {
                   <img
                     src={images.about.aboutVideoThumbnail}
                     alt="Octagon Force logo video preview"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <span className="about-preview__thumbnail-badge">
                     Intro Preview

@@ -52,7 +52,12 @@ export default function KeepCompanyFacts() {
         <div className="keep-facts-layout">
           <Reveal>
             <article className="keep-facts-image keep-facts-image--large">
-              <img src={images.hero.H1} alt="Octagon Force service preview" />
+              <img
+                src={images.hero.H1}
+                alt="Octagon Force service preview"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="keep-facts-image__caption">
                 <ShieldCheck />
                 <span>Trusted Service Support</span>
@@ -63,7 +68,12 @@ export default function KeepCompanyFacts() {
           <div className="keep-facts-middle">
             <Reveal delay={0.08}>
               <article className="keep-facts-image keep-facts-image--small">
-                <img src={images.hero.H2} alt="Connected service ecosystem" />
+                <img
+                  src={images.hero.H2}
+                  alt="Connected service ecosystem"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="keep-facts-image__label">
                   Connected Ecosystem
                 </div>

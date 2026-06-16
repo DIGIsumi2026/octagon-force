@@ -131,6 +131,8 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
           <img
             src={activeProject.image}
             alt={`${activeProject.title} deployment`}
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
       </AnimatePresence>
@@ -158,6 +160,8 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
             <img
               src={activeProject.logo}
               alt={`${activeProject.title} logo`}
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -226,7 +230,12 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
               }}
               aria-label={`Show ${project.title}`}
             >
-              <img src={project.image} alt={`${project.title} preview`} />
+              <img
+                src={project.image}
+                alt={`${project.title} preview`}
+                loading="lazy"
+                decoding="async"
+              />
 
               <span className="project-queue-thumb__number">
                 {project.number}

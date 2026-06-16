@@ -117,7 +117,12 @@ export default function ServicesShowcase() {
               >
                 <div className="service-flip-card__inner">
                   <div className="service-flip-card__face service-flip-card__front">
-                    <img src={service.image} alt={service.title} />
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      decoding="async"
+                    />
 
                     <div className="service-flip-card__shade" />
 
@@ -128,7 +133,12 @@ export default function ServicesShowcase() {
                   </div>
 
                   <div className="service-flip-card__face service-flip-card__back">
-                    <img src={service.image} alt={`${service.title} detail`} />
+                    <img
+                      src={service.image}
+                      alt={`${service.title} detail`}
+                      loading="lazy"
+                      decoding="async"
+                    />
 
                     <div className="service-flip-card__back-overlay" />
 

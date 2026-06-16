@@ -16,6 +16,8 @@ export default function ServicesContactCta() {
         <motion.img
           src={images.services.contactCta}
           alt="Octagon Force service consultation"
+          loading="lazy"
+          decoding="async"
           initial={{ scale: 1.08 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true, amount: 0.35 }}
