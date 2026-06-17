@@ -11,6 +11,7 @@ export default function CompanyIntro() {
   const hasAutoPlayedRef = useRef(false);
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
   const [showThumbnail, setShowThumbnail] = useState(false);
+  const [isVideoBuffering, setIsVideoBuffering] = useState(false);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
@@ -64,6 +65,7 @@ export default function CompanyIntro() {
     }
 
     setShowThumbnail(false);
+    setIsVideoBuffering(false);
     video.pause();
     video.currentTime = 0;
 
@@ -77,8 +79,10 @@ export default function CompanyIntro() {
       try {
         video.muted = true;
         video.currentTime = 0;
+        setIsVideoBuffering(true);
         await video.play();
       } catch (error) {
+        setIsVideoBuffering(false);
         setShowThumbnail(true);
         console.error("About intro video failed to autoplay:", error);
       }
@@ -113,8 +117,10 @@ export default function CompanyIntro() {
       try {
         video.muted = true;
         video.currentTime = 0;
+        setIsVideoBuffering(true);
         await video.play();
       } catch (error) {
+        setIsVideoBuffering(false);
         console.error("About intro video failed to play:", error);
       }
     }, 2000);
@@ -132,6 +138,7 @@ export default function CompanyIntro() {
 
     if (!video) return;
 
+    setIsVideoBuffering(false);
     video.pause();
     video.currentTime = 0;
   };
@@ -146,7 +153,16 @@ export default function CompanyIntro() {
       video.currentTime = 0;
     }
 
+    setIsVideoBuffering(false);
     setShowThumbnail(true);
+  };
+
+  const showBuffering = () => {
+    setIsVideoBuffering(true);
+  };
+
+  const hideBuffering = () => {
+    setIsVideoBuffering(false);
   };
 
   return (
@@ -181,6 +197,12 @@ export default function CompanyIntro() {
             preload="auto"
             poster={images.about.aboutVideoThumbnail}
             onEnded={handleVideoEnded}
+            onWaiting={showBuffering}
+            onStalled={showBuffering}
+            onCanPlay={hideBuffering}
+            onCanPlayThrough={hideBuffering}
+            onPlaying={hideBuffering}
+            onPause={hideBuffering}
           />
 
           {showThumbnail && (
@@ -194,6 +216,17 @@ export default function CompanyIntro() {
               loading="lazy"
               decoding="async"
             />
+          )}
+
+          {isVideoBuffering && !showThumbnail && (
+            <div
+              className="about-company-intro__buffer"
+              role="status"
+              aria-live="polite"
+              aria-label="Video buffering"
+            >
+              <span />
+            </div>
           )}
 
           <div className="about-company-intro__image-shade" />
