@@ -12577,6 +12577,13 @@ button,
   box-shadow: 0 0 0 4px rgba(201, 149, 39, 0.12);
 }
 
+.contact-form__trap {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .contact-form button {
   width: 100%;
   min-height: 58px;
@@ -12592,6 +12599,11 @@ button,
   font-weight: 950;
   cursor: pointer;
   box-shadow: 0 18px 42px rgba(201, 149, 39, 0.24);
+}
+
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
 }
 
 .contact-form button svg {
@@ -12615,6 +12627,11 @@ button,
 .contact-form__status svg {
   color: #3ed181;
   flex: 0 0 auto;
+}
+
+.contact-form__status--error {
+  background: rgba(210, 53, 53, 0.16) !important;
+  border-color: rgba(210, 53, 53, 0.32) !important;
 }
 
 /* google map  */

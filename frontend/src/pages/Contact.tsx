@@ -66,7 +66,10 @@ const contactStats = [
 
 export default function Contact() {
   const [activeBranchId, setActiveBranchId] = useState(branches[0].id);
-  const [formStatus, setFormStatus] = useState<"idle" | "success">("idle");
+  const [formStatus, setFormStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [formMessage, setFormMessage] = useState("");
 
   const activeBranch = useMemo(() => {
     return branches.find((branch) => branch.id === activeBranchId) ?? branches[0];
@@ -74,14 +77,57 @@ export default function Contact() {
 
   const mapSrc = activeBranch.mapEmbed;
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    setFormStatus("success");
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      service: String(formData.get("service") ?? ""),
+      message: String(formData.get("message") ?? ""),
+      website: String(formData.get("website") ?? ""),
+    };
 
-    window.setTimeout(() => {
-      setFormStatus("idle");
-    }, 4200);
+    setFormStatus("loading");
+    setFormMessage("Sending...");
+
+    try {
+      const response = await fetch("/contact.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json().catch(() => ({
+        success: false,
+        message: "Unable to send your inquiry. Please try again.",
+      }))) as {
+        success?: boolean;
+        message?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to send your inquiry.");
+      }
+
+      form.reset();
+      setFormStatus("success");
+      setFormMessage(
+        result.message || "Your inquiry has been sent successfully."
+      );
+    } catch (error) {
+      setFormStatus("error");
+      setFormMessage(
+        error instanceof Error
+          ? error.message
+          : "Unable to send your inquiry. Please try again."
+      );
+    }
   };
 
   return (
@@ -353,16 +399,25 @@ export default function Contact() {
               />
             </label>
 
-            <button type="submit">
-              Send Message
+            <input
+              type="text"
+              name="website"
+              className="contact-form__trap"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+
+            <button type="submit" disabled={formStatus === "loading"}>
+              {formStatus === "loading" ? "Sending..." : "Send Message"}
               <Send />
             </button>
 
-            {formStatus === "success" && (
-              <div className="contact-form__status">
+            {formStatus !== "idle" && (
+              <div
+                className={`contact-form__status contact-form__status--${formStatus}`}
+              >
                 <CheckCircle2 />
-                Your inquiry has been prepared successfully. Backend submission
-                can be connected later.
+                {formMessage}
               </div>
             )}
           </motion.form>
