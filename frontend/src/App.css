@@ -6654,7 +6654,7 @@ button,
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(20px, 2vw, 28px);
   align-items: stretch;
 }
@@ -6783,20 +6783,31 @@ button,
 /* Responsive */
 @media (max-width: 1280px) {
   .about-board-grid {
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 940px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .about-board-card {
-    min-height: 500px;
+    min-height: 480px;
+  }
+
+  .about-board-card__image {
+    height: 250px;
   }
 }
 
 @media (max-width: 860px) {
+  .about-board-section {
+    padding: 70px 0 78px;
+  }
+
   .about-board-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
   .about-board-header {
+    max-width: 680px;
+    margin-bottom: 36px;
     text-align: left;
   }
 
@@ -6804,41 +6815,96 @@ button,
     justify-content: flex-start;
   }
 
+  .about-board-header h2 {
+    margin-top: 18px;
+    font-size: clamp(2.8rem, 10vw, 4.8rem);
+    letter-spacing: -0.055em;
+  }
+
   .about-board-header p {
     margin-left: 0;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .about-board-card {
+    min-height: 450px;
+    border-radius: 28px;
+  }
+
+  .about-board-card__body {
+    min-height: 210px;
+    padding: 24px 22px 26px;
+  }
+
+  .about-board-card h3 {
+    max-width: min(100%, 260px);
+    font-size: 1.16rem;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .about-board-section {
-    padding: 64px 0;
+    padding: 60px 0 68px;
+  }
+
+  .about-board-section::before {
+    background-size: 42px 42px;
+  }
+
+  .about-board-header {
+    margin-bottom: 28px;
   }
 
   .about-board-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .about-board-header h2 {
-    font-size: 2.8rem;
+    margin-bottom: 14px;
+    font-size: clamp(2.35rem, 13vw, 3.4rem);
+    line-height: 0.98;
   }
 
   .about-board-card {
     min-height: auto;
-    border-radius: 28px;
+    border-radius: 24px;
+    box-shadow:
+      0 18px 46px rgba(7, 16, 29, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.96);
   }
 
   .about-board-card__image {
-    height: 320px;
+    height: clamp(230px, 72vw, 310px);
   }
 
   .about-board-card__body {
     min-height: auto;
-    padding: 26px;
+    padding: 24px 22px 26px;
+  }
+
+  .about-board-card__number {
+    right: 18px;
+    top: 16px;
+    font-size: 3.4rem;
   }
 
   .about-board-card h3 {
-    max-width: 100%;
-    font-size: 1.35rem;
+    max-width: calc(100% - 54px);
+    font-size: clamp(1.22rem, 6.4vw, 1.48rem);
+    letter-spacing: -0.025em;
+  }
+
+  .about-board-card__role {
+    margin-bottom: 14px;
+    padding: 7px 11px;
+    font-size: 0.68rem;
+  }
+
+  .about-board-card__description {
+    font-size: 0.88rem;
+    line-height: 1.64;
   }
 }
 
