@@ -7,6 +7,7 @@ import ScrollToHash from "./components/common/ScrollToHash";
 import CustomCursor from "./components/common/CustomCursor";
 import SmoothScroll from "./components/common/SmoothScroll";
 import WhatsAppButton from "./components/common/WhatsAppButton";
+import PagePreloader from "./components/common/PagePreloader";
 import "./App.css";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -41,6 +42,7 @@ function PageLoader() {
 export default function App() {
   return (
     <BrowserRouter>
+      <PagePreloader />
       <SmoothScroll />
       <Navbar />
       <ScrollToHash />

@@ -40,6 +40,10 @@ body {
   overflow-x: hidden;
 }
 
+body.preloader-active {
+  overflow: hidden;
+}
+
 .page-loader {
   min-height: 100svh;
   display: grid;
@@ -72,6 +76,71 @@ body {
 @keyframes pageLoaderSpin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+.site-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(4, 9, 18, 0.28);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  transition: opacity 0.32s ease, visibility 0.32s ease;
+}
+
+.site-preloader--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.site-preloader__inner {
+  width: clamp(112px, 14vw, 168px);
+  height: clamp(112px, 14vw, 168px);
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(201, 149, 39, 0.18), transparent 62%),
+    rgba(7, 16, 29, 0.18);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.28),
+    0 0 70px rgba(201, 149, 39, 0.18);
+}
+
+.site-preloader__video {
+  width: clamp(92px, 11vw, 136px);
+  height: clamp(92px, 11vw, 136px);
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .site-preloader {
+    backdrop-filter: blur(14px) saturate(115%);
+    -webkit-backdrop-filter: blur(14px) saturate(115%);
+  }
+
+  .site-preloader__inner {
+    width: 116px;
+    height: 116px;
+  }
+
+  .site-preloader__video {
+    width: 94px;
+    height: 94px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-preloader {
+    transition: none;
   }
 }
 
