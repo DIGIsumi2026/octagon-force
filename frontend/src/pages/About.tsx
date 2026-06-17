@@ -12,7 +12,6 @@ import {
   UsersRound,
 } from "lucide-react";
 
-import Reveal from "../components/common/Reveal";
 import { images } from "../data/imageAssets";
 
 const values = [
