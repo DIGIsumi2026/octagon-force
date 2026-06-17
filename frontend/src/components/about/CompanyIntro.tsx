@@ -1,14 +1,16 @@
-import { useRef} from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Reveal from "../common/Reveal";
 import { images } from "../../data/imageAssets";
 
-
-
 export default function CompanyIntro() {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const mediaStageRef = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const hoverTimerRef = useRef<number | null>(null);
+  const hasAutoPlayedRef = useRef(false);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+  const [showThumbnail, setShowThumbnail] = useState(false);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
@@ -38,45 +40,123 @@ export default function CompanyIntro() {
     ["46px", "0px"]
   );
 
-  const playVideo = () => {
-  const video = videoRef.current;
-  if (!video) return;
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 1024px)");
+    const syncViewportMode = () => setIsMobileOrTablet(query.matches);
 
-  if (hoverTimerRef.current) {
-    window.clearTimeout(hoverTimerRef.current);
-  }
+    syncViewportMode();
+    query.addEventListener("change", syncViewportMode);
 
-  hoverTimerRef.current = window.setTimeout(async () => {
-    try {
-      video.muted = true;
-      video.currentTime = 0;
-      await video.play();
-    } catch (error) {
-      console.error("About intro video failed to play:", error);
+    return () => query.removeEventListener("change", syncViewportMode);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const mediaStage = mediaStageRef.current;
+
+    if (!video) return;
+
+    video.loop = !isMobileOrTablet;
+
+    if (!isMobileOrTablet) {
+      setShowThumbnail(false);
+      return;
     }
-  }, 2000);
-};
 
+    setShowThumbnail(false);
+    video.pause();
+    video.currentTime = 0;
+
+    if (!mediaStage) return;
+
+    const playOnce = async () => {
+      if (hasAutoPlayedRef.current) return;
+
+      hasAutoPlayedRef.current = true;
+
+      try {
+        video.muted = true;
+        video.currentTime = 0;
+        await video.play();
+      } catch (error) {
+        setShowThumbnail(true);
+        console.error("About intro video failed to autoplay:", error);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          void playOnce();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(mediaStage);
+
+    return () => observer.disconnect();
+  }, [isMobileOrTablet]);
+
+  const playVideo = () => {
+    if (isMobileOrTablet) return;
+
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (hoverTimerRef.current) {
+      window.clearTimeout(hoverTimerRef.current);
+    }
+
+    hoverTimerRef.current = window.setTimeout(async () => {
+      try {
+        video.muted = true;
+        video.currentTime = 0;
+        await video.play();
+      } catch (error) {
+        console.error("About intro video failed to play:", error);
+      }
+    }, 2000);
+  };
 
   const stopVideo = () => {
-  const video = videoRef.current;
+    if (isMobileOrTablet) return;
 
-  if (hoverTimerRef.current) {
-    window.clearTimeout(hoverTimerRef.current);
-    hoverTimerRef.current = null;
-  }
+    const video = videoRef.current;
 
-  if (!video) return;
+    if (hoverTimerRef.current) {
+      window.clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = null;
+    }
 
-  video.pause();
-  video.currentTime = 0;
-};
+    if (!video) return;
+
+    video.pause();
+    video.currentTime = 0;
+  };
+
+  const handleVideoEnded = () => {
+    if (!isMobileOrTablet) return;
+
+    const video = videoRef.current;
+
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    setShowThumbnail(true);
+  };
 
   return (
     <section className="about-company-intro" ref={sectionRef}>
       <div className="about-company-intro__sticky">
         <div
-          className="about-company-intro__media-stage"
+          ref={mediaStageRef}
+          className={`about-company-intro__media-stage ${
+            isMobileOrTablet ? "is-mobile-video" : ""
+          } ${showThumbnail ? "has-thumbnail" : ""}`}
           onMouseEnter={playVideo}
           onMouseLeave={stopVideo}
         >
@@ -98,9 +178,23 @@ export default function CompanyIntro() {
             src={images.about.companyIntroVideo}
             muted
             playsInline
-            loop
             preload="auto"
+            poster={images.about.aboutVideoThumbnail}
+            onEnded={handleVideoEnded}
           />
+
+          {showThumbnail && (
+            <motion.img
+              src={images.about.aboutVideoThumbnail}
+              alt="Octagon Force about video thumbnail"
+              className="about-company-intro__thumbnail"
+              initial={{ opacity: 0, scale: 1.03, filter: "blur(8px)" }}
+              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              loading="lazy"
+              decoding="async"
+            />
+          )}
 
           <div className="about-company-intro__image-shade" />
 

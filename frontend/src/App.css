@@ -5798,6 +5798,28 @@ button,
   opacity: 0;
 }
 
+.about-company-intro__media-stage.is-mobile-video .about-company-intro__video {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.about-company-intro__media-stage.is-mobile-video .about-company-intro__image,
+.about-company-intro__media-stage.has-thumbnail .about-company-intro__video {
+  opacity: 0;
+}
+
+.about-company-intro__thumbnail {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
 /* Dark cinematic overlay */
 .about-company-intro__image-shade {
   position: absolute;
@@ -5843,6 +5865,11 @@ button,
 
 .about-company-intro__media-stage:hover .about-company-intro__hover-badge,
 .about-company-intro__image-container:hover .about-company-intro__hover-badge {
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.about-company-intro__media-stage.is-mobile-video .about-company-intro__hover-badge {
   opacity: 0;
   transform: translateX(-50%) translateY(10px);
 }
@@ -6251,6 +6278,7 @@ button,
     min-height: 40px;
     font-size: 0.66rem;
   }
+
 }
 /* about video hover fix */
 .about-company-intro__sticky {
