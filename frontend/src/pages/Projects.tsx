@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Building2,
   Landmark,
-  ShieldCheck,
   Store,
   Waves,
 } from "lucide-react";
@@ -113,7 +112,7 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
 
   return (
     <motion.div
-      className="project-queue-showcase"
+      className="project-queue-showcase sp-project-showcase"
       initial={{ opacity: 0, y: 70, scale: 0.96, filter: "blur(14px)" }}
       whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
       viewport={{ once: true, amount: 0.22 }}
@@ -156,7 +155,7 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
             {activeProject.number}
           </div>
 
-          <div className="project-queue-showcase__logo">
+          <div className="project-queue-showcase__logo sp-project-showcase-logo">
             <img
               src={activeProject.logo}
               alt={`${activeProject.title} logo`}
@@ -171,7 +170,9 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
 
           <h3>{activeProject.title}</h3>
 
-          <p>{activeProject.description}</p>
+          <p className="sp-project-showcase-description">
+            {activeProject.description}
+          </p>
 
           <div className="project-queue-showcase__locations">
             {activeProject.locations}
@@ -214,7 +215,7 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
             <motion.button
               key={project.title}
               type="button"
-              className={`project-queue-thumb ${isActive ? "is-active" : ""}`}
+              className={`project-queue-thumb sp-project-showcase-card ${isActive ? "is-active" : ""}`}
               onMouseEnter={() => handleProjectChange(index)}
               onMouseLeave={clearHoverTimer}
               onFocus={() => handleProjectChange(index, true)}
@@ -229,6 +230,7 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
                 ease: [0.16, 1, 0.3, 1],
               }}
               aria-label={`Show ${project.title}`}
+              aria-pressed={isActive}
             >
               <img
                 src={project.image}
