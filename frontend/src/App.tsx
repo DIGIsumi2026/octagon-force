@@ -34,7 +34,7 @@ function PageLoader() {
   return (
     <div className="page-loader" role="status" aria-live="polite">
       <span className="page-loader__mark" />
-      <span className="page-loader__text">Octagon Force</span>
+      <span className="page-loader__text">Preparing Octagon Force...</span>
     </div>
   );
 }
@@ -76,23 +76,11 @@ export default function App() {
             }
           />
           <Route path="/services/security" element={<SecurityService />} />
-          <Route
-            path="/services/cleaning-housekeeping"
-            element={<CleaningHousekeepingService />}
-          />
-          <Route
-            path="/services/cash-transport"
-            element={<CashTransportService />}
-          />
-          <Route
-            path="/services/transport"
-            element={<TransportOperationsService />}
-          />
+          <Route path="/services/cleaning-housekeeping" element={<CleaningHousekeepingService />} />
+          <Route path="/services/cash-transport" element={<CashTransportService />} />
+          <Route path="/services/transport" element={<TransportOperationsService />} />
           <Route path="/services/logistics" element={<LogisticsService />} />
-          <Route
-            path="/services/solid-waste-management"
-            element={<SolidWasteManagementService />}
-          />
+          <Route path="/services/solid-waste-management" element={<SolidWasteManagementService />} />
 
           <Route
             path="/projects"

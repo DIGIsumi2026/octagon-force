@@ -13,8 +13,6 @@ const serviceHighlights = [
   "Cleaning & Housekeeping",
   "Cash Transport",
   "Transport Operations",
-  "Logistics Support",
-  "Solid Waste Management",
 ];
 
 export default function Services() {

@@ -20,6 +20,7 @@ import serviceCleaning from "../assets/images/cleaning-service.jpg";
 import serviceCashTransport from "../assets/images/cash-transport.jpg";
 import serviceSupplyChain from "../assets/images/supply-chain.jpg";
 import serviceSolidWaste from "../assets/images/solid-waste.jpg";
+import serviceTransportOperations from "../assets/images/transport-operations.png";
 
 import projectSecurity from "../assets/images/projects/security-project.png";
 import projectCash from "../assets/images/projects/cash-project.png";
@@ -189,7 +190,7 @@ export const images = {
     heroThumbnail: serviceHeroThumbnail,
     whyChooseUsVideo,
     contactCta: serviceContactCta,
-
+    serviceTransportOperations,
     securityHero: heroImage,
 
 

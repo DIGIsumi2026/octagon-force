@@ -80,16 +80,76 @@ export default function Contact() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (formStatus === "loading") return;
+
     const form = event.currentTarget;
     const formData = new FormData(form);
     const payload = {
-      name: String(formData.get("name") ?? ""),
-      phone: String(formData.get("phone") ?? ""),
-      email: String(formData.get("email") ?? ""),
-      service: String(formData.get("service") ?? ""),
-      message: String(formData.get("message") ?? ""),
-      website: String(formData.get("website") ?? ""),
+      name: String(formData.get("name") ?? "").trim(),
+      phone: String(formData.get("phone") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      service: String(formData.get("service") ?? "").trim(),
+      message: String(formData.get("message") ?? "").trim(),
+      website: String(formData.get("website") ?? "").trim(),
     };
+
+    const emailInput = form.elements.namedItem("email") as HTMLInputElement;
+    const phoneInput = form.elements.namedItem("phone") as HTMLInputElement;
+    const requiredFields = [
+      ["name", payload.name],
+      ["phone", payload.phone],
+      ["email", payload.email],
+      ["service", payload.service],
+      ["message", payload.message],
+    ] as const;
+
+    requiredFields.forEach(([name]) => {
+      const field = form.elements.namedItem(name) as
+        | HTMLInputElement
+        | HTMLSelectElement
+        | HTMLTextAreaElement;
+      field.setCustomValidity("");
+    });
+
+    const emptyField = requiredFields.find(([, value]) => !value);
+
+    if (emptyField) {
+      const field = form.elements.namedItem(emptyField[0]) as
+        | HTMLInputElement
+        | HTMLSelectElement
+        | HTMLTextAreaElement;
+      field.setCustomValidity("Please complete this required field.");
+      field.reportValidity();
+      return;
+    }
+
+    emailInput.setCustomValidity("");
+    phoneInput.setCustomValidity("");
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneDigits = payload.phone.replace(/\D/g, "");
+    const phonePattern = /^[+()\d\s-]+$/;
+
+    if (!emailPattern.test(payload.email)) {
+      emailInput.setCustomValidity("Please enter a valid email address.");
+      emailInput.reportValidity();
+      return;
+    }
+
+    if (
+      !phonePattern.test(payload.phone) ||
+      phoneDigits.length < 7 ||
+      phoneDigits.length > 15
+    ) {
+      phoneInput.setCustomValidity("Please enter a valid phone number.");
+      phoneInput.reportValidity();
+      return;
+    }
 
     setFormStatus("loading");
     setFormMessage("Sending...");
@@ -347,6 +407,13 @@ export default function Contact() {
           <motion.form
             className="contact-form"
             onSubmit={handleSubmit}
+            onInput={(event) => {
+              const field = event.target as
+                | HTMLInputElement
+                | HTMLSelectElement
+                | HTMLTextAreaElement;
+              field.setCustomValidity("");
+            }}
             initial={{ opacity: 0, x: 46, filter: "blur(12px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true, amount: 0.28 }}
@@ -383,8 +450,6 @@ export default function Contact() {
                 <option>Cleaning & Housekeeping</option>
                 <option>Cash Transport</option>
                 <option>Transport Operations</option>
-                <option>Logistics Support</option>
-                <option>Solid Waste Management</option>
                 <option>Other Inquiry</option>
               </select>
             </label>
@@ -411,6 +476,11 @@ export default function Contact() {
               {formStatus === "loading" ? "Sending..." : "Send Message"}
               <Send />
             </button>
+
+            <p className="contact-form__privacy">
+              Your inquiry will only be used by Octagon Force to respond to your
+              request.
+            </p>
 
             {formStatus !== "idle" && (
               <div

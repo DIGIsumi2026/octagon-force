@@ -17,14 +17,6 @@ const serviceLinks = [
     label: "Transport Operations",
     path: "/services/transport",
   },
-  {
-    label: "Logistics Support",
-    path: "/services/logistics",
-  },
-  {
-    label: "Solid Waste Management",
-    path: "/services/solid-waste-management",
-  },
 ];
 
 export default function ServicePillMarquee() {

@@ -6,7 +6,6 @@ import {
   Sparkles,
   Banknote,
   Truck,
-  Recycle,
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
@@ -55,15 +54,9 @@ const octagonServices: StatService[] = [
   },
   {
     icon: <Truck />,
-    title: "Supply Chain & Logistics",
+    title: "Transport Operations",
     description:
-      "Storage facilities, goods monitoring, transport coordination, and logistics support from origin to final delivery.",
-  },
-  {
-    icon: <Recycle />,
-    title: "Solid Waste Management",
-    description:
-      "Responsible waste collection, sorting, treatment, and disposal services focused on cleaner and safer communities.",
+      "Dependable asset based transportation, secure cash in transit services, professional driver deployment, top tier equipment.",
   },
 ];
 
@@ -93,21 +86,13 @@ const visualServices: VisualService[] = [
     points: ["Cash in transit", "Secure handling", "Reliable delivery"],
   },
   {
-    number: "04",
-    title: "Supply Chain & Logistics",
-    caption:
-      "Storage, monitoring, transport coordination, and logistics support from origin point to final delivery.",
-    image: images.services.supplyChain,
-    points: ["Storage support", "Goods monitoring", "Logistics planning"],
-  },
-  {
-    number: "05",
-    title: "Solid Waste Management",
-    caption:
-      "Responsible waste collection, sorting, treatment, and disposal support for cleaner and safer communities.",
-    image: images.services.solidWaste,
-    points: ["Waste collection", "Sorting support", "Safe disposal"],
-  },
+  number: "04",
+  title: "Transport Operations",
+  caption:
+    "Reliable transport solutions delivered through professional drivers, fleet readiness, quality equipment, and disciplined operational support.",
+  image: images.services.serviceTransportOperations,
+  points: ["Professional drivers", "Fleet readiness", "Dependable service"],
+},
 ];
 
 export default function BenefitCards() {

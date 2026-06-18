@@ -36,22 +36,6 @@ const services = [
     description:
       "Asset-based transport solutions supported by trained drivers, maintained fleet equipment, and responsive customer service coordination.",
   },
-  {
-    title: "Logistics Support",
-    tag: "Operations",
-    image: images.services.cards.logisticsCard,
-    href: "/services/logistics",
-    description:
-      "Structured supply chain and logistics support including goods handling, delivery coordination, warehouse assistance, and operational service support.",
-  },
-  {
-    title: "Solid Waste Management",
-    tag: "Environment",
-    image: images.services.cards.wasteCard,
-    href: "/services/solid-waste-management",
-    description:
-      "Responsible waste management support with organized collection, separated recycling practices, clean handling, and environmental care.",
-  },
 ];
 
 export default function ServicesShowcase() {

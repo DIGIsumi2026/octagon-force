@@ -10,8 +10,6 @@ const serviceSubItems = [
   { label: "Cleaning & Housekeeping", path: "/services/cleaning-housekeeping" },
   { label: "Cash Transport", path: "/services/cash-transport" },
   { label: "Transport Operations", path: "/services/transport" },
-  { label: "Logistics Support", path: "/services/logistics" },
-  { label: "Solid Waste Management", path: "/services/solid-waste-management" },
 ];
 
 const navItems = [
@@ -24,6 +22,7 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesMenuDismissed, setServicesMenuDismissed] = useState(false);
   const location = useLocation();
 
   const isServicesActive = location.pathname.startsWith("/services");
@@ -45,7 +44,12 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
   const closeMenu = () => setMenuOpen(false);
+  const closeServicesMenu = () => setServicesMenuDismissed(true);
 
   return (
     <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""}`}>
@@ -80,7 +84,12 @@ export default function Navbar() {
             About Us
           </NavLink>
 
-          <div className="nav-dropdown">
+          <div
+            className={`nav-dropdown ${
+              servicesMenuDismissed ? "nav-dropdown--dismissed" : ""
+            }`}
+            onMouseLeave={() => setServicesMenuDismissed(false)}
+          >
             <NavLink
               to="/services"
               className={`nav-dropdown__trigger ${isServicesActive ? "active" : ""}`}
@@ -96,6 +105,7 @@ export default function Navbar() {
                   to={item.path}
                   end={item.path === "/services"}
                   className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={closeServicesMenu}
                 >
                   {item.label}
                 </NavLink>
