@@ -8,6 +8,24 @@
 </head>
   <body>
     <div id="root"></div>
+    <script>
+      const originalPlay = HTMLVideoElement.prototype.play;
+      HTMLVideoElement.prototype.play = function() {
+        if (window.innerWidth <= 768) {
+          return Promise.resolve();
+        }
+        return originalPlay.apply(this, arguments);
+      };
+      // Prevent autoplay
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.innerWidth <= 768) {
+          document.querySelectorAll('video').forEach(v => {
+            v.removeAttribute('autoplay');
+            v.pause();
+          });
+        }
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

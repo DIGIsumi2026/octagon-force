@@ -44,6 +44,22 @@ body.preloader-active {
   overflow: hidden;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600 !important;
+  letter-spacing: 0.015em;
+  line-height: 1.15;
+}
+
+p {
+  letter-spacing: 0.005em;
+  line-height: 1.7;
+}
+
+
+
+
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -1071,7 +1087,7 @@ body.menu-open {
 .hero-copy h2 {
   margin: 16px 0 26px;
   max-width: 600px;
-  font-size: clamp(4rem, 9vw, 8.5rem);
+  font-size: clamp(3.40rem, 7.65vw, 7.22rem);
   line-height: 0.88;
   letter-spacing: -0.09em;
 }
@@ -1209,7 +1225,7 @@ body.menu-open {
 .about-preview__content h2 {
   margin: 18px 0 22px;
   color: #ffffff;
-  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  font-size: clamp(2.38rem, 5.10vw, 4.93rem);
   line-height: 0.94;
   letter-spacing: -0.06em;
 }
@@ -1464,7 +1480,7 @@ body.menu-open {
 
 @media (max-width: 640px) {
   .about-preview__content h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
   }
 
   .about-preview__content p {
@@ -1528,7 +1544,7 @@ body.menu-open {
 
 .section-header h2 {
   margin: 18px 0 14px;
-  font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+  font-size: clamp(2.21rem, 4.67vw, 4.42rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -1594,7 +1610,7 @@ body.menu-open {
 
 .collage-card__caption h3 {
   margin: 0 0 8px;
-  font-size: 2rem;
+  font-size: 1.70rem;
   letter-spacing: -0.05em;
 }
 
@@ -1646,7 +1662,7 @@ body.menu-open {
 
 .collage-card--teal h3 {
   max-width: 230px;
-  font-size: 2.1rem;
+  font-size: 1.78rem;
   line-height: 1.05;
   letter-spacing: -0.05em;
 }
@@ -1695,7 +1711,7 @@ body.menu-open {
 .mini-card h3,
 .benefit-card h3 {
   margin: 0 0 16px;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   letter-spacing: -0.04em;
 }
 
@@ -1786,7 +1802,7 @@ body.menu-open {
 .cta-banner h2 {
   max-width: 830px;
   margin: 18px 0;
-  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  font-size: clamp(2.13rem, 4.67vw, 4.67rem);
   line-height: 0.98;
   letter-spacing: -0.08em;
 }
@@ -1877,7 +1893,7 @@ body.menu-open {
 
 .experience-card h3 {
   margin: 50px 0 20px;
-  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-size: clamp(1.70rem, 3.40vw, 3.23rem);
   line-height: 1;
   letter-spacing: -0.07em;
 }
@@ -2029,7 +2045,7 @@ body.menu-open {
 .project-card h3,
 .support-card h3 {
   margin: 0 0 12px;
-  font-size: 2.2rem;
+  font-size: 1.87rem;
   letter-spacing: -0.06em;
 }
 
@@ -2064,7 +2080,7 @@ body.menu-open {
 
 .product-feature h2 {
   margin: 18px 0 40px;
-  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-size: clamp(2.04rem, 4.25vw, 4.25rem);
   line-height: 1;
   letter-spacing: -0.08em;
 }
@@ -2110,7 +2126,7 @@ body.menu-open {
 
 .product-feature__visual h3 {
   margin: 0 0 12px;
-  font-size: 2rem;
+  font-size: 1.70rem;
   letter-spacing: -0.05em;
 }
 
@@ -2139,7 +2155,7 @@ body.menu-open {
 
 .stat-circle h3 {
   margin: 0;
-  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-size: clamp(2.21rem, 4.25vw, 3.74rem);
   line-height: 1;
   letter-spacing: -0.08em;
 }
@@ -2196,7 +2212,7 @@ body.menu-open {
   left: 42px;
   bottom: -52px;
   color: rgba(255, 255, 255, 0.18);
-  font-size: clamp(5rem, 14vw, 14rem);
+  font-size: clamp(4.25rem, 11.90vw, 11.90rem);
   line-height: 1;
   letter-spacing: -0.1em;
   margin: 0;
@@ -2265,7 +2281,7 @@ body.menu-open {
 
 .process-card h3 {
   margin: 16px 0 10px;
-  font-size: 1.45rem;
+  font-size: 1.23rem;
   letter-spacing: -0.05em;
 }
 
@@ -2281,7 +2297,7 @@ body.menu-open {
 .brand-strip h2 {
   margin: 0 auto 44px;
   max-width: 900px;
-  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-size: clamp(2.04rem, 4.25vw, 4.25rem);
   line-height: 1.02;
   letter-spacing: -0.07em;
 }
@@ -2342,7 +2358,7 @@ body.menu-open {
 }
 
 .testimonial-card h4 {
-  font-size: 1.7rem;
+  font-size: 1.44rem;
   line-height: 1.1;
   margin-bottom: 18px;
 }
@@ -2409,7 +2425,7 @@ body.menu-open {
 
 .contact-copy h2 {
   margin: 22px 0 22px;
-  font-size: clamp(2.7rem, 5.5vw, 5.8rem);
+  font-size: clamp(2.29rem, 4.67vw, 4.93rem);
   line-height: 0.98;
   letter-spacing: -0.08em;
 }
@@ -2536,7 +2552,7 @@ body.menu-open {
 }
 
 .footer-column h3 {
-  font-size: 1.55rem;
+  font-size: 1.32rem;
   margin: 0 0 18px;
 }
 
@@ -3009,7 +3025,7 @@ body.menu-open {
   max-width: 980px;
   margin: 22px auto 18px;
   color: #07101d;
-  font-size: clamp(3rem, 4rem, 6.2rem);
+  font-size: clamp(2.55rem, 3.40rem, 5.27rem);
   line-height: 0.95;
   letter-spacing: -0.007em;
 }
@@ -3152,7 +3168,7 @@ body.menu-open {
   min-height: 58px;
   margin: 0 0 18px;
   color: #07101d;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   line-height: 1.22;
   letter-spacing: -0.035em;
 }
@@ -3274,7 +3290,7 @@ body.menu-open {
   max-width: 920px;
   margin: 20px auto 18px;
   color: #ffffff;
-  font-size: clamp(2.6rem, 5.8vw, 5rem);
+  font-size: clamp(2.21rem, 4.93vw, 4.25rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -3367,7 +3383,7 @@ body.menu-open {
 .visual-stack-card h3 {
   margin: 0 0 18px;
   color: #ffffff;
-  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-size: clamp(2.04rem, 4.25vw, 4.08rem);
   line-height: 0.92;
   letter-spacing: -0.078em;
 }
@@ -3527,7 +3543,7 @@ body.menu-open {
   }
 
   .benefit-services-header h2 {
-    font-size: clamp(2.6rem, 12vw, 4.4rem);
+    font-size: clamp(2.21rem, 10.20vw, 3.74rem);
   }
 
   .benefit-services-header p {
@@ -3556,7 +3572,7 @@ body.menu-open {
   }
 
   .visual-stack-header h2 {
-    font-size: 2.8rem;
+    font-size: 2.38rem;
   }
 
   .visual-stack-card {
@@ -3565,7 +3581,7 @@ body.menu-open {
   }
 
   .visual-stack-card h3 {
-    font-size: 2.35rem;
+    font-size: 2rem;
   }
 
   .visual-stack-card__image {
@@ -3661,7 +3677,7 @@ body.menu-open {
   max-width: 940px;
   margin: 22px auto 18px;
   color: #07101d;
-  font-size: clamp(3rem, 6.4vw, 5.8rem);
+  font-size: clamp(2.55rem, 5.44vw, 4.93rem);
   line-height: 0.96;
   letter-spacing: -0.075em;
 }
@@ -3897,7 +3913,7 @@ body.menu-open {
   }
 
   .home-clients-header h2 {
-    font-size: 2.7rem;
+    font-size: 2.29rem;
   }
 
   .home-clients-header p {
@@ -4067,7 +4083,7 @@ button,
 .about-page-hero h1 {
   margin: 18px 0 22px;
   color: #ffffff;
-  font-size: clamp(3rem, 7vw, 6.4rem);
+  font-size: clamp(2.55rem, 5.95vw, 5.44rem);
   line-height: 0.92;
   letter-spacing: -0.065em;
 }
@@ -4100,7 +4116,7 @@ button,
 .about-page-content h2 {
   margin-bottom: 18px;
   color: var(--color-dark);
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2.04rem, 4.25vw, 3.40rem);
 }
 
 .about-page-content p {
@@ -4142,7 +4158,7 @@ button,
 .keep-section-header h2 {
   margin: 22px auto 18px;
   color: #07101d;
-  font-size: clamp(3rem, 7vw, 6.2rem);
+  font-size: clamp(2.55rem, 5.95vw, 5.27rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -4257,7 +4273,7 @@ button,
 
 .keep-facts-highlight h3 {
   margin: 0 0 14px;
-  font-size: 1.55rem;
+  font-size: 1.32rem;
   letter-spacing: -0.04em;
 }
 
@@ -4390,7 +4406,7 @@ button,
 .keep-detailed-card h3 {
   margin: 0 0 18px;
   color: #ffffff;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(1.70rem, 3.40vw, 3.40rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -4601,7 +4617,7 @@ button,
 .home-projects-header h2 {
   margin: 20px 0 22px;
   color: #ffffff;
-  font-size: clamp(3rem, 6.5vw, 6.2rem);
+  font-size: clamp(2.55rem, 5.52vw, 5.27rem);
   line-height: 0.94;
   letter-spacing: -0.078em;
 }
@@ -4650,7 +4666,7 @@ button,
 .home-projects-card h3 {
   margin: 0 0 16px;
   color: #ffffff;
-  font-size: clamp(1.9rem, 3.5vw, 3.3rem);
+  font-size: clamp(1.61rem, 2.98vw, 2.80rem);
   line-height: 0.98;
   letter-spacing: -0.065em;
 }
@@ -4781,7 +4797,7 @@ button,
   }
 
   .home-projects-header h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
   }
 
   .home-projects-card {
@@ -4791,7 +4807,7 @@ button,
   }
 
   .home-projects-card h3 {
-    font-size: 2.35rem;
+    font-size: 2rem;
   }
 
   .home-projects-tabs {
@@ -5014,7 +5030,7 @@ button,
 .home-clients-header h2 {
   max-width: 820px;
   margin: 16px auto 12px !important;
-  font-size: clamp(2.45rem, 4.7vw, 4.3rem) !important;
+  font-size: clamp(2.08rem, 4vw, 3.65rem) !important;
   line-height: 0.98;
   letter-spacing: -0.065em;
 }
@@ -5228,7 +5244,7 @@ button,
   }
 
   .home-clients-header h2 {
-    font-size: 2.45rem !important;
+    font-size: 2.08rem !important;
   }
 
   .home-clients-slider {
@@ -5333,7 +5349,7 @@ button,
 .about-hero-v2 h1 {
   margin: 20px 0 24px;
   color: #ffffff;
-  font-size: clamp(3.4rem, 5vw, 7.2rem);
+  font-size: clamp(2.89rem, 4.25vw, 6.12rem);
   line-height: 0.9;
   letter-spacing: -0.005em;
 }
@@ -5520,7 +5536,7 @@ button,
   margin: 20px 0 0;
   max-width: 620px;
   color: #07101d;
-  font-size: clamp(2.8rem, 5.8vw, 5.8rem);
+  font-size: clamp(2.38rem, 4.93vw, 4.93rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -5594,7 +5610,7 @@ button,
 .about-section-heading-v2 h2 {
   margin: 22px auto 18px;
   color: #07101d;
-  font-size: clamp(2.8rem, 5.8vw, 5.8rem);
+  font-size: clamp(2.38rem, 4.93vw, 4.93rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -5675,7 +5691,7 @@ button,
   min-height: 54px;
   margin: 0 0 14px;
   color: #07101d;
-  font-size: 1.25rem;
+  font-size: 1.06rem;
   line-height: 1.18;
   letter-spacing: -0.04em;
 }
@@ -5723,7 +5739,7 @@ button,
 .about-values-v2__copy h2 {
   margin: 20px 0 22px;
   color: #ffffff;
-  font-size: clamp(2.8rem, 5.8vw, 5.8rem);
+  font-size: clamp(2.38rem, 4.93vw, 4.93rem);
   line-height: 0.94;
   letter-spacing: -0.075em;
 }
@@ -5785,7 +5801,7 @@ button,
 .about-value-card-v2 h3 {
   margin: 0 0 8px;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.06rem;
   letter-spacing: -0.04em;
 }
 
@@ -5821,7 +5837,7 @@ button,
   max-width: 760px;
   margin: 20px 0 16px;
   color: #ffffff;
-  font-size: clamp(2.7rem, 5.6vw, 5.6rem);
+  font-size: clamp(2.29rem, 4.76vw, 4.76rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -6119,7 +6135,7 @@ button,
   max-width: 840px;
   margin: 20px 0 24px;
   color: #07101d;
-  font-size: clamp(3rem, 5.9vw, 6.1rem);
+  font-size: clamp(2.55rem, 5.02vw, 5.18rem);
   line-height: 0.94;
   letter-spacing: -0.078em;
 }
@@ -6147,7 +6163,7 @@ button,
 .about-company-services__heading h3 {
   margin: 20px 0 0;
   color: #07101d;
-  font-size: clamp(2.5rem, 4.8vw, 4.8rem);
+  font-size: clamp(2.13rem, 4.08vw, 4.08rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -6302,7 +6318,7 @@ button,
   }
 
   .about-hero-v2 h1 {
-    font-size: 3.35rem;
+    font-size: 2.85rem;
     line-height: 0.96;
   }
 
@@ -6335,7 +6351,7 @@ button,
   .about-section-heading-v2 h2,
   .about-values-v2__copy h2,
   .about-cta-v2 h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 1;
   }
 
@@ -6397,7 +6413,7 @@ button,
   }
 
   .about-company-card__content h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 1;
   }
 
@@ -6410,7 +6426,7 @@ button,
   }
 
   .about-company-services__heading h3 {
-    font-size: 2.8rem;
+    font-size: 2.38rem;
   }
 
   .about-company-services__grid {
@@ -6512,7 +6528,7 @@ button,
   max-width: 920px;
   margin: 22px auto 18px;
   color: #ffffff;
-  font-size: clamp(3rem, 6.2vw, 5.8rem);
+  font-size: clamp(2.55rem, 5.27vw, 4.93rem);
   line-height: 0.94;
   letter-spacing: -0.075em;
 }
@@ -6593,7 +6609,7 @@ button,
   max-width: 720px;
   margin: 22px 0 26px;
   color: #ffffff;
-  font-size: clamp(2.65rem, 4.8vw, 5.2rem);
+  font-size: clamp(2.25rem, 4.08vw, 4.42rem);
   line-height: 0.96;
   letter-spacing: -0.075em;
 }
@@ -6742,7 +6758,7 @@ button,
   }
 
   .about-vision-mission-header h2 {
-    font-size: 2.85rem;
+    font-size: 2.42rem;
   }
 
   .about-vm-swipe-card {
@@ -6764,7 +6780,7 @@ button,
   }
 
   .about-vm-swipe-card__content h3 {
-    font-size: 2.55rem;
+    font-size: 2.17rem;
   }
 
   .about-vm-swipe-card__content p {
@@ -6827,7 +6843,7 @@ button,
   max-width: 900px;
   margin: 22px auto 18px;
   color: #07101d;
-  font-size: clamp(3rem, 6vw, 5.8rem);
+  font-size: clamp(2.55rem, 5.10vw, 4.93rem);
   line-height: 0.94;
   letter-spacing: -0.075em;
 }
@@ -6934,7 +6950,7 @@ button,
   max-width: 210px;
   margin: 0 0 10px;
   color: #07101d;
-  font-size: 1.18rem;
+  font-size: 1rem;
   line-height: 1.18;
   letter-spacing: -0.04em;
 }
@@ -7009,7 +7025,7 @@ button,
 
   .about-board-header h2 {
     margin-top: 18px;
-    font-size: clamp(2.8rem, 10vw, 4.8rem);
+    font-size: clamp(2.38rem, 8.50vw, 4.08rem);
     letter-spacing: -0.055em;
   }
 
@@ -7031,7 +7047,7 @@ button,
 
   .about-board-card h3 {
     max-width: min(100%, 260px);
-    font-size: 1.16rem;
+    font-size: 0.99rem;
   }
 }
 
@@ -7055,7 +7071,7 @@ button,
 
   .about-board-header h2 {
     margin-bottom: 14px;
-    font-size: clamp(2.35rem, 13vw, 3.4rem);
+    font-size: clamp(2rem, 11.05vw, 2.89rem);
     line-height: 0.98;
   }
 
@@ -7084,7 +7100,7 @@ button,
 
   .about-board-card h3 {
     max-width: calc(100% - 54px);
-    font-size: clamp(1.22rem, 6.4vw, 1.48rem);
+    font-size: clamp(1.04rem, 5.44vw, 1.26rem);
     letter-spacing: -0.025em;
   }
 
@@ -7154,7 +7170,7 @@ button,
   max-width: 900px;
   margin: 20px auto 16px;
   color: #07101d;
-  font-size: clamp(2.8rem, 5.6vw, 5.4rem);
+  font-size: clamp(2.38rem, 4.76vw, 4.59rem);
   line-height: 0.96;
   letter-spacing: -0.075em;
 }
@@ -7377,7 +7393,7 @@ button,
   }
 
   .about-company-logo-header h2 {
-    font-size: 2.55rem;
+    font-size: 2.17rem;
   }
 
   .about-company-logo-slider {
@@ -7519,7 +7535,7 @@ button,
 .about-contact-banner__content h2 {
   margin: 18px 0 16px;
   color: #ffffff;
-  font-size: clamp(2.3rem, 4.3vw, 4.6rem);
+  font-size: clamp(1.95rem, 3.65vw, 3.91rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -7660,7 +7676,7 @@ button,
   }
 
   .about-contact-banner__content h2 {
-    font-size: 2.55rem;
+    font-size: 2.17rem;
   }
 
   .about-contact-banner__content p {
@@ -7773,7 +7789,7 @@ button,
   max-width: 720px;
   margin: 18px 0 18px;
   color: #ffffff;
-  font-size: clamp(2.55rem, 5vw, 5.1rem);
+  font-size: clamp(2.17rem, 4.25vw, 4.33rem);
   line-height: 0.98;
   letter-spacing: -0.075em;
   text-shadow: 0 14px 44px rgba(0, 0, 0, 0.36);
@@ -7951,7 +7967,7 @@ button,
 .services-overview-header h2 {
   margin: 20px auto 16px;
   color: #07101d;
-  font-size: clamp(2.8rem, 5.8vw, 5.8rem);
+  font-size: clamp(2.38rem, 4.93vw, 4.93rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -7971,7 +7987,7 @@ button,
 
   .services-hero__content h1 {
     max-width: 680px;
-    font-size: clamp(2.7rem, 8vw, 4.6rem);
+    font-size: clamp(2.29rem, 6.80vw, 3.91rem);
   }
 
   .services-hero__overlay {
@@ -7995,7 +8011,7 @@ button,
   }
 
   .services-hero__content h1 {
-    font-size: 2.75rem;
+    font-size: 2.34rem;
     line-height: 0.98;
   }
 
@@ -8033,7 +8049,7 @@ button,
   }
 
   .services-overview-header h2 {
-    font-size: 2.8rem;
+    font-size: 2.38rem;
   }
 }
 /* Thumbnail shown after service hero video ends */
@@ -8330,7 +8346,7 @@ button,
   margin: 0 0 20px;
   max-width: 360px;
   color: #ffffff;
-  font-size: clamp(1.8rem, 2.5vw, 2.7rem);
+  font-size: clamp(1.53rem, 2.13vw, 2.29rem);
   line-height: 1.02;
   letter-spacing: -0.06em;
 }
@@ -8457,7 +8473,7 @@ button,
   max-width: 820px;
   margin: 18px auto 12px;
   color: #07101d;
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-size: clamp(2.21rem, 4.25vw, 4.08rem);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -8720,7 +8736,7 @@ button,
   max-width: 360px;
   margin: 0 0 20px;
   color: #ffffff;
-  font-size: clamp(1.95rem, 2.5vw, 2.55rem);
+  font-size: clamp(1.66rem, 2.13vw, 2.17rem);
   line-height: 1.02;
   letter-spacing: -0.06em;
 }
@@ -9065,7 +9081,7 @@ button,
 .why-choose-us-copy h2 {
   margin: 20px 0 24px;
   color: #ffffff;
-  font-size: clamp(3rem, 5.8vw, 6.25rem);
+  font-size: clamp(2.55rem, 4.93vw, 5.31rem);
   line-height: 0.92;
   letter-spacing: -0.078em;
   text-shadow: 0 18px 52px rgba(0, 0, 0, 0.4);
@@ -9202,7 +9218,7 @@ button,
   margin: 0 0 10px;
   max-width: 520px;
   color: #ffffff;
-  font-size: 1.36rem;
+  font-size: 1.16rem;
   line-height: 1.18;
   letter-spacing: -0.045em;
 }
@@ -9246,7 +9262,7 @@ button,
   }
 
   .why-choose-us-copy h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 0.98;
   }
 
@@ -9271,7 +9287,7 @@ button,
   }
 
   .why-choose-us-card__content h3 {
-    font-size: 1.22rem;
+    font-size: 1.04rem;
   }
 
   .why-choose-us-card__content p {
@@ -9365,7 +9381,7 @@ button,
   max-width: 720px;
   margin: 20px 0 20px;
   color: #ffffff;
-  font-size: clamp(3rem, 5.8vw, 6rem);
+  font-size: clamp(2.55rem, 4.93vw, 5.10rem);
   line-height: 0.94;
   letter-spacing: -0.078em;
   text-shadow: 0 18px 56px rgba(0, 0, 0, 0.42);
@@ -9488,7 +9504,7 @@ button,
   }
 
   .services-contact-cta-content h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 0.98;
   }
 
@@ -9583,7 +9599,7 @@ button,
 .security-service-hero__copy h1 {
   margin: 20px 0 22px;
   color: #ffffff;
-  font-size: clamp(3.2rem, 6.8vw, 7rem);
+  font-size: clamp(2.72rem, 5.78vw, 5.95rem);
   line-height: 0.92;
   letter-spacing: -0.078em;
   text-shadow: 0 20px 62px rgba(0, 0, 0, 0.42);
@@ -9684,7 +9700,7 @@ button,
   }
 
   .security-service-hero__copy h1 {
-    font-size: 3.2rem;
+    font-size: 2.72rem;
     line-height: 0.98;
   }
 
@@ -9744,7 +9760,7 @@ button,
   max-width: 940px;
   margin: 22px auto 18px;
   color: #07101d;
-  font-size: clamp(2.9rem, 5.8vw, 5.7rem);
+  font-size: clamp(2.46rem, 4.93vw, 4.84rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -9926,7 +9942,7 @@ button,
   max-width: 220px;
   margin: 0;
   color: #ffffff;
-  font-size: 1.45rem;
+  font-size: 1.23rem;
   line-height: 1.08;
   letter-spacing: -0.045em;
 }
@@ -9971,7 +9987,7 @@ button,
   max-width: 570px;
   margin: 0 0 16px;
   color: #ffffff;
-  font-size: clamp(2.1rem, 4vw, 4.2rem);
+  font-size: clamp(1.78rem, 3.40vw, 3.57rem);
   line-height: 0.94;
   letter-spacing: -0.075em;
   text-shadow: 0 18px 56px rgba(0, 0, 0, 0.42);
@@ -10074,7 +10090,7 @@ button,
   }
 
   .security-accordion-header h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 1;
   }
 
@@ -10095,7 +10111,7 @@ button,
   }
 
   .security-accordion-card__expanded h3 {
-    font-size: 2.45rem;
+    font-size: 2.08rem;
     line-height: 1;
   }
 
@@ -10125,7 +10141,7 @@ button,
 
 .security-accordion-header h2 {
   margin: 16px auto 12px !important;
-  font-size: clamp(2.55rem, 4.8vw, 4.9rem) !important;
+  font-size: clamp(2.17rem, 4.08vw, 4.17rem) !important;
 }
 
 .security-accordion-header p {
@@ -10203,7 +10219,7 @@ button,
 
 .security-accordion-card__collapsed h3 {
   max-width: 190px !important;
-  font-size: clamp(1.1rem, 1.45vw, 1.55rem) !important;
+  font-size: clamp(0.94rem, 1.23vw, 1.32rem) !important;
   line-height: 1.02 !important;
 }
 
@@ -10233,7 +10249,7 @@ button,
 }
 
 .security-accordion-card__expanded h3 {
-  font-size: clamp(2rem, 3.5vw, 3.75rem) !important;
+  font-size: clamp(1.70rem, 2.98vw, 3.19rem) !important;
 }
 
 .security-accordion-card__expanded p {
@@ -10282,7 +10298,7 @@ button,
   }
 
   .security-accordion-card__expanded h3 {
-    font-size: 2.35rem !important;
+    font-size: 2rem !important;
   }
 }
 
@@ -10316,7 +10332,7 @@ button,
   align-items: flex-start !important;
   max-width: 190px !important;
   color: #ffffff !important;
-  font-size: clamp(1.08rem, 1.35vw, 1.45rem) !important;
+  font-size: clamp(0.92rem, 1.15vw, 1.23rem) !important;
   line-height: 0.98 !important;
   letter-spacing: -0.05em !important;
 }
@@ -10416,7 +10432,7 @@ button,
 .security-solutions-highlight__copy h2 {
   margin: 22px 0 24px;
   color: #ffffff;
-  font-size: clamp(3rem, 5.8vw, 6.1rem);
+  font-size: clamp(2.55rem, 4.93vw, 5.18rem);
   line-height: 0.94;
   letter-spacing: -0.078em;
   text-shadow: 0 20px 58px rgba(0, 0, 0, 0.36);
@@ -10612,7 +10628,7 @@ button,
   max-width: 270px;
   margin: 0 0 12px;
   color: #ffffff;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   line-height: 1.16;
   letter-spacing: -0.045em;
 }
@@ -10652,7 +10668,7 @@ button,
   }
 
   .security-solutions-highlight__copy h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 1;
   }
 
@@ -11309,7 +11325,7 @@ button,
 .projects-hero__copy h1 {
   margin: 18px 0 24px;
   max-width: 980px;
-  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-size: clamp(3.40rem, 6.80vw, 7.22rem);
   line-height: 0.9;
   letter-spacing: -0.09em;
 }
@@ -11452,7 +11468,7 @@ button,
 .project-presentation-header h2 {
   margin: 18px 0 18px;
   color: #07101d;
-  font-size: clamp(2.8rem, 5.4vw, 5.7rem);
+  font-size: clamp(2.38rem, 4.59vw, 4.84rem);
   line-height: 0.94;
   letter-spacing: -0.078em;
 }
@@ -11596,7 +11612,7 @@ button,
   max-width: 650px;
   margin: 0 0 18px;
   color: #ffffff;
-  font-size: clamp(3rem, 5.35vw, 6.25rem);
+  font-size: clamp(2.55rem, 4.55vw, 5.31rem);
   line-height: 0.91;
   letter-spacing: -0.088em;
 }
@@ -11853,7 +11869,7 @@ button,
 
 .projects-brief-section__copy h2 {
   margin: 18px 0 24px;
-  font-size: clamp(2.8rem, 5.4vw, 5.8rem);
+  font-size: clamp(2.38rem, 4.59vw, 4.93rem);
   line-height: 0.95;
   letter-spacing: -0.08em;
 }
@@ -11895,7 +11911,7 @@ button,
 
 .projects-brief-section__cards h3 {
   margin: 0 0 10px;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 }
 
 .projects-brief-section__cards p {
@@ -12006,7 +12022,7 @@ button,
   max-width: 760px;
   margin: 0 0 22px;
   color: #ffffff;
-  font-size: clamp(3rem, 5.8vw, 6.6rem);
+  font-size: clamp(2.55rem, 4.93vw, 5.61rem);
   line-height: 0.92;
   letter-spacing: -0.085em;
 }
@@ -12068,7 +12084,7 @@ button,
   }
 
   .projects-contact-cta__panel h2 {
-    font-size: 3.2rem;
+    font-size: 2.72rem;
     line-height: 0.94;
   }
 
@@ -12134,7 +12150,7 @@ button,
   }
 
   .projects-hero__copy h1 {
-    font-size: 3.7rem;
+    font-size: 3.15rem;
   }
 
   .projects-hero__stats,
@@ -12154,7 +12170,7 @@ button,
   }
 
   .project-presentation-header h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
   }
 
   .project-queue-showcase {
@@ -12183,7 +12199,7 @@ button,
   }
 
   .project-queue-showcase__content h3 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     line-height: 0.92;
   }
 
@@ -12341,7 +12357,7 @@ button,
 .contact-hero__copy h1 {
   margin: 18px 0 24px;
   color: #ffffff;
-  font-size: clamp(4rem, 4vw, 8.3rem);
+  font-size: clamp(3.40rem, 3.40vw, 7.06rem);
   line-height: 0.9;
   letter-spacing: -0.005em;
 }
@@ -12477,7 +12493,7 @@ button,
 .contact-details-header h2 {
   margin: 18px 0 18px;
   color: #07101d;
-  font-size: clamp(2.8rem, 5.4vw, 5.7rem);
+  font-size: clamp(2.38rem, 4.59vw, 4.84rem);
   line-height: 0.94;
   letter-spacing: -0.078em;
 }
@@ -12588,7 +12604,7 @@ button,
 .contact-branch-card h3 {
   margin: 0 0 12px;
   color: #07101d;
-  font-size: 1.45rem;
+  font-size: 1.23rem;
 }
 
 .contact-branch-card p {
@@ -12653,7 +12669,7 @@ button,
 .contact-inquiry-copy h2 {
   margin: 18px 0 22px;
   color: #ffffff;
-  font-size: clamp(2.8rem, 5.4vw, 5.8rem);
+  font-size: clamp(2.38rem, 4.59vw, 4.93rem);
   line-height: 0.95;
   letter-spacing: -0.08em;
 }
@@ -12838,7 +12854,7 @@ button,
 .contact-map-info h2 {
   margin: 18px 0 14px;
   color: #07101d;
-  font-size: clamp(2.2rem, 4vw, 4.4rem);
+  font-size: clamp(1.87rem, 3.40vw, 3.74rem);
   line-height: 0.95;
   letter-spacing: -0.075em;
 }
@@ -12895,7 +12911,7 @@ button,
   }
 
   .contact-hero__copy h1 {
-    font-size: 3.6rem;
+    font-size: 3.06rem;
   }
 
   .contact-details-section,
@@ -12931,7 +12947,7 @@ button,
 .trusted-clients-strip h2 {
   margin: 0;
   color: #07101d;
-  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-size: clamp(1.02rem, 1.70vw, 1.40rem);
   line-height: 1.2;
   text-align: center;
 }
@@ -13112,7 +13128,7 @@ button,
 .footer-column h3 {
   margin: 0 0 26px;
   color: #ffffff;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 900;
   letter-spacing: -0.04em;
 }
