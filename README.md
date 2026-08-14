@@ -22,62 +22,6 @@ This version keeps the same one-page portfolio design from the video demo, but t
 - Nodemailer email notifications
 - Helmet, CORS, Morgan, and rate limiting
 
-## Frontend structure
-
-```text
-frontend/src/
-├── assets/
-│   └── images/
-│       └── README.md
-├── components/
-│   ├── common/
-│   │   ├── Footer.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── Reveal.tsx
-│   │   ├── ScrollTop.tsx
-│   │   └── SectionHeader.tsx
-│   ├── contact/
-│   │   ├── ContactForm.tsx
-│   │   └── SupportCards.tsx
-│   ├── home/
-│   │   ├── AboutBanner.tsx
-│   │   ├── Hero.tsx
-│   │   └── Marquee.tsx
-│   ├── products/
-│   │   ├── LocationShowcase.tsx
-│   │   ├── ProductCategories.tsx
-│   │   ├── ProductFeature.tsx
-│   │   ├── Stats.tsx
-│   │   └── VideoShowcase.tsx
-│   ├── projects/
-│   │   ├── BrandStrip.tsx
-│   │   ├── Process.tsx
-│   │   └── ProjectsCarousel.tsx
-│   ├── reviews/
-│   │   ├── CallToAction.tsx
-│   │   └── Testimonials.tsx
-│   └── services/
-│       ├── BenefitCards.tsx
-│       ├── ExperienceTimeline.tsx
-│       └── FeatureCollage.tsx
-├── data/
-│   ├── imageAssets.ts
-│   └── siteData.tsx
-├── hooks/
-│   └── useActiveSection.ts
-├── pages/
-│   ├── Contact.tsx
-│   ├── Home.tsx
-│   ├── Products.tsx
-│   ├── Projects.tsx
-│   ├── Reviews.tsx
-│   └── Services.tsx
-├── types/
-│   └── index.ts
-├── App.css
-├── App.tsx
-├── main.tsx
-└── vite-env.d.ts
 ```
 
 ## Install and run frontend
@@ -145,11 +89,5 @@ Frontend:
 
 ```bash
 npm install motion swiper lucide-react
-```
-
-Backend:
-
-```bash
-npm install express mongoose zod nodemailer cors helmet morgan express-rate-limit dotenv
 ```
 

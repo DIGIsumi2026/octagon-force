@@ -1,161 +1,161 @@
 //logos
 import companyLogo from "../assets/images/company-logo.png";
-import aboutVideoThumbnail from "../assets/images/about-video-thumbnail.png";
+import aboutVideoThumbnail from "../assets/images/about-video-thumbnail.webp";
 
 //footer logo
 import footerLogo from "../assets/images/logo-white.png";
 
 //images 
-import sidebarBg from "../assets/images/navigation/sidebar-bg.png";
-import heroH1 from "../assets/images/header-bg1.jpg";
-import heroH2 from "../assets/images/header-bg2.jpg";
-import heroH3 from "../assets/images/header-bg3.jpg";
-import heroH4 from "../assets/images/header-bg4.jpg";
-import heroH5 from "../assets/images/header-bg5.jpg";
-import heroH6 from "../assets/images/header-bg6.jpg";
-import heroH7 from "../assets/images/header-bg7.jpg";
-import heroH8 from "../assets/images/header-bg8.jpg";
-import serviceSecurity from "../assets/images/security-service.jpg";
-import serviceCleaning from "../assets/images/cleaning-service.jpg";
-import serviceCashTransport from "../assets/images/cash-transport.jpg";
-import serviceSupplyChain from "../assets/images/supply-chain.jpg";
-import serviceSolidWaste from "../assets/images/solid-waste.jpg";
-import serviceTransportOperations from "../assets/images/transport-operations.png";
+import sidebarBg from "../assets/images/navigation/sidebar-bg.webp";
+import heroH1 from "../assets/images/header-bg1.webp";
+import heroH2 from "../assets/images/header-bg2.webp";
+import heroH3 from "../assets/images/header-bg3.webp";
+import heroH4 from "../assets/images/header-bg4.webp";
+import heroH5 from "../assets/images/header-bg5.webp";
+import heroH6 from "../assets/images/header-bg6.webp";
+import heroH7 from "../assets/images/header-bg7.webp";
+import heroH8 from "../assets/images/header-bg8.webp";
+import serviceSecurity from "../assets/images/security-service.webp";
+import serviceCleaning from "../assets/images/cleaning-service.webp";
+import serviceCashTransport from "../assets/images/cash-transport.webp";
+import serviceSupplyChain from "../assets/images/supply-chain.webp";
+import serviceSolidWaste from "../assets/images/solid-waste.webp";
+import serviceTransportOperations from "../assets/images/transport-operations.webp";
 
-import projectSecurity from "../assets/images/projects/security-project.png";
-import projectCash from "../assets/images/projects/cash-project.png";
-import projectFacility from "../assets/images/projects/facility-project.png";
-import projectLogistics from "../assets/images/projects/logistics-project.png";
+import projectSecurity from "../assets/images/projects/security-project.webp";
+import projectCash from "../assets/images/projects/cash-project.webp";
+import projectFacility from "../assets/images/projects/facility-project.webp";
+import projectLogistics from "../assets/images/projects/logistics-project.webp";
 
-import aboutContactBanner from "../assets/images/about us/contact_us.png";
+import aboutContactBanner from "../assets/images/about us/contact_us.webp";
 
 /* clients */
-import clientLogo1 from "../assets/images/clients/sumathi-universal.jpg";
-import clientLogo2 from "../assets/images/clients/leisure-sports.jpg";
-import clientLogo3 from "../assets/images/clients/napco.jpg";
-import clientLogo4 from "../assets/images/clients/sumathi-printers.jpg";
-import clientLogo5 from "../assets/images/clients/cool-planet.jpg";
-import clientLogo6 from "../assets/images/clients/kapri-market.jpg";
-import clientLogo7 from "../assets/images/clients/fingara-club.jpg";
-import clientLogo8 from "../assets/images/clients/food-city.jpg";
-import clientLogo9 from "../assets/images/clients/rush-residence.jpg";
-import clientLogo10 from "../assets/images/clients/petals-shop.jpg";
-import clientLogo11 from "../assets/images/clients/dfcc-bank.jpg";
-import clientLogo12 from "../assets/images/clients/gowmark.jpg";
-import clientLogo13 from "../assets/images/clients/kids-walk.jpg";
-import clientLogo14 from "../assets/images/clients/lakpohora.jpg";
-import clientLogo15 from "../assets/images/clients/dep-meteology.jpg";
-import clientLogo16 from "../assets/images/clients/inst-archeology.jpg";
-import clientLogo17 from "../assets/images/clients/business-school.jpg";
-import clientLogo18 from "../assets/images/clients/hindu-collage.jpg";
+import clientLogo1 from "../assets/images/clients/sumathi-universal.webp";
+import clientLogo2 from "../assets/images/clients/leisure-sports.webp";
+import clientLogo3 from "../assets/images/clients/napco.webp";
+import clientLogo4 from "../assets/images/clients/sumathi-printers.webp";
+import clientLogo5 from "../assets/images/clients/cool-planet.webp";
+import clientLogo6 from "../assets/images/clients/kapri-market.webp";
+import clientLogo7 from "../assets/images/clients/fingara-club.webp";
+import clientLogo8 from "../assets/images/clients/food-city.webp";
+import clientLogo9 from "../assets/images/clients/rush-residence.webp";
+import clientLogo10 from "../assets/images/clients/petals-shop.webp";
+import clientLogo11 from "../assets/images/clients/dfcc-bank.webp";
+import clientLogo12 from "../assets/images/clients/gowmark.webp";
+import clientLogo13 from "../assets/images/clients/kids-walk.webp";
+import clientLogo14 from "../assets/images/clients/lakpohora.webp";
+import clientLogo15 from "../assets/images/clients/dep-meteology.webp";
+import clientLogo16 from "../assets/images/clients/inst-archeology.webp";
+import clientLogo17 from "../assets/images/clients/business-school.webp";
+import clientLogo18 from "../assets/images/clients/hindu-collage.webp";
 
-import aboutHero from "../assets/images/about us/about-hero.png";
-import aboutEntry from "../assets/images/about us/about-entry.png";
-import sumathiLogo from "../assets/images/about us/sumathilogo.png";
-import aboutVisionImage from "../assets/images/about us/vision-image.png";
-import aboutMissionImage from "../assets/images/about us/mission-image.png";
+import aboutHero from "../assets/images/about us/about-hero.webp";
+import aboutEntry from "../assets/images/about us/about-entry.webp";
+import sumathiLogo from "../assets/images/about us/sumathilogo.webp";
+import aboutVisionImage from "../assets/images/about us/vision-image.webp";
+import aboutMissionImage from "../assets/images/about us/mission-image.webp";
 
 import aboutCompanyIntroVideo from "../assets/videos/about us/about-company-intro.mp4";
 
 /* management */
-import thilangaSumathipala from "../assets/images/about us/management/thilanga.png";
-import samadaraSumathipala from "../assets/images/about us/management/samadara.png";
-import dulanthaSumathipala from "../assets/images/about us/management/dulantha.png";
-import sajanthaSumathipala from "../assets/images/about us/management/sajantha.png"; 
+import thilangaSumathipala from "../assets/images/about us/management/thilanga.webp";
+import samadaraSumathipala from "../assets/images/about us/management/samadara.webp";
+import dulanthaSumathipala from "../assets/images/about us/management/dulantha.webp";
+import sajanthaSumathipala from "../assets/images/about us/management/sajantha.webp"; 
 
 /* companies */
-import company1Logo from "../assets/images/about us/companyLogo/company1.png";
-import company2Logo from "../assets/images/about us/companyLogo/company2.png";
-import company3Logo from "../assets/images/about us/companyLogo/company3.png";
-import company4Logo from "../assets/images/about us/companyLogo/company4.png";
-import company5Logo from "../assets/images/about us/companyLogo/company5.png";
-import company6Logo from "../assets/images/about us/companyLogo/company6.png";
-import company7Logo from "../assets/images/about us/companyLogo/company7.png";
-import company8Logo from "../assets/images/about us/companyLogo/company8.png";
-import company9Logo from "../assets/images/about us/companyLogo/company9.png";
-import company10Logo from "../assets/images/about us/companyLogo/company10.png";
-import company11Logo from "../assets/images/about us/companyLogo/company11.png";
-import company12Logo from "../assets/images/about us/companyLogo/company12.png";
-import company13Logo from "../assets/images/about us/companyLogo/company13.png";
-import company14Logo from "../assets/images/about us/companyLogo/company14.png";
-import company15Logo from "../assets/images/about us/companyLogo/company15.png";
+import company1Logo from "../assets/images/about us/companyLogo/company1.webp";
+import company2Logo from "../assets/images/about us/companyLogo/company2.webp";
+import company3Logo from "../assets/images/about us/companyLogo/company3.webp";
+import company4Logo from "../assets/images/about us/companyLogo/company4.webp";
+import company5Logo from "../assets/images/about us/companyLogo/company5.webp";
+import company6Logo from "../assets/images/about us/companyLogo/company6.webp";
+import company7Logo from "../assets/images/about us/companyLogo/company7.webp";
+import company8Logo from "../assets/images/about us/companyLogo/company8.webp";
+import company9Logo from "../assets/images/about us/companyLogo/company9.webp";
+import company10Logo from "../assets/images/about us/companyLogo/company10.webp";
+import company11Logo from "../assets/images/about us/companyLogo/company11.webp";
+import company12Logo from "../assets/images/about us/companyLogo/company12.webp";
+import company13Logo from "../assets/images/about us/companyLogo/company13.webp";
+import company14Logo from "../assets/images/about us/companyLogo/company14.webp";
+import company15Logo from "../assets/images/about us/companyLogo/company15.webp";
 
 //services page imports
 import serviceHeroVideo from "../assets/images/service/service-hero.mp4";
-import serviceHeroThumbnail from "../assets/images/service/service-hero-thumbnail.png";
+import serviceHeroThumbnail from "../assets/images/service/service-hero-thumbnail.webp";
 
-import cardSecurity from "../assets/images/service/service-security.jpg";
-import cardCleaning from "../assets/images/service/service-cleaning.jpg";
-import cardCashTransport from "../assets/images/service/service-cash-transport.jpg";
-import cardTrasport from "../assets/images/service/service-transport.png";
-import cardLogistics from "../assets/images/service/service-logistics.jpg";
-import cardWaste from "../assets/images/service/service-waste-management.jpg";
-import serviceContactCta from "../assets/images/service/service-contact-cta.png";
+import cardSecurity from "../assets/images/service/service-security.webp";
+import cardCleaning from "../assets/images/service/service-cleaning.webp";
+import cardCashTransport from "../assets/images/service/service-cash-transport.webp";
+import cardTrasport from "../assets/images/service/service-transport.webp";
+import cardLogistics from "../assets/images/service/service-logistics.webp";
+import cardWaste from "../assets/images/service/service-waste-management.webp";
+import serviceContactCta from "../assets/images/service/service-contact-cta.webp";
 
 import whyChooseUsVideo from "../assets/images/service/why-choose-us.mp4";
 
 //security service page
-import heroImage from "../assets/images/service/security/security-hero.jpg";
-import securityBouncers from "../assets/images/service/security/security-bouncers.png";
-import privateSecurity from "../assets/images/service/security/private-security.png";
-import vipProtection from "../assets/images/service/security/vip-protection.png";
-import armedUnarmedGuards from "../assets/images/service/security/armed-unarmed-guards.png";
-import staticSecurity from "../assets/images/service/security/static-security.png";
+import heroImage from "../assets/images/service/security/security-hero.webp";
+import securityBouncers from "../assets/images/service/security/security-bouncers.webp";
+import privateSecurity from "../assets/images/service/security/private-security.webp";
+import vipProtection from "../assets/images/service/security/vip-protection.webp";
+import armedUnarmedGuards from "../assets/images/service/security/armed-unarmed-guards.webp";
+import staticSecurity from "../assets/images/service/security/static-security.webp";
 
 //cleaning & housekeeping page 
-import cleaningHero from "../assets/images/service/cleaning/cleaningHero.jpg"
-import cleaningSanitizing from "../assets/images//service/cleaning/sanitizing.png";
-import cleaningHouses from "../assets/images//service/cleaning/cleaning-houses.png";
-import cleaningOffices from "../assets/images/service/cleaning/cleaning-offices.png";
-import cleaningGardensLandscaping from "../assets/images/service/cleaning/gardens-landscaping.png";
+import cleaningHero from "../assets/images/service/cleaning/cleaningHero.webp"
+import cleaningSanitizing from "../assets/images//service/cleaning/sanitizing.webp";
+import cleaningHouses from "../assets/images//service/cleaning/cleaning-houses.webp";
+import cleaningOffices from "../assets/images/service/cleaning/cleaning-offices.webp";
+import cleaningGardensLandscaping from "../assets/images/service/cleaning/gardens-landscaping.webp";
 
 //cash transport page
-import cashHero from "../assets/images/service/cash-transport/service-cash-transport.jpg";
-import cashRiskManagement from "../assets/images/service/cash-transport/risk-management.png";
-import cashArmedPersonnel from "../assets/images/service/cash-transport/armed-personnel.png";
-import cashSecureVehicles from "../assets/images/service/cash-transport/secure-vehicles.png";
-import cashSafeStorage from "../assets/images/service/cash-transport/safe-storage.png";
+import cashHero from "../assets/images/service/cash-transport/service-cash-transport.webp";
+import cashRiskManagement from "../assets/images/service/cash-transport/risk-management.webp";
+import cashArmedPersonnel from "../assets/images/service/cash-transport/armed-personnel.webp";
+import cashSecureVehicles from "../assets/images/service/cash-transport/secure-vehicles.webp";
+import cashSafeStorage from "../assets/images/service/cash-transport/safe-storage.webp";
 
 //transport service 
-import transportHero from "../assets/images/transport/transportHero.jpg";
-import transportAssetBased from "../assets/images/transport/asset-based-transport.png";
-import transportProfessionalDrivers from "../assets/images/transport/professional-drivers.png"
-import transportTopLineEquipment from "../assets/images/transport/top-line-equipment.png";
-import transportFleetMaintenance from "../assets/images/transport/fleet-maintenance.png";
-import transportCustomerSupport from "../assets/images/transport/customer-support.png";
+import transportHero from "../assets/images/transport/transportHero.webp";
+import transportAssetBased from "../assets/images/transport/asset-based-transport.webp";
+import transportProfessionalDrivers from "../assets/images/transport/professional-drivers.webp"
+import transportTopLineEquipment from "../assets/images/transport/top-line-equipment.webp";
+import transportFleetMaintenance from "../assets/images/transport/fleet-maintenance.webp";
+import transportCustomerSupport from "../assets/images/transport/customer-support.webp";
 
 //logistic service page 
-import logisticHero from "../assets/images/service/logistics/logisticHero.jpg";
-import logisticsProfessionalStaff from "../assets/images/service/logistics/professional-logistics-staff.png";
-import logisticsFleetPositioning from "../assets/images/service/logistics/fleet-positioning.png";
-import logisticsRapidCoordination from "../assets/images/service/logistics/rapid-coordination.png";
-import logisticsCustomizedConsultancy from "../assets/images/service/logistics/customized-consultancy.png";
+import logisticHero from "../assets/images/service/logistics/logisticHero.webp";
+import logisticsProfessionalStaff from "../assets/images/service/logistics/professional-logistics-staff.webp";
+import logisticsFleetPositioning from "../assets/images/service/logistics/fleet-positioning.webp";
+import logisticsRapidCoordination from "../assets/images/service/logistics/rapid-coordination.webp";
+import logisticsCustomizedConsultancy from "../assets/images/service/logistics/customized-consultancy.webp";
 
 //solid waste service page
-import solidHero from "../assets/images/service/solid-waste/solid-hero.jpg";
-import wasteRemovalCleanup from "../assets/images/service/solid-waste/waste-removal-cleanup.png";
-import residentialWasteHandling from "../assets/images/service/solid-waste/residential-waste-handling.png";
-import officeJanitorialWaste from "../assets/images/service/solid-waste/office-janitorial-waste.png";
-import gardenWasteCleaning from "../assets/images/service/solid-waste/garden-waste-cleaning.png";
+import solidHero from "../assets/images/service/solid-waste/solid-hero.webp";
+import wasteRemovalCleanup from "../assets/images/service/solid-waste/waste-removal-cleanup.webp";
+import residentialWasteHandling from "../assets/images/service/solid-waste/residential-waste-handling.webp";
+import officeJanitorialWaste from "../assets/images/service/solid-waste/office-janitorial-waste.webp";
+import gardenWasteCleaning from "../assets/images/service/solid-waste/garden-waste-cleaning.webp";
 
 //projects page
-import projectHero from "../assets/images/projects/project-hero.png";
-import projectCta from "../assets/images\/projects/project-cta.png";
+import projectHero from "../assets/images/projects/project-hero.webp";
+import projectCta from "../assets/images/projects/project-cta.webp";
 
-import foodCityLogo from "../assets/images/projects/food-city.jpg";
-import coolPlanetLogo from "../assets/images/projects/cool-planet.jpg";
-import kapriLogo from "../assets/images/projects/kapri-market.jpg";
-import calamansiLogo from "../assets/images/projects/calamansi-villas.jpg";
-import dfccLogo from "../assets/images/projects/dfcc-bank.jpg";
+import foodCityLogo from "../assets/images/projects/food-city.webp";
+import coolPlanetLogo from "../assets/images/projects/cool-planet.webp";
+import kapriLogo from "../assets/images/projects/kapri-market.webp";
+import calamansiLogo from "../assets/images/projects/calamansi-villas.webp";
+import dfccLogo from "../assets/images/projects/dfcc-bank.webp";
 
-import foodCityProject from "../assets/images/projects/cargills-food-city-project.png";
-import coolPlanetProject from "../assets/images/projects/cool-planet-project.png";
-import kapriProject from "../assets/images/projects/kapri-project.png";
-import calamansiProject  from "../assets/images/projects/calamansi-cove-project.png";
-import dfccProject from "../assets/images/projects/dfcc-bank.png";
+import foodCityProject from "../assets/images/projects/cargills-food-city-project.webp";
+import coolPlanetProject from "../assets/images/projects/cool-planet-project.webp";
+import kapriProject from "../assets/images/projects/kapri-project.webp";
+import calamansiProject  from "../assets/images/projects/calamansi-cove-project.webp";
+import dfccProject from "../assets/images/projects/dfcc-bank.webp";
 
 //contact page 
-import contactHero from "../assets/images/contact/contact-hero.png";
+import contactHero from "../assets/images/contact/contact-hero.webp";
 
 
 
