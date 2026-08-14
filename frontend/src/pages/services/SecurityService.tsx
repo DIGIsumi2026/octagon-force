@@ -33,12 +33,12 @@ export default function SecurityService() {
               Security Services
             </span>
 
-            <h1>Professional Security Built On Discipline And Trust.</h1>
+            <h1>Professional Security Built On Discipline and Trust</h1>
 
             <p>
               Octagon Force provides reliable security solutions through trained,
-              disciplined, and well-supervised security personnel for corporate,
-              commercial, residential, and operational environments.
+              disciplined, and well supervised security personnel for corporate,
+              commercial, residential and operational environments.
             </p>
 
             <div className="security-service-hero__actions">

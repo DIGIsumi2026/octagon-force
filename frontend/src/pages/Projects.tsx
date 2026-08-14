@@ -282,11 +282,11 @@ export default function Projects() {
               Our Deployments
             </span>
 
-            <h1>Featured Projects & Active Deployments.</h1>
+            <h1>Featured Projects & Active Deployments</h1>
 
             <p>
               Proven operational excellence across Sri Lanka&apos;s leading
-              retail, hospitality, banking, corporate, government, and critical
+              retail, hospitality, banking, corporate, government and critical
               infrastructure environments.
             </p>
 
@@ -335,10 +335,6 @@ export default function Projects() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.82, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="eyebrow">
-              <span />
-              Project Presentation
-            </span>
 
             <h2>Featured Deployments In One Operational Showcase.</h2>
 
