@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -39,6 +40,25 @@ const services = [
 ];
 
 export default function ServicesShowcase() {
+  useEffect(() => {
+    const cards = document.querySelectorAll(".service-flip-card");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-mobile-active");
+          } else {
+            entry.target.classList.remove("is-mobile-active");
+          }
+        });
+      },
+      { threshold: 0.6 } // Activate when 60% of card is visible
+    );
+
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="our-services" className="services-showcase-section">
       <div className="container">

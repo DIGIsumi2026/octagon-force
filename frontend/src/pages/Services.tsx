@@ -78,8 +78,6 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span />
-            Our Services
           </motion.span>
 
           <motion.h1
