@@ -37,11 +37,6 @@ export default function BoardManagement() {
     <section className="about-board-section">
       <div className="container">
         <div className="about-board-header">
-          <span className="eyebrow">
-            <span />
-            Leadership
-          </span>
-
           <h2>Board Of Management.</h2>
 
           <p>

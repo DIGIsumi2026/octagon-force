@@ -76,7 +76,7 @@ export default function ProjectShowcase() {
               Our Projects
             </span>
 
-            <h2>Field-Proven Work Across Critical Services.</h2>
+            <h2>Field Proven Work Across Critical Services.</h2>
 
             <p>
               Explore selected Octagon Force project areas built around security,

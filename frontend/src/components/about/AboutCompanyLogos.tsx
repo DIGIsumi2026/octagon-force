@@ -46,16 +46,11 @@ export default function AboutCompanyLogos() {
     <section className="about-company-logo-section">
       <div className="container">
         <div className="about-company-logo-header">
-          <span className="eyebrow">
-            <span />
-            Our Companies
-          </span>
-
-          <h2>Connected By Trust, Service, And Shared Values.</h2>
+          <h2>Connected By Trust, Service and Shared Values.</h2>
 
           <p>
             Our operations are strengthened by connected businesses, trusted
-            partnerships, and a long-standing commitment to professional service
+            partnerships and a long standing commitment to professional service
             delivery.
           </p>
         </div>

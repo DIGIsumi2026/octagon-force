@@ -261,7 +261,7 @@ export default function CompanyIntro() {
                 About Us
               </span>
 
-              <h2>Part Of A Legacy Built On Unity, Honesty, And Integrity.</h2>
+              <h2>Part Of A Legacy Built On Unity, Honesty And Integrity.</h2>
 
               <p>
                 Octagon Force is part of Sumathi Universal Management and
@@ -280,19 +280,6 @@ export default function CompanyIntro() {
 
         <Reveal delay={0.12}>
   <section className="about-vision-mission-section">
-  <div className="about-vision-mission-header">
-    <span className="eyebrow eyebrow--light">
-      <span />
-      Vision & Mission
-    </span>
-
-    <h2>Guided By Purpose. Driven By Service.</h2>
-
-    <p>
-      Our vision and mission reflect the standards, discipline, and service
-      commitment that guide every Octagon Force operation.
-    </p>
-  </div>
 
   <div className="about-vm-swipe-list">
     {/* Vision */}

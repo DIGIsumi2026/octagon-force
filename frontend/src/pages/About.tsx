@@ -55,12 +55,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="eyebrow eyebrow--light">
-              <span />
-              About Octagon Force
-            </span>
-
-            <h1>One Force For Safer, Services for the country.</h1>
+            <h1>One Force For Safer, Services for the country</h1>
 
             <p>
               Octagon Force is dedicated to serving the country through security,

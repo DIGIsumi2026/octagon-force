@@ -50,8 +50,6 @@ export default function AboutContactBanner() {
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.12 }}
           >
-            <span />
-            Talk To Us
           </motion.span>
 
           <motion.h2
@@ -70,7 +68,7 @@ export default function AboutContactBanner() {
             transition={{ duration: 0.65, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
             Connect with Octagon Force to discuss professional security,
-            cleaning, transport, logistics, and operational support services
+            cleaning, transport, logistics and operational support services
             tailored to your organization.
           </motion.p>
 
@@ -116,10 +114,15 @@ export default function AboutContactBanner() {
               <ArrowRight />
             </Link>
 
-            <span className="about-contact-banner__note">
+            <a 
+              href="https://wa.me/94777660021"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about-contact-banner__note"
+            >
               <PhoneCall />
               Let’s discuss your service requirement.
-            </span>
+            </a>
           </motion.div>
         </div>
       </motion.div>
