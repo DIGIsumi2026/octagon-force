@@ -22,72 +22,164 @@ This version keeps the same one-page portfolio design from the video demo, but t
 - Nodemailer email notifications
 - Helmet, CORS, Morgan, and rate limiting
 
+## Frontend structure
+
+```text
+frontend/src/
+├── assets/
+│   └── images/
+│       └── README.md
+├── components/
+│   ├── common/
+│   │   ├── Footer.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Reveal.tsx
+│   │   ├── ScrollTop.tsx
+│   │   └── SectionHeader.tsx
+│   ├── contact/
+│   │   ├── ContactForm.tsx
+│   │   └── SupportCards.tsx
+│   ├── home/
+│   │   ├── AboutBanner.tsx
+│   │   ├── Hero.tsx
+│   │   └── Marquee.tsx
+│   ├── products/
+│   │   ├── LocationShowcase.tsx
+│   │   ├── ProductCategories.tsx
+│   │   ├── ProductFeature.tsx
+│   │   ├── Stats.tsx
+│   │   └── VideoShowcase.tsx
+│   ├── projects/
+│   │   ├── BrandStrip.tsx
+│   │   ├── Process.tsx
+│   │   └── ProjectsCarousel.tsx
+│   ├── reviews/
+│   │   ├── CallToAction.tsx
+│   │   └── Testimonials.tsx
+│   └── services/
+│       ├── BenefitCards.tsx
+│       ├── ExperienceTimeline.tsx
+│       └── FeatureCollage.tsx
+├── data/
+│   ├── imageAssets.ts
+│   └── siteData.tsx
+├── hooks/
+│   └── useActiveSection.ts
+├── pages/
+│   ├── Contact.tsx
+│   ├── Home.tsx
+│   ├── Products.tsx
+│   ├── Projects.tsx
+│   ├── Reviews.tsx
+│   └── Services.tsx
+├── types/
+│   └── index.ts
+├── App.css
+├── App.tsx
+├── main.tsx
+└── vite-env.d.ts
 ```
 
 ## Install and run frontend
 
 ```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+---
+
+## 🧪 Run Locally
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Build frontend:
+Open:
+
+```txt
+http://localhost:5173
+```
+
+---
+
+## 🏗️ Build for Production
+
+Create the production build:
 
 ```bash
 npm run build
 ```
 
-## Install and run backend
+This will generate:
+
+```txt
+dist/
+```
+
+Preview the production build locally:
 
 ```bash
-cd backend
-npm install
-cp .env.example .env
-npm run dev
+npm run preview
 ```
 
-Create this file for frontend API connection:
+---
+
+## 🌐 Hostinger Deployment
+
+After running:
 
 ```bash
-frontend/.env
+npm run build
 ```
 
-```env
-VITE_API_URL=http://localhost:5000/api
+Upload only the **contents inside** the `dist` folder to Hostinger:
+
+```txt
+Hostinger → Websites → octagonforce.com → Dashboard → File Manager → public_html
 ```
 
-## Change images easily
+Correct final structure:
 
-All image URLs are centralized here:
-
-```text
-frontend/src/data/imageAssets.ts
+```txt
+public_html/
+├── index.html
+├── contact.php
+├── .htaccess
+├── favicon.png
+└── assets/
 ```
 
-To use local images:
+Do **not** upload:
 
-1. Put images inside `frontend/src/assets/images/`.
-2. Import them in `frontend/src/data/imageAssets.ts`.
-3. Replace the matching image value.
-
-Example:
-
-```ts
-import heroHome from "../assets/images/hero-home.jpg";
-
-export const images = {
-  hero: {
-    monitoring: heroHome
-  }
-};
+```txt
+src/
+node_modules/
+backend/
+package.json
+vite.config.ts
 ```
 
-## Main libraries/plugins
+---
 
-Frontend:
+## 🔁 Updating the Live Website
+
+After making changes locally:
 
 ```bash
 npm install motion swiper lucide-react
+```
+
+Backend:
+
+```bash
+npm install express mongoose zod nodemailer cors helmet morgan express-rate-limit dotenv
 ```
 
