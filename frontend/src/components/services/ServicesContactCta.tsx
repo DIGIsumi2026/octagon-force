@@ -79,10 +79,10 @@ export default function ServicesContactCta() {
               <ArrowRight />
             </Link>
 
-            <Link to="/contact" className="services-contact-cta-secondary">
+            <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="services-contact-cta-secondary">
               <PhoneCall />
               Request Consultation
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>

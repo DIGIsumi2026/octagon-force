@@ -120,10 +120,6 @@ export default function CleaningSolutionsHighlight() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <span className="eyebrow eyebrow--light">
-            <span />
-            Professional Housekeeping & Janitorial Solutions
-          </span>
 
           <h2>A Cleaner, Healthier Environment Built Around Your Busy Schedule.</h2>
 
@@ -142,10 +138,10 @@ export default function CleaningSolutionsHighlight() {
             remains pristine, organized, and inviting.
           </p>
 
-          <Link to="/contact" className="security-solutions-highlight__button">
+          <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-solutions-highlight__button">
             Discuss Cleaning Requirements
             <ArrowRight />
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div

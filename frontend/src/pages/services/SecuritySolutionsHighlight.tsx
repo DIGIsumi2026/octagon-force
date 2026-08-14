@@ -117,10 +117,6 @@ export default function SecuritySolutionsHighlight() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <span className="eyebrow eyebrow--light">
-            <span />
-            Comprehensive Security Solutions
-          </span>
 
           <h2>24/7 Vigilance And Protection For Your Assets.</h2>
 
@@ -140,10 +136,10 @@ export default function SecuritySolutionsHighlight() {
             mind tailored to your exact needs.
           </p>
 
-          <Link to="/contact" className="security-solutions-highlight__button">
+          <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-solutions-highlight__button">
             Discuss Security Requirements
             <ArrowRight />
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div

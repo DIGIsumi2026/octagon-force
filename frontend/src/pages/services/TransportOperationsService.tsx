@@ -48,10 +48,10 @@ export default function TransportOperationsService() {
             </p>
 
             <div className="security-service-hero__actions">
-              <Link to="/contact" className="security-service-hero__button">
+              <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-service-hero__button">
                 Request Transport Service
                 <ArrowRight />
-              </Link>
+              </a>
 
               <Link to="/services" className="security-service-hero__secondary">
                 View All Services

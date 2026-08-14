@@ -141,10 +141,10 @@ export default function CashTransportSolutionsHighlight() {
             safely, reliably, and without compromise.
           </p>
 
-          <Link to="/contact" className="security-solutions-highlight__button">
+          <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-solutions-highlight__button">
             Discuss Cash Transport
             <ArrowRight />
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div

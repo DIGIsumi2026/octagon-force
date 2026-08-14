@@ -121,10 +121,6 @@ export default function SolidWasteSolutionsHighlight() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <span className="eyebrow eyebrow--light">
-            <span />
-            Integrated Waste Removal & Housekeeping
-          </span>
 
           <h2>Hygienic, Organized, And Regular Waste Clearance Solutions.</h2>
 
@@ -143,10 +139,10 @@ export default function SolidWasteSolutionsHighlight() {
             residents.
           </p>
 
-          <Link to="/contact" className="security-solutions-highlight__button">
+          <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-solutions-highlight__button">
             Discuss Waste Cleaning Support
             <ArrowRight />
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div

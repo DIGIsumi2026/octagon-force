@@ -114,10 +114,10 @@ export default function CashTransportAccordion() {
 
                   <p>{service.description}</p>
 
-                  <Link to="/contact" className="security-accordion-card__link">
+                  <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-accordion-card__link">
                     Request This Service
                     <ArrowRight />
-                  </Link>
+                  </a>
                 </div>
               </article>
             );

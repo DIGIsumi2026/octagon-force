@@ -48,10 +48,6 @@ export default function LogisticsAccordion() {
           viewport={{ once: true, amount: 0.28 }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="eyebrow">
-            <span />
-            Logistics Support
-          </span>
 
           <h2>Streamlined Coordination For Operational Continuity.</h2>
 
@@ -114,10 +110,10 @@ export default function LogisticsAccordion() {
 
                   <p>{service.description}</p>
 
-                  <Link to="/contact" className="security-accordion-card__link">
+                  <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-accordion-card__link">
                     Request This Service
                     <ArrowRight />
-                  </Link>
+                  </a>
                 </div>
               </article>
             );

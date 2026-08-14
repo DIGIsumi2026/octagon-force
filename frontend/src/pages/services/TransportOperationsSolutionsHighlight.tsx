@@ -120,10 +120,6 @@ export default function TransportOperationsSolutionsHighlight() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <span className="eyebrow eyebrow--light">
-            <span />
-            Asset-Based Transportation Solutions
-          </span>
 
           <h2>Quality Service And Complete Dependability On The Move.</h2>
 
@@ -141,10 +137,10 @@ export default function TransportOperationsSolutionsHighlight() {
             helps your cargo move safely and efficiently.
           </p>
 
-          <Link to="/contact" className="security-solutions-highlight__button">
+          <a href="https://wa.me/94777660021" target="_blank" rel="noopener noreferrer" className="security-solutions-highlight__button">
             Discuss Transport Requirements
             <ArrowRight />
-          </Link>
+          </a>
         </motion.div>
 
         <motion.div
