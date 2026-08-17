@@ -38,7 +38,7 @@ export default function CleaningHousekeepingService() {
               Cleaning & Housekeeping
             </span>
 
-            <h1>Professional Cleaning Built Around Healthy Spaces.</h1>
+            <h1>Professional Cleaning Built Around Healthy Spaces</h1>
 
             <p>
               Octagon Force delivers trusted housekeeping and janitorial

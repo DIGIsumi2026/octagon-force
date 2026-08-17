@@ -85,7 +85,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.75, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
           >
-            Professional Services Built Around Discipline And Trust.
+            Professional Services Built Around Discipline And Trust
           </motion.h1>
 
           <motion.p
@@ -93,7 +93,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.56, ease: [0.22, 1, 0.36, 1] }}
           >
-            Reliable security, cleaning, cash transport, logistics, transport,
+            Reliable security, transport, cleaning, cash transport
             and environmental support services delivered through trained teams.
           </motion.p>
 

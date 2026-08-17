@@ -38,7 +38,7 @@ export default function CashTransportService() {
               Cash In Transit
             </span>
 
-            <h1>Secure Cash Transport With Absolute Dependability.</h1>
+            <h1>Secure Cash Transport With Absolute Dependability</h1>
 
             <p>
               Octagon Force provides high-risk cash transport solutions managed

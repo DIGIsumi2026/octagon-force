@@ -49,7 +49,7 @@ export default function LogisticsAccordion() {
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
         >
 
-          <h2>Streamlined Coordination For Operational Continuity.</h2>
+          <h2>Streamlined Coordination For Operational Continuity</h2>
 
           <p>
             From experienced technical staff to area-based vehicle readiness and

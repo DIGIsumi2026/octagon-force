@@ -53,7 +53,7 @@ export default function CashTransportAccordion() {
             Cash Transport Operations
           </span>
 
-          <h2>High-Risk Financial Asset Protection.</h2>
+          <h2>High Risk Financial Asset Protection</h2>
 
           <p>
             Our cash-in-transit service is designed for secure financial asset

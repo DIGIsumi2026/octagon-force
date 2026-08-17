@@ -121,19 +121,19 @@ export default function TransportOperationsSolutionsHighlight() {
           animate={isInView ? "visible" : "hidden"}
         >
 
-          <h2>Quality Service And Complete Dependability On The Move.</h2>
+          <h2>Quality Service and Complete Dependability On The Move</h2>
 
           <p>
             In a highly competitive market, Octagon Force stands out as a
             transportation provider committed to operational reliability,
-            disciplined movement, and complete peace of mind for every client.
+            disciplined movement and complete peace of mind for every client.
           </p>
 
           <p>
             We deploy professional, experienced drivers operating top-of-the-line
             equipment, supported by our own on-site fleet maintenance facility
             and a dedicated customer service team. Whether managing routine
-            logistics or time-sensitive distribution, our asset-based network
+            logistics or time sensitive distribution, our asset-based network
             helps your cargo move safely and efficiently.
           </p>
 

@@ -55,7 +55,7 @@ export default function SecurityServicesAccordion() {
           viewport={{ once: true, amount: 0.28 }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2>Specialized Protection For Every Security Requirement.</h2>
+          <h2>Specialized Protection For Every Security Requirement</h2>
 
           <p>
             Octagon Force provides disciplined, well-supervised, and professional

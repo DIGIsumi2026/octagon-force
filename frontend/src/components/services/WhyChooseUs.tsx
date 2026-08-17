@@ -178,7 +178,7 @@ export default function WhyChooseUs() {
           <motion.p variants={copyItemVariants}>
             Octagon Force combines leadership heritage, operational vigilance,
             technical capability, and practical consultancy to deliver service
-            solutions built around trust, control, and measurable value.
+            solutions built around trust, control and measurable value.
           </motion.p>
         </div>
 

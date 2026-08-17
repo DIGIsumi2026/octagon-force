@@ -49,12 +49,12 @@ export default function CleaningServicesAccordion() {
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
         >
 
-          <h2>Reliable Housekeeping And Janitorial Support.</h2>
+          <h2>Reliable Housekeeping And Janitorial Support</h2>
 
           <p>
             From daily cleaning to deep sanitization and outdoor maintenance,
             Octagon Force helps maintain cleaner, healthier, and more organized
-            spaces for homes, offices, and commercial properties.
+            spaces for homes, offices and commercial properties.
           </p>
         </motion.div>
 

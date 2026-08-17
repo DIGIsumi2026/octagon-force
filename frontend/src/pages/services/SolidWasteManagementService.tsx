@@ -38,12 +38,12 @@ export default function SolidWasteManagementService() {
               Waste & Janitorial Cleaning
             </span>
 
-            <h1>Integrated Waste Removal And Housekeeping Solutions.</h1>
+            <h1>Integrated Waste Removal and Housekeeping Solutions</h1>
 
             <p>
               Octagon Force supports clean, hygienic, and organized environments
               through dependable waste handling, regular janitorial cleaning,
-              and housekeeping support for residential, corporate, and outdoor
+              and housekeeping support for residential, corporate and outdoor
               spaces.
             </p>
 

@@ -38,7 +38,7 @@ export default function LogisticsService() {
               Logistics Solutions
             </span>
 
-            <h1>Integrated Operational Logistics Built For Dependability.</h1>
+            <h1>Integrated Operational Logistics Built For Dependability</h1>
 
             <p>
               Octagon Force provides structured logistics support through

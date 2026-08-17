@@ -37,7 +37,7 @@ export default function BoardManagement() {
     <section className="about-board-section">
       <div className="container">
         <div className="about-board-header">
-          <h2>Board Of Management.</h2>
+          <h2>Board Of Management</h2>
 
           <p>
             Guided by experienced leadership, Octagon Force continues to grow

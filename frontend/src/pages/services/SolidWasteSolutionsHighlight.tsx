@@ -122,7 +122,7 @@ export default function SolidWasteSolutionsHighlight() {
           animate={isInView ? "visible" : "hidden"}
         >
 
-          <h2>Hygienic, Organized, And Regular Waste Clearance Solutions.</h2>
+          <h2>Hygienic, Organized and Regular Waste Clearance Solutions</h2>
 
           <p>
             Do not let accumulated waste compromise the hygiene and presentation

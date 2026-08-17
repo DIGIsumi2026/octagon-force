@@ -125,7 +125,7 @@ export default function CashTransportSolutionsHighlight() {
             Secure Cash Transport Services
           </span>
 
-          <h2>High-Risk Asset Protection With Absolute Dependability.</h2>
+          <h2>High Risk Asset Protection With Absolute Dependability</h2>
 
           <p>
             Protect your financial assets with transit solutions engineered to

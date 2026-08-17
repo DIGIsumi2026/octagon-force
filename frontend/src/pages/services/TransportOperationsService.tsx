@@ -38,7 +38,7 @@ export default function TransportOperationsService() {
               Transport Services
             </span>
 
-            <h1>Asset Based Transportation Built For Dependability.</h1>
+            <h1>Asset Based Transportation Built For Dependability</h1>
 
             <p>
               Octagon Force delivers reliable transport operations through

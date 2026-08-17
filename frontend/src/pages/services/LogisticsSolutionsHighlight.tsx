@@ -121,7 +121,7 @@ export default function LogisticsSolutionsHighlight() {
           animate={isInView ? "visible" : "hidden"}
         >
 
-          <h2>Streamlined Coordination And Complete Dependability.</h2>
+          <h2>Streamlined Coordination And Complete Dependability</h2>
 
           <p>
             Do not let operational bottlenecks slow down your business. Our

@@ -57,7 +57,7 @@ export default function TransportOperationsAccordion() {
         >
           
 
-          <h2>Reliable Movement Backed By Fleet Control.</h2>
+          <h2>Reliable Movement Backed By Fleet Control</h2>
 
           <p>
             From experienced drivers to maintained equipment and responsive

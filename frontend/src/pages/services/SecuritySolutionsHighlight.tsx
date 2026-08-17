@@ -118,7 +118,7 @@ export default function SecuritySolutionsHighlight() {
           animate={isInView ? "visible" : "hidden"}
         >
 
-          <h2>24/7 Vigilance And Protection For Your Assets.</h2>
+          <h2>24/7 Vigilance And Protection For Your Assets</h2>
 
           <p>
             Don't compromise on the safety of your property, people, or financial

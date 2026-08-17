@@ -160,12 +160,12 @@ export default function BenefitCards() {
                  Our Expertise
               </span>
 
-              <h2>Reliable Service Solutions For Every Operation.</h2>
+              <h2>Reliable Service Solutions For Every Operation</h2>
 
               <p>
                  Explore Octagon Force services across security, cleaning, cash transport,
-    logistics, and solid waste management through a focused visual service
-    experience.
+                and solid waste management through a focused visual service
+                experience.
               </p>
             </div>
           </Reveal>

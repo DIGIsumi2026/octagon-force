@@ -74,11 +74,11 @@ export default function ServicesShowcase() {
             Our Services
           </span>
 
-          <h2>Reliable Service Areas For Everyday Operations.</h2>
+          <h2>Reliable Service Areas For Everyday Operations</h2>
 
           <p>
             Explore the core services delivered by Octagon Force through trained
-            teams, structured supervision, and dependable operational standards.
+            teams, structured supervision and dependable operational standards
           </p>
         </motion.div>
 

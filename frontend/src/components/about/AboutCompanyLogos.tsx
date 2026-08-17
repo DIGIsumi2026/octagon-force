@@ -46,7 +46,7 @@ export default function AboutCompanyLogos() {
     <section className="about-company-logo-section">
       <div className="container">
         <div className="about-company-logo-header">
-          <h2>Connected By Trust, Service and Shared Values.</h2>
+          <h2>Connected By Trust, Service and Shared Values</h2>
 
           <p>
             Our operations are strengthened by connected businesses, trusted

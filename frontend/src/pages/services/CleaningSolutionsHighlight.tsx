@@ -121,7 +121,7 @@ export default function CleaningSolutionsHighlight() {
           animate={isInView ? "visible" : "hidden"}
         >
 
-          <h2>A Cleaner, Healthier Environment Built Around Your Busy Schedule.</h2>
+          <h2>A Cleaner, Healthier Environment Built Around Your Busy Schedule</h2>
 
           <p>
             Regular cleaning is essential to maintaining a healthy, organized,

@@ -52,7 +52,7 @@ export default function SolidWasteAccordion() {
           viewport={{ once: true, amount: 0.28 }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2>Regular Cleaning And Waste Care For Better Environments.</h2>
+          <h2>Regular Cleaning And Waste Care For Better Environments</h2>
 
           <p>
             Waste handling is integrated into our janitorial and housekeeping
