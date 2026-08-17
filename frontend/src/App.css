@@ -13588,3 +13588,19 @@ button,
   transform: translateY(-150%);
   pointer-events: none;
 }
+
+/* Simplify scroll top button on mobile view */
+@media (max-width: 760px) {
+  .scroll-top__progress {
+    display: none !important;
+  }
+  
+  .scroll-top {
+    background: #A67212 !important; /* solid gold color */
+    box-shadow: 0 4px 12px rgba(5, 14, 34, 0.2) !important;
+  }
+
+  .scroll-top__icon {
+    color: #ffffff !important;
+  }
+}
