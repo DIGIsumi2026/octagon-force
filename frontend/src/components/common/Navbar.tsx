@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState, useRef, type CSSProperties } from "react";
 import { ChevronDown, Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -21,19 +21,53 @@ const navItems = [
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesMenuDismissed, setServicesMenuDismissed] = useState(false);
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
   const isServicesActive = location.pathname.startsWith("/services");
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 24);
+    let lastScrollY = window.scrollY;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 24);
+
+      if (currentScrollY <= 24) {
+        setIsVisible(true);
+        if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+      } else {
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // Scrolling down
+          setIsVisible(false);
+          if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+        } else if (currentScrollY < lastScrollY) {
+          // Scrolling up
+          setIsVisible(true);
+          
+          if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+          
+          hideTimerRef.current = setTimeout(() => {
+            if (window.scrollY > 24) {
+              setIsVisible(false);
+            }
+          }, 3500); // 3.5 seconds
+        }
+      }
+      
+      lastScrollY = currentScrollY;
+    };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -52,7 +86,7 @@ export default function Navbar() {
   const closeServicesMenu = () => setServicesMenuDismissed(true);
 
   return (
-    <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""}`}>
+    <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""} ${!isVisible ? "site-header--hidden" : ""}`}>
       <motion.nav
         className="nav-shell"
         initial={{ y: -80, opacity: 0 }}
