@@ -437,6 +437,9 @@ button {
   z-index: 100;
   pointer-events: none;
   transition: top 0.32s ease, transform 0.32s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-header--scrolled {
@@ -446,8 +449,9 @@ button {
 .nav-shell {
   pointer-events: auto;
   width: calc(100% - 48px);
-  max-width: 840px;  
+  max-width: 840px;
   margin: 0 auto;
+  transform: translateX(-4.5vw);
   min-height: 86px;
   padding: 6px 14px;
   border-radius: 999px;
@@ -681,6 +685,7 @@ button {
 .desktop-links a:hover,
 .desktop-links a.active {
   color: #A67212;
+  transform: translateY(-2px);
 }
 
 .desktop-links a:hover::after,
@@ -13448,5 +13453,53 @@ button,
   }
   .home-projects-arrows {
     display: flex;
+  }
+}
+
+
+/* =========================================================
+   Header Social Icons
+   ========================================================= */
+.header-socials {
+  position: absolute;
+  right: clamp(16px, 4vw, 48px);
+  display: flex;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+.header-socials a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.726);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #07101d;
+  box-shadow: 0 12px 32px rgba(5, 14, 34, 0.08);
+  transition: all 0.25s ease;
+}
+
+.site-header--scrolled .header-socials a {
+  box-shadow: 0 4px 12px rgba(5, 14, 34, 0.15);
+}
+
+.header-socials a:hover {
+  background: #c79527;
+  color: #fff;
+  transform: translateY(-4px);
+  border-color: #c79527;
+  box-shadow: 0 12px 32px rgba(199, 149, 39, 0.25);
+}
+
+@media (max-width: 980px) {
+  .header-socials {
+    display: none;
+  }
+  .nav-shell {
+    transform: none;
   }
 }

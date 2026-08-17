@@ -1,5 +1,5 @@
 import { useEffect, useState, type CSSProperties } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { images } from "../../data/imageAssets";
@@ -135,6 +135,23 @@ export default function Navbar() {
           </button>
         </div>
       </motion.nav>
+
+      <motion.div 
+        className="header-socials"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >
+        <a href="#" target="_blank" rel="noreferrer" aria-label="Facebook">
+          <Facebook size={18} />
+        </a>
+        <a href="#" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <Instagram size={18} />
+        </a>
+        <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <Linkedin size={18} />
+        </a>
+      </motion.div>
 
       <div
         className={`mobile-menu ${menuOpen ? "mobile-menu--open" : ""}`}
