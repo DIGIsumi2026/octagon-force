@@ -82,11 +82,11 @@ export default function ClientsBanner() {
               Our Clients
             </span>
 
-            <h2>Trusted By Clients Who Expect Reliable Service.</h2>
+            <h2>Trusted By Clients Who Expect Reliable Service</h2>
 
             <p>
               We support organizations with dependable security, cleaning,
-              logistics, transport, and facility service operations.
+              transport and facility service operations
             </p>
           </div>
         </Reveal>

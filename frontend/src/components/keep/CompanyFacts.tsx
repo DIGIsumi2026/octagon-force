@@ -40,11 +40,11 @@ export default function KeepCompanyFacts() {
               Company Facts
             </span>
 
-            <h2>Everything You Need To Keep Safe.</h2>
+            <h2>Everything You Need To Keep Safe</h2>
 
             <p>
               A flexible portfolio layout with image cards, icon panels, and
-              service-focused content for future page development.
+              service-focused content for future page development
             </p>
           </div>
         </Reveal>
@@ -85,8 +85,8 @@ export default function KeepCompanyFacts() {
                 <LockKeyhole />
                 <h3>Professional Service Network</h3>
                 <p>
-                  Designed for security, cleaning, logistics, transport, and
-                  facility support operations.
+                  Designed for security, cleaning, transport, and
+                  facility support operations
                 </p>
               </article>
             </Reveal>

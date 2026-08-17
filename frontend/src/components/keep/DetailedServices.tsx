@@ -93,11 +93,11 @@ export default function KeepDetailedServices() {
               What We Do
             </span>
 
-            <h2>Detailed Services With Strong Visual Cards.</h2>
+            <h2>Detailed Services With Strong Visual Cards</h2>
 
             <p>
               This saved section uses large alternating service cards with
-              rounded images, dark panels, and clear service details.
+              rounded images, dark panels, and clear service details
             </p>
           </div>
         </Reveal>

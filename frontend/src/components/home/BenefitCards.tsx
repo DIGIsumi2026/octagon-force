@@ -113,12 +113,12 @@ export default function BenefitCards() {
               Our Services
             </span>
 
-            <h2>Professional Services Built Around Your Needs.</h2>
+            <h2>Professional Services Built Around Your Needs</h2>
 
             <p>
               Octagon Force delivers trusted security, cleaning, cash transport,
-              logistics, and solid waste management services with discipline,
-              reliability, and professional care.
+              logistics and solid waste management services with discipline,
+              reliability and professional care.
             </p>
           </div>
         </Reveal>
