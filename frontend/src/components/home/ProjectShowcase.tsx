@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { AnimatePresence, motion } from "motion/react";
 
 import Reveal from "../common/Reveal";
@@ -45,6 +45,15 @@ export default function ProjectShowcase() {
   const [activeProject, setActiveProject] = useState(0);
   const selectedProject = projects[activeProject];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (window.innerWidth <= 980) {
+        setActiveProject((prev) => (prev + 1) % projects.length);
+      }
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="home-projects-section" id="projects">
       <div className="home-projects-bg">
@@ -87,7 +96,9 @@ export default function ProjectShowcase() {
         </Reveal>
 
         <div className="home-projects-content">
-          <AnimatePresence mode="wait">
+          
+          <div className="home-projects-carousel-wrapper" style={{ position: 'relative' }}>
+            <AnimatePresence mode="wait">
             <motion.article
               key={selectedProject.title}
               className="home-projects-card"
@@ -106,6 +117,15 @@ export default function ProjectShowcase() {
               <p>{selectedProject.description}</p>
             </motion.article>
           </AnimatePresence>
+            <div className="home-projects-arrows">
+              <button onClick={() => setActiveProject((prev) => (prev - 1 + projects.length) % projects.length)}>
+                <ChevronLeft size={24} />
+              </button>
+              <button onClick={() => setActiveProject((prev) => (prev + 1) % projects.length)}>
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </div>
 
           <div className="home-projects-tabs" role="tablist">
             {projects.map((project, index) => (

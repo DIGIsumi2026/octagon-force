@@ -445,7 +445,8 @@ button {
 
 .nav-shell {
   pointer-events: auto;
-  width: min(980px, calc(100% - 48px));  
+  width: calc(100% - 48px);
+  max-width: 980px;  
   margin: 0 auto;
   min-height: 86px;
   padding: 6px 14px;
@@ -13306,7 +13307,7 @@ button,
 /* Mobile spacing polish */
 @media (max-width: 760px) {
   .nav-shell {
-    width: min(100% - 20px, 980px);
+    width: calc(100% - 20px);
   }
 
   .hero-content {
@@ -13409,5 +13410,41 @@ button,
   .service-flip-card.is-mobile-active .service-flip-card__back-content {
     transform: translate3d(0, 0, 0) !important;
     opacity: 1;
+  }
+}
+
+.home-projects-arrows {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  right: -20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+.home-projects-arrows button {
+  pointer-events: auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(7, 16, 29, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #c79527;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 980px) {
+  .home-projects-tabs {
+    display: none !important;
+  }
+  .home-projects-arrows {
+    display: flex;
   }
 }
