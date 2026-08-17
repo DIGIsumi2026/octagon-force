@@ -168,9 +168,8 @@ export default function Navbar() {
             <Menu size={28} />
           </button>
         </div>
-      </motion.nav>
-
-      <motion.div 
+      
+        <motion.div 
         className="header-socials"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -186,6 +185,7 @@ export default function Navbar() {
           <Linkedin size={18} />
         </a>
       </motion.div>
+      </motion.nav>
 
       <div
         className={`mobile-menu ${menuOpen ? "mobile-menu--open" : ""}`}

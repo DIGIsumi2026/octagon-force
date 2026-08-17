@@ -11469,9 +11469,9 @@ button,
 .project-presentation-header h2 {
   margin: 18px 0 18px;
   color: #07101d;
-  font-size: clamp(2.38rem, 4.59vw, 4.84rem);
+  font-size: clamp(2.38rem, 3vw, 4.84rem);
   line-height: 1.1;
-  letter-spacing: -0.078em;
+  letter-spacing: -0.00078em;
 }
 
 .project-presentation-header p {
@@ -12023,9 +12023,9 @@ button,
   max-width: 760px;
   margin: 0 0 22px;
   color: #ffffff;
-  font-size: clamp(2.55rem, 4.93vw, 5.61rem);
-  line-height: 0.92;
-  letter-spacing: -0.085em;
+  font-size: clamp(2.55rem, 3vw, 5.61rem);
+  line-height: 1.1;
+  letter-spacing: -0.00085em;
 }
 
 .projects-contact-cta__panel p {
@@ -12359,8 +12359,8 @@ button,
   margin: 18px 0 24px;
   color: #ffffff;
   font-size: clamp(3.40rem, 3.40vw, 7.06rem);
-  line-height: 0.9;
-  letter-spacing: -0.005em;
+  line-height: 1.1;
+  letter-spacing: -0.00em;
 }
 
 .contact-hero__copy p {
@@ -12494,9 +12494,9 @@ button,
 .contact-details-header h2 {
   margin: 18px 0 18px;
   color: #07101d;
-  font-size: clamp(2.38rem, 4.59vw, 4.84rem);
-  line-height: 0.94;
-  letter-spacing: -0.078em;
+  font-size: clamp(2.38rem, 3vw, 4.84rem);
+  line-height: 1.1;
+  letter-spacing: -0.000098em;
 }
 
 .contact-details-header p {
@@ -12670,9 +12670,9 @@ button,
 .contact-inquiry-copy h2 {
   margin: 18px 0 22px;
   color: #ffffff;
-  font-size: clamp(2.38rem, 4.59vw, 4.93rem);
-  line-height: 0.95;
-  letter-spacing: -0.08em;
+  font-size: clamp(2.38rem, 3vw, 4.93rem);
+  line-height: 1.1;
+  letter-spacing: -0.000098em;
 }
 
 .contact-inquiry-copy p {
@@ -12855,9 +12855,9 @@ button,
 .contact-map-info h2 {
   margin: 18px 0 14px;
   color: #07101d;
-  font-size: clamp(1.87rem, 3.40vw, 3.74rem);
-  line-height: 0.95;
-  letter-spacing: -0.075em;
+  font-size: clamp(1.87rem, 3vw, 3.74rem);
+  line-height: 1.1;
+  letter-spacing: -0.00098em;
 }
 
 .contact-map-info p {
@@ -13458,99 +13458,120 @@ button,
 
 
 /* =========================================================
-   Header Social Icons — PC only
+   Header Social Icons & Scrolled Nav (PC Only > 1024px)
    ========================================================= */
-.header-socials {
-  position: absolute;
-  right: clamp(16px, 3vw, 48px);
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 10px;
-  pointer-events: auto;
+.nav-shell {
+  position: relative;
 }
 
-.header-socials a {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #07101d;
-  box-shadow: 0 8px 24px rgba(5, 14, 34, 0.10);
-  transition: all 0.25s ease;
-  text-decoration: none;
-}
-
-.header-socials a:hover {
-  background: #c79527;
-  color: #fff;
-  transform: translateY(-4px);
-  border-color: #c79527;
-  box-shadow: 0 12px 32px rgba(199, 149, 39, 0.28);
-}
-
-/* Hide on scrolled state: socials not shown when pill nav visible while scrolled */
-.site-header--scrolled .header-socials {
-  display: none;
-}
-
-/* Tablet and Mobile: hide social icons entirely */
-@media (max-width: 1024px) {
-  .header-socials {
-    display: none !important;
+@media (min-width: 1025px) {
+  /* Default state nav-shell on PC: shrink to fit contents to reduce gaps */
+  .site-header:not(.site-header--scrolled) .nav-shell {
+    width: max-content !important;
+    max-width: none !important;
+    gap: 48px !important;
+    padding-left: 24px !important;
+    padding-right: 14px !important; /* matches scrolled state mostly */
   }
-}
 
-/* =========================================================
-   Scrolled nav: hide toggle button, shrink shell to fit
-   ========================================================= */
-@media (min-width: 981px) {
+  /* Hide the toggle in scrolled state */
   .site-header--scrolled .nav-actions {
     display: none !important;
   }
 
+  /* In scrolled state, nav shell shrinks to fit, hugging the content */
   .site-header--scrolled .nav-shell {
     width: max-content !important;
     max-width: none !important;
-    padding-right: 38px !important;
+    padding-right: 14px !important;
     padding-left: 14px !important;
     gap: 36px !important;
+    justify-content: center;
+  }
+
+  /* Default State (not scrolled): Socials are separated circles outside the pill */
+  .site-header:not(.site-header--scrolled) .header-socials {
+    display: none !important;
+  }
+
+  .site-header:not(.site-header--scrolled) .header-socials a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #07101d;
+    box-shadow: 0 8px 24px rgba(5, 14, 34, 0.10);
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .site-header:not(.site-header--scrolled) .header-socials a:hover {
+    background: #c79527;
+    color: #fff;
+    transform: translateY(-4px);
+    border-color: #c79527;
+    box-shadow: 0 12px 32px rgba(199, 149, 39, 0.28);
+  }
+
+  /* Scrolled State: Socials are IN the nav pill */
+  .site-header--scrolled .header-socials {
+    position: static;
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 16px; /* space between links and socials */
+  }
+
+  .site-header--scrolled .header-socials a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(7, 16, 29, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #07101d;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .site-header--scrolled .header-socials a:hover {
+    background: #c79527;
+    color: #fff;
+    transform: translateY(-2px);
   }
 }
 
 /* =========================================================
-   Hidden state (scroll-down auto-hide)
+   Tablet and Mobile (≤ 1024px)
    ========================================================= */
-.site-header--hidden {
-  transform: translateY(-150%);
-  pointer-events: none;
-}
-
-/* =========================================================
-   Tablet nav (981px — 1024px): no transform, full width pill
-   ========================================================= */
-@media (max-width: 1024px) and (min-width: 761px) {
+@media (max-width: 1024px) {
+  /* Completely disable social icons */
+  .header-socials {
+    display: none !important;
+  }
+  
+  /* Ensure nav shell uses full width and keeps toggle */
   .nav-shell {
     max-width: 100%;
     width: calc(100% - 32px);
   }
+  
   .site-header {
     top: 16px;
   }
 }
 
-/* =========================================================
-   Mobile nav (≤ 760px): compact pill
-   ========================================================= */
+/* Mobile adjustments (≤ 760px) */
 @media (max-width: 760px) {
   .nav-shell {
     width: calc(100% - 20px);
-    max-width: 100%;
     min-height: 68px;
     padding: 8px 12px;
   }
@@ -13560,4 +13581,10 @@ button,
   .desktop-links {
     display: none;
   }
+}
+
+/* Hidden state for auto-hide scroll */
+.site-header--hidden {
+  transform: translateY(-150%);
+  pointer-events: none;
 }

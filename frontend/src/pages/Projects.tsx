@@ -336,7 +336,7 @@ export default function Projects() {
             transition={{ duration: 0.82, ease: [0.16, 1, 0.3, 1] }}
           >
 
-            <h2>Featured Deployments In One Operational Showcase.</h2>
+            <h2>Featured Deployments In One Operational Showcase</h2>
 
             <p>
               Hover each deployment image to expand the project, view the

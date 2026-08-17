@@ -217,7 +217,7 @@ export default function Contact() {
               Contact Octagon Force
             </span>
 
-            <h1>Let’s Discuss Your Security & Service Requirements.</h1>
+            <h1>Let’s Discuss Your Security & Service Requirements</h1>
 
             <p>
               Reach Octagon Force for security, facility support, cleaning,
@@ -272,7 +272,7 @@ export default function Contact() {
               Company Details
             </span>
 
-            <h2>Multiple Contact Points For Faster Coordination.</h2>
+            <h2>Multiple Contact Points For Faster Coordination</h2>
 
             <p>
               Contact our head office or nearest branch to discuss service
@@ -379,7 +379,7 @@ export default function Contact() {
               Inquiry Form
             </span>
 
-            <h2>Send Your Requirement To Our Team.</h2>
+            <h2>Send Your Requirement To Our Team</h2>
 
             <p>
               Share your service requirement, location  and contact information.
