@@ -175,13 +175,13 @@ export default function Navbar() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        <a href="#" target="_blank" rel="noreferrer" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/18Vy6BGqUg/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook">
           <Facebook size={18} />
         </a>
-        <a href="#" target="_blank" rel="noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/octagon_force_pvt?igsh=aHhteGFyaHZoOGVm" target="_blank" rel="noreferrer" aria-label="Instagram">
           <Instagram size={18} />
         </a>
-        <a href="#" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/octagon-force/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <Linkedin size={18} />
         </a>
       </motion.div>
