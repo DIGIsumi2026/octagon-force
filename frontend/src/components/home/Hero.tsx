@@ -36,7 +36,7 @@ export default function Hero() {
         loop
         speed={900}
         autoplay={{ delay: 4500, disableOnInteraction: false }}
-        pagination={{ el: '.custom-hero-pagination', clickable: true, bulletClass: 'swiper-pagination-bullet', bulletActiveClass: 'swiper-pagination-bullet-active' }}
+        pagination={{ clickable: true }}
         className="hero-swiper"
       >
         {heroSlides.map((slide) => (
@@ -71,11 +71,6 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       
-        {/* Pagination overlay perfectly aligned vertically with hero-content */}
-        <div className="container hero-content custom-pagination-wrapper" style={{ pointerEvents: 'none', zIndex: 10 }}>
-          <div className="custom-hero-pagination" style={{ pointerEvents: 'auto' }}></div>
-        </div>
-
         <HeroNavButtons />
       </Swiper>
     </section>

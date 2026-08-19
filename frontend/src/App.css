@@ -1052,7 +1052,7 @@ body.menu-open {
 .hero-swiper,
 .hero-slide {
   height: 100vh;
-  min-height: 600px;
+  min-height: 760px;
 }
 
 .hero-slide {
@@ -1087,7 +1087,7 @@ body.menu-open {
 .hero-content {
   position: absolute;
   inset: 0;
-  padding-top: 130px;
+  padding-top: 170px;
   display: flex;
   align-items: center;
 }
@@ -1162,7 +1162,7 @@ body.menu-open {
 
 
 
-.custom-hero-pagination {
+.hero-swiper .swiper-pagination {
   position: absolute;
   bottom: 46px !important;
   left: 50% !important;
@@ -1174,7 +1174,7 @@ body.menu-open {
   text-align: left;
 }
 
-.swiper-pagination-bullet {
+.hero-swiper .swiper-pagination-bullet {
   width: 14px;
   height: 6px;
   border-radius: 12px;
@@ -1187,12 +1187,12 @@ body.menu-open {
   display: block;
 }
 
-.swiper-pagination-bullet-active {
+.hero-swiper .swiper-pagination-bullet-active {
   width: 60px; /* Expand like a process bar */
   background: rgba(255, 255, 255, 0.2);
 }
 
-.swiper-pagination-bullet-active::after {
+.hero-swiper .swiper-pagination-bullet-active::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1210,30 +1210,27 @@ body.menu-open {
 
 /* PC Vertical Layout */
 @media (min-width: 1025px) {
-  .custom-hero-pagination {
-    position: relative !important;
+  .hero-swiper .swiper-pagination {
     bottom: auto !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
     flex-direction: column;
     justify-content: center;
-    width: auto !important;
-    margin: 0 !important;
+    width: var(--container) !important;
     padding-left: 0 !important;
   }
 
-  .swiper-pagination-bullet {
+  .hero-swiper .swiper-pagination-bullet {
     width: 6px;
     height: 14px;
   }
 
-  .swiper-pagination-bullet-active {
+  .hero-swiper .swiper-pagination-bullet-active {
     width: 6px;
     height: 60px; /* Expand vertically */
   }
 
-  .swiper-pagination-bullet-active::after {
+  .hero-swiper .swiper-pagination-bullet-active::after {
     top: 0;
     left: 0;
     right: 0;
@@ -1291,7 +1288,7 @@ body.menu-open {
   }
   
   /* Make sure pagination doesn't overlap controls on small screens */
-  .custom-hero-pagination {
+  .hero-swiper .swiper-pagination {
     width: calc(var(--container) - 120px) !important;
     left: 22px !important;
     transform: none;
@@ -2506,7 +2503,7 @@ body.menu-open {
 }
 
 .cta-banner {
-  min-height: 520px;
+  min-height: 680px;
 }
 
 .cta-banner section {
@@ -2917,7 +2914,7 @@ body.menu-open {
   }
 
   .hero-content {
-    padding-top: 90px;
+    padding-top: 120px;
   }
 
   .section {
@@ -13450,8 +13447,8 @@ button,
   }
 
   .hero-content {
-    padding-top: 110px;
-    padding-bottom: 50px;
+    padding-top: 142px;
+    padding-bottom: 72px;
   }
 
   .services-hero__content,
