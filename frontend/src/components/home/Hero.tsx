@@ -1,7 +1,7 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
-import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { heroSlides } from "../../data/siteData";
 
 const WHATSAPP_NUMBER = "94777660021"; 
@@ -9,21 +9,34 @@ const WHATSAPP_NUMBER = "94777660021";
 const WHATSAPP_MESSAGE =
   "Hello Octagon Force, I would like to know more about your services.";
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    WHATSAPP_MESSAGE
-  )}`;
+const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE
+)}`;
+
+function HeroNavButtons() {
+  const swiper = useSwiper();
+  return (
+    <div className="hero-controls-mobile">
+      <button className="hero-prev" aria-label="Previous slide" onClick={() => swiper.slidePrev()}>
+        <ChevronLeft size={24} />
+      </button>
+      <button className="hero-next" aria-label="Next slide" onClick={() => swiper.slideNext()}>
+        <ChevronRight size={24} />
+      </button>
+    </div>
+  );
+}
 
 export default function Hero() {
   return (
     <section id="home" className="hero-section">
       <Swiper
-        modules={[Autoplay, EffectFade, Pagination, Navigation]}
+        modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
         loop
         speed={900}
         autoplay={{ delay: 4500, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        navigation={{ prevEl: ".hero-prev", nextEl: ".hero-next" }}
+        pagination={{ el: '.custom-hero-pagination', clickable: true, bulletClass: 'swiper-pagination-bullet', bulletActiveClass: 'swiper-pagination-bullet-active' }}
         className="hero-swiper"
       >
         {heroSlides.map((slide) => (
@@ -58,17 +71,13 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       
-        {/* Mobile controls */}
-        <div className="hero-controls-mobile">
-          <button className="hero-prev" aria-label="Previous slide">
-            <ChevronLeft size={24} />
-          </button>
-          <button className="hero-next" aria-label="Next slide">
-            <ChevronRight size={24} />
-          </button>
+        {/* Pagination overlay perfectly aligned vertically with hero-content */}
+        <div className="container hero-content custom-pagination-wrapper" style={{ pointerEvents: 'none', zIndex: 10 }}>
+          <div className="custom-hero-pagination" style={{ pointerEvents: 'auto' }}></div>
         </div>
+
+        <HeroNavButtons />
       </Swiper>
     </section>
   );
 }
-
