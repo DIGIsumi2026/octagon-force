@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { heroSlides } from "../../data/siteData";
 
@@ -17,12 +17,13 @@ export default function Hero() {
   return (
     <section id="home" className="hero-section">
       <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
+        modules={[Autoplay, EffectFade, Pagination, Navigation]}
         effect="fade"
         loop
         speed={900}
         autoplay={{ delay: 4500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
+        navigation={{ prevEl: ".hero-prev", nextEl: ".hero-next" }}
         className="hero-swiper"
       >
         {heroSlides.map((slide) => (
@@ -56,6 +57,16 @@ export default function Hero() {
             </div>
           </SwiperSlide>
         ))}
+      
+        {/* Mobile controls */}
+        <div className="hero-controls-mobile">
+          <button className="hero-prev" aria-label="Previous slide">
+            <ChevronLeft size={24} />
+          </button>
+          <button className="hero-next" aria-label="Next slide">
+            <ChevronRight size={24} />
+          </button>
+        </div>
       </Swiper>
     </section>
   );
