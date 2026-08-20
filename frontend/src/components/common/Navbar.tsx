@@ -71,10 +71,28 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle("menu-open", menuOpen);
+    if (menuOpen) {
+      // Save the current scroll position before locking
+      const scrollY = window.scrollY;
+      document.body.style.top = `-${scrollY}px`;
+      document.body.classList.add("menu-open");
+    } else {
+      // Restore the scroll position after unlocking
+      const scrollY = document.body.style.top;
+      document.body.classList.remove("menu-open");
+      document.body.style.top = "";
+      if (scrollY) {
+        window.scrollTo({ top: parseInt(scrollY || "0") * -1, behavior: "instant" });
+      }
+    }
 
     return () => {
+      const scrollY = document.body.style.top;
       document.body.classList.remove("menu-open");
+      document.body.style.top = "";
+      if (scrollY) {
+        window.scrollTo({ top: parseInt(scrollY || "0") * -1, behavior: "instant" });
+      }
     };
   }, [menuOpen]);
 

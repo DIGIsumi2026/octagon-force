@@ -806,7 +806,13 @@ button {
 
 body.menu-open {
   overflow: hidden;
+  /* Prevent touch-scroll on iOS */
+  touch-action: none;
+  /* Keep the page at its current scroll position */
+  position: fixed;
+  width: 100%;
 }
+
 
 .mobile-menu__close {
   position: absolute;
@@ -1017,7 +1023,11 @@ body.menu-open {
 /* Prevent body scroll */
 body.menu-open {
   overflow: hidden !important;
+  touch-action: none !important;
+  position: fixed !important;
+  width: 100% !important;
 }
+
 
 /* Mobile tuning */
 @media (max-width: 640px) {
