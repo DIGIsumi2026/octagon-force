@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, type CSSProperties } from "react";
 import { ChevronDown, Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { images } from "../../data/imageAssets";
 
@@ -17,6 +17,24 @@ const navItems = [
   { label: "About Us", path: "/about" },
   { label: "Projects", path: "/projects" },
   { label: "Contact", path: "/contact" },
+];
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/share/18Vy6BGqUg/?mibextid=wwXIfr",
+    label: "Facebook",
+    icon: <Facebook size={18} />,
+  },
+  {
+    href: "https://www.instagram.com/octagon_force_pvt?igsh=aHhteGFyaHZoOGVm",
+    label: "Instagram",
+    icon: <Instagram size={18} />,
+  },
+  {
+    href: "https://www.linkedin.com/company/octagon-force/",
+    label: "LinkedIn",
+    icon: <Linkedin size={18} />,
+  },
 ];
 
 export default function Navbar() {
@@ -47,9 +65,9 @@ export default function Navbar() {
         } else if (currentScrollY < lastScrollY) {
           // Scrolling up
           setIsVisible(true);
-          
+
           if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
-          
+
           hideTimerRef.current = setTimeout(() => {
             if (window.scrollY > 24) {
               setIsVisible(false);
@@ -57,7 +75,7 @@ export default function Navbar() {
           }, 3500); // 3.5 seconds
         }
       }
-      
+
       lastScrollY = currentScrollY;
     };
 
@@ -176,33 +194,80 @@ export default function Navbar() {
           ))}
         </nav>
 
+        {/* ── Scrolled state: social icons appear inside the pill ── */}
+        <AnimatePresence>
+          {isScrolled && (
+            <motion.div
+              className="header-socials header-socials--inline"
+              key="socials-inline"
+              initial={{ opacity: 0, maxWidth: 0, marginLeft: 0 }}
+              animate={{ opacity: 1, maxWidth: 160, marginLeft: 16 }}
+              exit={{ opacity: 0, maxWidth: 0, marginLeft: 0 }}
+              transition={{
+                opacity:    { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] },
+                maxWidth:   { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
+                marginLeft: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
+              }}
+            >
+              {socialLinks.map((s, i) => (
+                <motion.a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={s.label}
+                  initial={{ opacity: 0, scale: 0.5, y: 8 }}
+                  animate={{ opacity: 1, scale: 1,   y: 0 }}
+                  exit={{    opacity: 0, scale: 0.5, y: 8 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: i * 0.08,
+                    ease: [0.34, 1.56, 0.64, 1], /* gentle overshoot spring */
+                  }}
+                >
+                  {s.icon}
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* ── Default state: menu toggle button ── */}
         <div className="nav-actions">
-          <button
-            className="menu-button"
-            type="button"
-            aria-label="Open menu"
-            onClick={() => setMenuOpen(true)}
-          >
-            <Menu size={28} />
-          </button>
+          <AnimatePresence mode="wait">
+            {!isScrolled ? (
+              <motion.button
+                key="menu-btn"
+                className="menu-button"
+                type="button"
+                aria-label="Open menu"
+                onClick={() => setMenuOpen(true)}
+                initial={{ opacity: 0, scale: 0.6 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{    opacity: 0, scale: 0.6 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 320,
+                  damping: 22,
+                  mass: 0.8,
+                }}
+              >
+                <Menu size={28} />
+              </motion.button>
+            ) : (
+              /* Keep a ghost so nav-actions doesn't collapse */
+              <motion.div
+                key="menu-ghost"
+                className="menu-button-ghost"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0 }}
+                exit={{    opacity: 0 }}
+              />
+            )}
+          </AnimatePresence>
         </div>
-      
-        <motion.div 
-        className="header-socials"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
-      >
-        <a href="https://www.facebook.com/share/18Vy6BGqUg/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook">
-          <Facebook size={18} />
-        </a>
-        <a href="https://www.instagram.com/octagon_force_pvt?igsh=aHhteGFyaHZoOGVm" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <Instagram size={18} />
-        </a>
-        <a href="https://www.linkedin.com/company/octagon-force/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-          <Linkedin size={18} />
-        </a>
-      </motion.div>
+
+
       </motion.nav>
 
       <div

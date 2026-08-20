@@ -444,7 +444,8 @@ button {
   right: 0;
   z-index: 100;
   pointer-events: none;
-  transition: top 0.32s ease, transform 0.32s ease;
+  transition: top 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,7 +470,15 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  transition: min-height 0.32s ease, box-shadow 0.32s ease, background 0.32s ease;
+  transition:
+    min-height  0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow  0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background  0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    gap         0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    padding     0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    max-width   0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    width       0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
 }
 
 .site-header--scrolled .nav-shell {
@@ -13623,22 +13632,91 @@ button,
   position: relative;
 }
 
+
 @media (min-width: 1025px) {
-  /* Default state nav-shell on PC: shrink to fit contents to reduce gaps */
-  .site-header:not(.site-header--scrolled) .nav-shell {
-    width: max-content !important;
-    max-width: none !important;
-    gap: 48px !important;
-    padding-left: 24px !important;
-    padding-right: 14px !important; /* matches scrolled state mostly */
+  /* ── Default state: social icons as separate pill-shaped bubbles outside the nav ── */
+  .header-socials--outside {
+    position: absolute;
+    /* sit just below the nav pill */
+    top: calc(100% + 10px);
+    right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: auto;
+    overflow: visible;
   }
 
-  /* Hide the toggle in scrolled state */
+  .header-socials--outside a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #07101d;
+    box-shadow: 0 8px 24px rgba(5, 14, 34, 0.12);
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .header-socials--outside a:hover {
+    background: #c79527;
+    color: #fff;
+    transform: translateY(-4px);
+    border-color: #c79527;
+    box-shadow: 0 12px 32px rgba(199, 149, 39, 0.28);
+  }
+
+  /* ── Scrolled state: social icons inside the nav pill ── */
+  .header-socials--inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .header-socials--inline a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(7, 16, 29, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #07101d;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .header-socials--inline a:hover {
+    background: #c79527;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* Hide the toggle button when scrolled (handled by AnimatePresence but CSS fallback) */
   .site-header--scrolled .nav-actions {
     display: none !important;
   }
 
-  /* In scrolled state, nav shell shrinks to fit, hugging the content */
+  /* Ghost placeholder so nav-actions layout is stable */
+  .menu-button-ghost {
+    width: 60px;
+    height: 60px;
+    display: block;
+    flex-shrink: 0;
+    pointer-events: none;
+  }
+
+  /* In scrolled state, nav shell hugs contents */
   .site-header--scrolled .nav-shell {
     width: max-content !important;
     max-width: none !important;
@@ -13648,64 +13726,16 @@ button,
     justify-content: center;
   }
 
-  /* Default State (not scrolled): Socials are separated circles outside the pill */
-  .site-header:not(.site-header--scrolled) .header-socials {
-    display: none !important;
-  }
-
-  .site-header:not(.site-header--scrolled) .header-socials a {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #07101d;
-    box-shadow: 0 8px 24px rgba(5, 14, 34, 0.10);
-    transition: all 0.25s ease;
-    text-decoration: none;
-  }
-
-  .site-header:not(.site-header--scrolled) .header-socials a:hover {
-    background: #c79527;
-    color: #fff;
-    transform: translateY(-4px);
-    border-color: #c79527;
-    box-shadow: 0 12px 32px rgba(199, 149, 39, 0.28);
-  }
-
-  /* Scrolled State: Socials are IN the nav pill */
-  .site-header--scrolled .header-socials {
-    position: static;
-    transform: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-left: 16px; /* space between links and socials */
-  }
-
-  .site-header--scrolled .header-socials a {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: rgba(7, 16, 29, 0.04);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #07101d;
-    transition: all 0.25s ease;
-    text-decoration: none;
-  }
-
-  .site-header--scrolled .header-socials a:hover {
-    background: #c79527;
-    color: #fff;
-    transform: translateY(-2px);
+  /* Default state nav-shell on PC */
+  .site-header:not(.site-header--scrolled) .nav-shell {
+    width: max-content !important;
+    max-width: none !important;
+    gap: 48px !important;
+    padding-left: 24px !important;
+    padding-right: 14px !important;
   }
 }
+
 
 /* =========================================================
    Tablet and Mobile (≤ 1024px)
