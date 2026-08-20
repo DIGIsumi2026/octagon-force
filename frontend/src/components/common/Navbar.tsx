@@ -42,10 +42,19 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesMenuDismissed, setServicesMenuDismissed] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(
+    typeof window !== "undefined" ? window.innerWidth > 1024 : true
+  );
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
   const isServicesActive = location.pathname.startsWith("/services");
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth > 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -232,10 +241,11 @@ export default function Navbar() {
           )}
         </AnimatePresence>
 
-        {/* ── Default state: menu toggle button ── */}
+        {/* ── Menu toggle button ── */}
+        {/* Shows in default state on Desktop, but ALWAYS on Mobile */}
         <div className="nav-actions">
           <AnimatePresence mode="wait">
-            {!isScrolled ? (
+            {(!isScrolled || !isDesktop) ? (
               <motion.button
                 key="menu-btn"
                 className="menu-button"
@@ -266,7 +276,6 @@ export default function Navbar() {
             )}
           </AnimatePresence>
         </div>
-
 
       </motion.nav>
 
