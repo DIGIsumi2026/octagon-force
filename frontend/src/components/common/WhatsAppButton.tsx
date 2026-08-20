@@ -1,9 +1,45 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 const WHATSAPP_NUMBER = "94777660021"; 
 
 const WHATSAPP_MESSAGE =
   "Hello Octagon Force, I would like to know more about your services.";
 
 export default function WhatsAppButton() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isHomePage && window.innerWidth <= 1024) {
+        // Find the hero section height, or fallback to window.innerHeight
+        const heroSection = document.querySelector(".hero-section");
+        const heroHeight = heroSection ? heroSection.getBoundingClientRect().height : window.innerHeight;
+        
+        // Appear when user has completely scrolled past the hero section
+        if (window.scrollY > heroHeight - 100) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      } else {
+        // Always visible on PC or other pages
+        setIsVisible(true);
+      }
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [isHomePage]);
+
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     WHATSAPP_MESSAGE
   )}`;
@@ -11,7 +47,7 @@ export default function WhatsAppButton() {
   return (
     <a
       href={whatsappUrl}
-      className="whatsapp-float"
+      className={`whatsapp-float ${!isVisible ? "whatsapp-float--hidden" : ""}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Octagon Force on WhatsApp"

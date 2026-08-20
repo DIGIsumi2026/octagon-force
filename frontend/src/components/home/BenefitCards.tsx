@@ -86,13 +86,13 @@ const visualServices: VisualService[] = [
     points: ["Cash in transit", "Secure handling", "Reliable delivery"],
   },
   {
-  number: "04",
-  title: "Transport Operations",
-  caption:
-    "Reliable transport solutions delivered through professional drivers, fleet readiness, quality equipment, and disciplined operational support.",
-  image: images.services.serviceTransportOperations,
-  points: ["Professional drivers", "Fleet readiness", "Dependable service"],
-},
+    number: "04",
+    title: "Transport Operations",
+    caption:
+      "Reliable transport solutions delivered through professional drivers, fleet readiness, quality equipment, and disciplined operational support.",
+    image: images.services.serviceTransportOperations,
+    points: ["Professional drivers", "Fleet readiness", "Dependable service"],
+  },
 ];
 
 export default function BenefitCards() {
@@ -187,6 +187,10 @@ export default function BenefitCards() {
   );
 }
 
+/* ─────────────────────────────────────────────────────────────────────────── */
+/*  Visual stack card (Our Expertise — dark image cards)                       */
+/* ─────────────────────────────────────────────────────────────────────────── */
+
 type VisualStackCardProps = {
   service: VisualService;
   index: number;
@@ -207,15 +211,14 @@ function VisualStackCard({
   const y = useTransform(
     scrollYProgress,
     [Math.max(start - 0.12, 0), middle, end],
-    [160, 0, index * 12]
+    [160, 0, 0]
   );
 
   const scale = useTransform(
     scrollYProgress,
     [start, 1],
-    [1, 1 - (total - index - 1) * 0.018]
+    [1, 1 - (total - index - 1) * 0.04]
   );
-
 
   const cardStyle = {
     "--card-index": index,
