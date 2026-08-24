@@ -101,9 +101,9 @@ export default function Footer() {
                 <span>0112 344 444</span>
               </a>
 
-              <a href="mailto:info@octagonforce.lk">
+              <a href="mailto:info@octagonforce.com">
                 <Mail />
-                <span>info@octagonforce.lk</span>
+                <span>info@octagonforce.com</span>
               </a>
             </div>
           </div>

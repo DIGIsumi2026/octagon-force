@@ -83,7 +83,6 @@ export default function ContactForm() {
                 </span>
                 <div>
                   <small>CALL NOW:</small>
-                  <strong>+(084) 123 - 456 88</strong>
                 </div>
               </div>
             </div>
