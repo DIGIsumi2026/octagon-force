@@ -231,8 +231,8 @@ export default function Contact() {
                 <ArrowRight />
               </a>
 
-              <a href="mailto:info@octagonforce.lk" className="contact-hero__secondary">
-                info@octagonforce.lk
+              <a href="mailto:info@octagonforce.com" className="contact-hero__secondary">
+                info@octagonforce.com
               </a>
             </div>
           </motion.div>

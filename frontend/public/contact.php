@@ -59,7 +59,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     send_json(false, 'Please enter a valid email address.', 400);
 }
 
-$to = 'info@octagonforce.lk';
+$to = 'info@octagonforce.com';
 $from = 'noreply@octagonforce.com';
 $subject = 'New Website Inquiry - ' . $service;
 

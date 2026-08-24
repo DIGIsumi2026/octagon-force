@@ -82,7 +82,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const { error } = await resend.emails.send({
       from: process.env.MAIL_FROM || "Octagon Force Website <onboarding@resend.dev>",
-      to: process.env.MAIL_TO || "info@octagonforce.lk",
+      to: process.env.MAIL_TO || "info@octagonforce.com",
       replyTo: email,
       subject: `New Website Inquiry - ${service}`,
       html: emailHtml,
