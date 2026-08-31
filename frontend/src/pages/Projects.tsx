@@ -334,8 +334,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.82, ease: [0.16, 1, 0.3, 1] }}
-          >
-
+          > 
             <h2>Featured Deployments In One Operational Showcase</h2>
 
             <p>

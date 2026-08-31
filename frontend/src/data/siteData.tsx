@@ -39,7 +39,7 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     title: "Mobile Security Patrols",
-    copy: "Rapid-response motorcycle units providing vigilant protection, monitoring, and escort services",
+    copy: "Rapid-response motorcycle units providing vigilant protection, monitoring, and escort services.",
     image: images.hero.H3,
   },
   {

@@ -31,14 +31,6 @@ const projects = [
       "Structured cleaning, maintenance, and facility support services for offices, residences, and managed properties.",
     image: images.projects.facility,
   },
-  {
-    label: "Logistics",
-    title: "Logistics & Environmental Support",
-    category: "Logistics & Waste Management",
-    description:
-      "Operational support for storage, transport coordination, waste handling, and cleaner service environments.",
-    image: images.projects.logistics,
-  },
 ];
 
 export default function ProjectShowcase() {

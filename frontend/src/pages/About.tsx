@@ -105,10 +105,6 @@ export default function About() {
               </span>
               <span>
                 <CheckCircle2 />
-                Logistics & transport
-              </span>
-              <span>
-                <CheckCircle2 />
                 Maintenance & projects
               </span>
             </div>
