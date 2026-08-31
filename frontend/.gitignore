@@ -18,6 +18,7 @@ backend/build/
 .env.test.local
 backend/.env.example
 .env.production.local
+smtp-config.php
 frontend/.env
 frontend/.env.local
 backend/.env
