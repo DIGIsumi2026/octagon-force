@@ -38,33 +38,18 @@ export const heroSlides: HeroSlide[] = [
     image: images.hero.H2,
   },
   {
-    title: "Mobile Security Patrols",
-    copy: "Rapid-response motorcycle units providing vigilant protection, monitoring, and escort services.",
+    title: "Professional Security Services",
+    copy: "Trained armed and unarmed personnel providing dependable protection for people, property, assets, and operations.",
     image: images.hero.H3,
-  },
-  {
-    title: "Technical Support & Diagnostics",
-    copy: "Expert technicians providing dedicated hardware troubleshooting and IT maintenance.",
-    image: images.hero.H4,
-  },
-  {
-    title: "Emergency & Safety Training",
-    copy: "Comprehensive fire safety and emergency response training for all field personnel.",
-    image: images.hero.H5,
-  },
-  {
-    title: "Industrial Equipment Maintenance",
-    copy: "Specialized servicing and repair for heavy-duty generators and industrial machinery.",
-    image: images.hero.H6,
-  },
-  {
-    title: "Precision Engineering",
-    copy: "Skilled mechanics delivering high-quality engine overhauls and technical workshop repairs.",
-    image: images.hero.H7,
   },
   {
     title: "Professional Transport Team",
     copy: "Experienced drivers and logistics coordinators dedicated to seamless fleet operations.",
-    image: images.hero.H8,
+    image: images.hero.H4,
+  },
+  {
+    title: "Professional Cleaning Services",
+    copy: "Reliable housekeeping, deep cleaning, sanitization, and facility care tailored to residential and commercial environments.",
+    image: images.hero.H5,
   }
 ];

@@ -9,12 +9,10 @@ import footerLogo from "../assets/images/logo-white.png";
 import sidebarBg from "../assets/images/navigation/sidebar-bg.webp";
 import heroH1 from "../assets/images/header-bg1.webp";
 import heroH2 from "../assets/images/header-bg2.webp";
-import heroH3 from "../assets/images/header-bg3.webp";
+import heroH3 from "../assets/images/header-bg3.png";
 import heroH4 from "../assets/images/header-bg4.webp";
-import heroH5 from "../assets/images/header-bg5.webp";
-import heroH6 from "../assets/images/header-bg6.webp";
-import heroH7 from "../assets/images/header-bg7.webp";
-import heroH8 from "../assets/images/header-bg8.webp";
+import hertoH5 from "../assets/images/header-bg5.png";
+
 import serviceSecurity from "../assets/images/security-service.webp";
 import serviceCleaning from "../assets/images/cleaning-service.webp";
 import serviceCashTransport from "../assets/images/cash-transport.webp";
@@ -174,10 +172,7 @@ export const images = {
     H2: heroH2,
     H3: heroH3,
     H4: heroH4,
-    H5: heroH5,
-    H6: heroH6,
-    H7: heroH7,
-    H8: heroH8,
+    H5: hertoH5
   },
 
   services: {
