@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'host' => 'smtp.hostinger.com',
+    'host' => 'smtp.gmail.com',
     'port' => 465,
-    'username' => 'website@octagonforce.com',
-    'password' => 'YOUR_SMTP_PASSWORD',
-    'from_email' => 'website@octagonforce.com',
+    'username' => 'digitalsumathi2026@gmail.com',
+    'password' => 'GOOGLE_APP_PASSWORD',
+    'from_email' => 'digitalsumathi2026@gmail.com',
     'from_name' => 'Octagon Force Website',
 ];

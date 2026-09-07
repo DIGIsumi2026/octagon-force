@@ -36,9 +36,9 @@ export default function SecurityService() {
             <h1>Professional Security Built On Discipline and Trust</h1>
 
             <p>
-              Octagon Force provides reliable security solutions through trained,
-              disciplined, and well supervised security personnel for corporate,
-              commercial, residential and operational environments.
+              Octagon Force (Pvt) Ltd provides professional armed and unarmed security services through trained, experienced, and disciplined personnel. 
+              Our services cover financial institutions, pawning centres, cash-in-transit operations, commercial and residential properties, retail outlets, hospitals, VIP protection, and event security, including bouncer services. 
+              We provide reliable, client-focused security solutions designed to protect people, property, assets, and business operations.
             </p>
 
             <div className="security-service-hero__actions">

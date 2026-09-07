@@ -41,10 +41,8 @@ export default function CleaningHousekeepingService() {
             <h1>Professional Cleaning Built Around Healthy Spaces</h1>
 
             <p>
-              Octagon Force delivers trusted housekeeping and janitorial
-              solutions for residential, commercial, corporate, and outdoor
-              environments through trained teams, structured supervision, and
-              reliable service scheduling.
+              Octagon Force (Pvt) Ltd provides skilled and reliable housekeeping and janitorial personnel, available at short notice to deliver professional cleaning solutions within 24 hours. 
+              Our services include general cleaning, deep cleaning, sanitization, garden and surrounding-area cleaning for private residences, offices, institutions, commercial premises, and other facilities.
             </p>
 
             <div className="security-service-hero__actions">

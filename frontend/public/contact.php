@@ -105,8 +105,13 @@ foreach ($requiredConfigKeys as $key) {
     }
 }
 
-if ((int) $config['port'] !== 465 || !filter_var((string) $config['from_email'], FILTER_VALIDATE_EMAIL)) {
-    error_log('Octagon Force contact form SMTP configuration has an invalid port or sender.');
+if (
+    $config['host'] !== 'smtp.gmail.com'
+    || (string) $config['port'] !== '465'
+    || $config['username'] !== 'digitalsumathi2026@gmail.com'
+    || $config['from_email'] !== 'digitalsumathi2026@gmail.com'
+) {
+    error_log('Octagon Force contact form requires the configured Gmail SMTP account on port 465.');
     respond(false, 'Unable to send inquiry. Please try again later.', 500);
 }
 
@@ -171,7 +176,7 @@ try {
     $mail->Username = (string) $config['username'];
     $mail->Password = (string) $config['password'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port = 465;
+    $mail->Port = (int) $config['port'];
     $mail->CharSet = 'UTF-8';
 
     $mail->setFrom((string) $config['from_email'], (string) $config['from_name']);
