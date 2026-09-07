@@ -75,9 +75,7 @@ export default function AboutBanner() {
 
               <p>
                 Octagon Force is dedicated to serving in key focus areas,
-                including security, transport, technical maintenance,
-                construction, consultancy, project management, supply chain
-                management, logistics, solid waste management, and housekeeping.
+                including security, transport, logistics, housekeeping and janitorial services.
               </p>
 
               <p>

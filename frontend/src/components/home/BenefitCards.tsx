@@ -38,7 +38,7 @@ const octagonServices: StatService[] = [
     icon: <ShieldCheck />,
     title: "Security Service",
     description:
-      "Professional property security, personnel protection, VIP security, special event security, and trained security support.",
+      "Professional property security, personnel and armed guard protection, VIP security, special event security, and trained security support.",
   },
   {
     icon: <Sparkles />,
@@ -54,7 +54,7 @@ const octagonServices: StatService[] = [
   },
   {
     icon: <Truck />,
-    title: "Transport Operations",
+    title: "Transport Operations, Travels & Tours",
     description:
       "Dependable asset based transportation, secure cash in transit services, professional driver deployment, top tier equipment.",
   },
@@ -67,7 +67,7 @@ const visualServices: VisualService[] = [
     caption:
       "Disciplined security teams for properties, personnel, VIP protection, special events, and high-responsibility environments.",
     image: images.services.security,
-    points: ["Property security", "VIP protection", "Event security"],
+    points: ["Property security", "VIP protection", "Event security","Armed guards"],
   },
   {
     number: "02",
@@ -116,8 +116,8 @@ export default function BenefitCards() {
             <h2>Professional Services Built Around Your Needs</h2>
 
             <p>
-              Octagon Force delivers trusted security, cleaning, cash transport,
-              logistics and solid waste management services with discipline,
+              Octagon Force delivers trusted security, cleaning, cash transport and
+              logistics with discipline,
               reliability and professional care.
             </p>
           </div>
@@ -163,8 +163,8 @@ export default function BenefitCards() {
               <h2>Reliable Service Solutions For Every Operation</h2>
 
               <p>
-                 Explore Octagon Force services across security, cleaning, cash transport,
-                and solid waste management through a focused visual service
+                 Explore Octagon Force services across security, cleaning, and cash transport
+                 through a focused visual service
                 experience.
               </p>
             </div>
