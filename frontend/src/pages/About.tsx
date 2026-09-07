@@ -4,13 +4,7 @@ import BoardManagement from "../components/about/BoardManagement";
 import { motion } from "motion/react";
 import AboutCompanyLogos from "../components/about/AboutCompanyLogos";
 import AboutContactBanner from "../components/about/AboutContactBanner";
-import {
-  ArrowRight,
-  BadgeCheck,
-  CheckCircle2,
-  Target,
-  UsersRound,
-} from "lucide-react";
+import {ArrowRight,BadgeCheck,CheckCircle2,Target,UsersRound} from "lucide-react";
 
 import { images } from "../data/imageAssets";
 
@@ -59,9 +53,7 @@ export default function About() {
 
             <p>
               Octagon Force is dedicated to serving the country through security,
-              transport, technical and maintenance, construction, consultancy,
-              project management, logistics, solid waste management, and
-              housekeeping services.
+              transport, housekeeping and janitorial services.
             </p>
 
             <div className="about-hero-v2__actions">
@@ -105,7 +97,7 @@ export default function About() {
               </span>
               <span>
                 <CheckCircle2 />
-                Maintenance & projects
+                Transport services
               </span>
             </div>
           </motion.div>

@@ -68,7 +68,7 @@ export default function AboutContactBanner() {
             transition={{ duration: 0.65, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
           >
             Connect with Octagon Force to discuss professional security,
-            cleaning, transport, logistics and operational support services
+            cleaning, transport nad logistics services
             tailored to your organization.
           </motion.p>
 
