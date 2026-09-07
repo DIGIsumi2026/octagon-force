@@ -90,25 +90,20 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
   const startAutoplay = () => {
     clearAutoplayTimer();
     autoplayTimerRef.current = window.setInterval(() => {
-      if (window.innerWidth <= 1024) {
-        setActiveIndex((prev) => (prev + 1) % projects.length);
-      }
+      setActiveIndex((prev) => (prev + 1) % projects.length);
     }, 4000);
   };
 
   const nextProject = () => {
     setActiveIndex((prev) => (prev + 1) % projects.length);
-    startAutoplay(); // Reset autoplay timer
   };
 
   const prevProject = () => {
     setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
-    startAutoplay(); // Reset autoplay timer
   };
 
   const handleProjectChange = (index: number, immediate = false) => {
     clearHoverTimer();
-    startAutoplay(); // Reset autoplay timer on manual interaction
 
     if (index === activeIndex) return;
 
@@ -170,6 +165,8 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
             duration: 0.28,
             ease: [0.16, 1, 0.3, 1],
           }}
+          onMouseEnter={clearAutoplayTimer}
+          onMouseLeave={startAutoplay}
         >
           <div className="project-queue-showcase__number">
             {activeProject.number}
@@ -227,7 +224,11 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="project-queue-showcase__controls">
+      <div 
+        className="project-queue-showcase__controls"
+        onMouseEnter={clearAutoplayTimer}
+        onMouseLeave={startAutoplay}
+      >
         <button 
           className="project-queue-showcase__nav-btn" 
           onClick={prevProject} 
@@ -244,7 +245,11 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
         </button>
       </div>
 
-      <div className="project-queue-showcase__thumb-queue">
+      <div 
+        className="project-queue-showcase__thumb-queue"
+        onMouseEnter={clearAutoplayTimer}
+        onMouseLeave={startAutoplay}
+      >
         {projects.map((project, index) => {
           const isActive = index === activeIndex;
 
