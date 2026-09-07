@@ -19,7 +19,7 @@ const branches = [
     id: "grandpass",
     name: "Grandpass Head Office",
     type: "Head Office",
-    address: "445/1 Sirimavo Bandaranayaka Mawatha, Colombo 14",
+    address: "445 Sirimavo Bandaranaike Mawatha, Colombo 14",
     phones: ["+94 11 242 1294", "+94 11 234 4444", "+94 77 766 0021"],
      mapUrl: "https://maps.app.goo.gl/Nw17Q4kt9Z8kUKok9",
   mapEmbed:

@@ -92,7 +92,7 @@ export default function Footer() {
               <div>
                 <MapPin />
                 <span>
-                  445/1 Sirimavo Bandaranayaka Mw, Colombo-14
+                  445 Sirimavo Bandaranaike Mawatha, Colombo 14, Sri Lanka
                 </span>
               </div>
 

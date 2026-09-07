@@ -6,6 +6,8 @@ import {
   Landmark,
   Store,
   Waves,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { images } from "../data/imageAssets";
@@ -18,22 +20,22 @@ const projects = [
     logo: images.projects.logos.foodCity,
     image: images.projects.showcase.foodCity,
     icon: Store,
-    locations: "Katubadda, Thalawathugoda, Nugegoda, Maradana, Majestic City",
+    locations: "Island wide, Sri Lanka",
     description:
       "Active service presence across major Cargills Food City branches, supporting high-traffic retail environments with disciplined supervision, operational support, and reliable service coverage.",
     tags: ["Retail deployment", "Branch coverage", "Operational support"],
   },
   {
     number: "02",
-    title: "Cool Planet",
+    title: "Molly",
     category: "Retail Facility Support",
-    logo: images.projects.logos.coolPlanet,
-    image: images.projects.showcase.coolPlanet,
+    logo: images.projects.logos.molly,
+    image: images.projects.showcase.molly,
     icon: Building2,
-    locations: "Mount Lavinia, Delkanda",
+    locations: "Chillaw, Kuliyapitiya, Wattegama",
     description:
-      "Retail facility security and operational support deployments for premium shopping environments requiring customer-friendly service presence, structured monitoring, and dependable coordination.",
-    tags: ["Retail security", "Facility support", "Customer environment"],
+      "Shopping comnplex security and Parking area security for premium shopping environments requiring customer-friendly service presence, structured monitoring, and dependable coordination.",
+    tags: ["Shopping comnplex security", "Parking area security"],
   },
   {
     number: "03",
@@ -49,28 +51,16 @@ const projects = [
   },
   {
     number: "04",
-    title: "Calamansi Cove Villas",
+    title: "Luxury apartments villas",
     category: "Hospitality & Leisure Projects",
-    logo: images.projects.logos.calamansi,
-    image: images.projects.showcase.calamansi,
+    logo: images.projects.logos.villas,
+    image: images.projects.showcase.villas,
     icon: Waves,
     locations: "Premium luxury villa environment",
     description:
       "Luxury villa security and environmental support project focused on guest safety, site presentation, discreet service presence, and premium hospitality standards.",
-    tags: ["Luxury villas", "Environmental support", "Guest safety"],
-  },
-  {
-    number: "05",
-    title: "DFCC Bank",
-    category: "Banking & Corporate Deployments",
-    logo: images.projects.logos.dfcc,
-    image: images.projects.showcase.dfcc,
-    icon: Landmark,
-    locations: "Specialized corporate and financial institution environment",
-    description:
-      "Specialized corporate and financial institution asset protection project requiring disciplined security execution, reliable access control, and dependable supervision.",
-    tags: ["Asset protection", "Corporate security", "Financial institution"],
-  },
+    tags: ["Apartments", "Residentials", "Guest safety"],
+  }
 ];
 
 type ProjectItem = (typeof projects)[number];
@@ -78,6 +68,7 @@ type ProjectItem = (typeof projects)[number];
 function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const hoverTimerRef = useRef<number | null>(null);
+  const autoplayTimerRef = useRef<number | null>(null);
 
   const activeProject = projects[activeIndex];
   const ActiveIcon = activeProject.icon;
@@ -89,8 +80,35 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
     }
   };
 
+  const clearAutoplayTimer = () => {
+    if (autoplayTimerRef.current) {
+      window.clearInterval(autoplayTimerRef.current);
+      autoplayTimerRef.current = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    clearAutoplayTimer();
+    autoplayTimerRef.current = window.setInterval(() => {
+      if (window.innerWidth <= 1024) {
+        setActiveIndex((prev) => (prev + 1) % projects.length);
+      }
+    }, 4000);
+  };
+
+  const nextProject = () => {
+    setActiveIndex((prev) => (prev + 1) % projects.length);
+    startAutoplay(); // Reset autoplay timer
+  };
+
+  const prevProject = () => {
+    setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    startAutoplay(); // Reset autoplay timer
+  };
+
   const handleProjectChange = (index: number, immediate = false) => {
     clearHoverTimer();
+    startAutoplay(); // Reset autoplay timer on manual interaction
 
     if (index === activeIndex) return;
 
@@ -105,10 +123,12 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
   };
 
   useEffect(() => {
+    startAutoplay();
     return () => {
       clearHoverTimer();
+      clearAutoplayTimer();
     };
-  }, []);
+  }, [projects.length]);
 
   return (
     <motion.div
@@ -206,6 +226,23 @@ function ProjectQueueShowcase({ projects }: { projects: ProjectItem[] }) {
           <ActiveIcon />
         </motion.div>
       </AnimatePresence>
+
+      <div className="project-queue-showcase__controls">
+        <button 
+          className="project-queue-showcase__nav-btn" 
+          onClick={prevProject} 
+          aria-label="Previous Project"
+        >
+          <ChevronLeft />
+        </button>
+        <button 
+          className="project-queue-showcase__nav-btn" 
+          onClick={nextProject} 
+          aria-label="Next Project"
+        >
+          <ChevronRight />
+        </button>
+      </div>
 
       <div className="project-queue-showcase__thumb-queue">
         {projects.map((project, index) => {
@@ -403,9 +440,9 @@ export default function Projects() {
           >
             {[
               ["Retail", "Cargills Food City, Cool Planet, Kapri Super Center"],
-              ["Hospitality", "Calamansi Cove Villas"],
-              ["Banking", "DFCC Bank"],
-              ["Government", "Department of Meteorology"],
+              ["Apartments", "Rush","Colombo Business School"],
+              ["Government Organization", " Ayurvedic Drugs Corporation","State Fertilizer Company Limited"],
+              ["Private Bungalows", "Island wide"],
             ].map(([title, text], index) => (
               <motion.article
                 key={title}

@@ -56,7 +56,7 @@ const detailedServices = [
     number: "04",
     icon: <Truck />,
     title: "Supply Chain Management & Logistics",
-    image: images.hero.H6,
+    image: images.services.supplyChain,
     description:
       "Storage facilities, goods monitoring, transportation support, and logistics coordination from origin to final delivery.",
     points: [
@@ -70,7 +70,7 @@ const detailedServices = [
     number: "05",
     icon: <Recycle />,
     title: "Solid Waste Management",
-    image: images.hero.H7,
+    image: images.services.solidWaste,
     description:
       "Responsible waste collection, sorting, treatment, and disposal services focused on cleaner and safer communities.",
     points: [

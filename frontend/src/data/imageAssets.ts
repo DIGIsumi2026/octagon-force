@@ -140,16 +140,16 @@ import gardenWasteCleaning from "../assets/images/service/solid-waste/garden-was
 import projectHero from "../assets/images/projects/project-hero.webp";
 import projectCta from "../assets/images/projects/project-cta.webp";
 
-import foodCityLogo from "../assets/images/projects/food-city.webp";
-import coolPlanetLogo from "../assets/images/projects/cool-planet.webp";
+import foodCityLogo from "../assets/images/projects/food-city.png";
+import mollyLogo from "../assets/images/projects/molly.png";
 import kapriLogo from "../assets/images/projects/kapri-market.webp";
-import calamansiLogo from "../assets/images/projects/calamansi-villas.webp";
+import villasLogo from "../assets/images/projects/villas.png";
 import dfccLogo from "../assets/images/projects/dfcc-bank.webp";
 
 import foodCityProject from "../assets/images/projects/cargills-food-city-project.webp";
-import coolPlanetProject from "../assets/images/projects/cool-planet-project.webp";
+import mollyProject from "../assets/images/projects/molly-project.webp";
 import kapriProject from "../assets/images/projects/kapri-project.webp";
-import calamansiProject  from "../assets/images/projects/calamansi-cove-project.webp";
+import villasProject  from "../assets/images/projects/calamansi-cove-project.webp";
 import dfccProject from "../assets/images/projects/dfcc-bank.webp";
 
 //contact page 
@@ -259,16 +259,16 @@ projects: {
 
     logos: {
     foodCity: foodCityLogo,
-    coolPlanet: coolPlanetLogo,
+    molly: mollyLogo,
     kapri: kapriLogo,
-    calamansi: calamansiLogo,
+    villas: villasLogo,
     dfcc: dfccLogo,
   },
   showcase: {
     foodCity: foodCityProject,
-    coolPlanet: coolPlanetProject,
+    molly: mollyProject,
     kapri: kapriProject,
-    calamansi: calamansiProject,
+    villas: villasProject,
     dfcc: dfccProject,
   },
   

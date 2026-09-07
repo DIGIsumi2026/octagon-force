@@ -317,69 +317,81 @@ p {
 
 /* 
    Global Custom Scrollbar
-   Applies to all pages */
+   Desktop only (> 1024px) */
 
-/* scrollbar-gutter only on desktop where scrollbar takes physical space */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
+  /* scrollbar-gutter only on desktop where scrollbar takes physical space */
   html {
     scrollbar-gutter: stable;
   }
-}
 
-/* Firefox scrollbar */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #c79527 #07101d;
-}
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #c79527 #07101d;
+  }
 
-/* Chrome, Edge, Safari scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background:
-    linear-gradient(180deg, #07101d 0%, #0b1728 100%);
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-::-webkit-scrollbar-thumb {
-  background:
-    linear-gradient(180deg, #ffd36a 0%, #c79527 45%, #9f741b 100%);
-  border-radius: 999px;
-  border: 3px solid #07101d;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.35),
-    0 0 14px rgba(199, 149, 39, 0.28);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background:
-    linear-gradient(180deg, #ffe08b 0%, #d8a32f 45%, #b7831d 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 0 18px rgba(199, 149, 39, 0.42);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background:
-    linear-gradient(180deg, #c79527 0%, #9f741b 100%);
-}
-
-::-webkit-scrollbar-corner {
-  background: #07101d;
-}
-
-/* thinner scrollbar on mobile/tablet */
-@media (max-width: 760px) {
+  /* Chrome, Edge, Safari scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background:
+      linear-gradient(180deg, #07101d 0%, #0b1728 100%);
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   ::-webkit-scrollbar-thumb {
-    border-width: 2px;
+    background:
+      linear-gradient(180deg, #ffd36a 0%, #c79527 45%, #9f741b 100%);
+    border-radius: 999px;
+    border: 3px solid #07101d;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 14px rgba(199, 149, 39, 0.28);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background:
+      linear-gradient(180deg, #ffe08b 0%, #d8a32f 45%, #b7831d 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.45),
+      0 0 18px rgba(199, 149, 39, 0.42);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background:
+      linear-gradient(180deg, #c79527 0%, #9f741b 100%);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #07101d;
+  }
+}
+
+/* Disable scrollbar on mobile and tablet mode (≤ 1024px) */
+@media (max-width: 1024px) {
+  html {
+    scrollbar-gutter: auto !important;
+  }
+
+  html,
+  body,
+  * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  ::-webkit-scrollbar,
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
   }
 }
 
@@ -11830,6 +11842,47 @@ button,
   border: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.76rem;
   font-weight: 850;
+}
+
+.project-queue-showcase__controls {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .project-queue-showcase__controls {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    bottom: clamp(170px, 20vw, 200px);
+    right: 24px;
+    z-index: 20;
+  }
+}
+
+.project-queue-showcase__nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.project-queue-showcase__nav-btn:active,
+.project-queue-showcase__nav-btn:hover {
+  background: #c79527;
+  border-color: #c79527;
+  transform: scale(1.05);
+}
+
+.project-queue-showcase__nav-btn svg {
+  width: 22px;
+  height: 22px;
 }
 
 .project-queue-showcase__button {
