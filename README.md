@@ -1,4 +1,4 @@
-# OpenHome Portfolio Full-Stack Project
+# Octagon Force Full-Stack Project
 
 This version keeps the same one-page portfolio design from the video demo, but the React frontend is reorganized into page-level containers and grouped components.
 

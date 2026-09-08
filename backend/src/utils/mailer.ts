@@ -30,7 +30,7 @@ export async function sendLeadNotification(lead: ContactInput) {
   const interests = lead.interests.length ? lead.interests.join(", ") : "Not specified";
 
   await transporter.sendMail({
-    from: process.env.MAIL_FROM ?? "OpenHome Portfolio <no-reply@example.com>",
+    from: process.env.MAIL_FROM ?? "Octagon Force <no-reply@example.com>",
     to: process.env.MAIL_TO,
     subject: `New portfolio lead from ${lead.firstName} ${lead.lastName}`,
     text: `
