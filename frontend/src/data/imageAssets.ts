@@ -152,6 +152,13 @@ import kapriProject from "../assets/images/projects/kapri-project.webp";
 import villasProject  from "../assets/images/projects/calamansi-cove-project.webp";
 import dfccProject from "../assets/images/projects/dfcc-bank.webp";
 
+//careers page
+import careersHero1 from "../assets/images/careers/careersHero1.webp";
+import careersHero2 from "../assets/images/careers/careersHero2.webp";
+import careersHero3 from "../assets/images/careers/careersHero3.webp";
+import careersHero4 from "../assets/images/careers/careersHero4.webp";
+
+
 //contact page 
 import contactHero from "../assets/images/contact/contact-hero.webp";
 
@@ -328,6 +335,13 @@ companyLogos: {
   company13: company13Logo,
   company14: company14Logo,
   company15: company15Logo,
+},
+
+careers: {
+  hero1: careersHero1,
+  hero2: careersHero2,
+  hero3: careersHero3,
+  hero4: careersHero4,
 },
 
   contact: {

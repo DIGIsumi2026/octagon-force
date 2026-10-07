@@ -29,6 +29,7 @@ const SolidWasteManagementService = lazy(
 );
 const Projects = lazy(() => import("./pages/Projects"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Careers = lazy(() => import("./pages/Careers"));
 
 function PageLoader() {
   return (
@@ -90,6 +91,8 @@ export default function App() {
               </main>
             }
           />
+
+          <Route path="/careers" element={<main><Careers /></main>} />
 
           <Route
             path="/contact"

@@ -16,6 +16,7 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
   { label: "Projects", path: "/projects" },
+  { label: "Careers", path: "/careers" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -380,6 +381,14 @@ export default function Navbar() {
               onClick={closeMenu}
             >
               Projects
+            </NavLink>
+
+            <NavLink
+              to="/careers"
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={closeMenu}
+            >
+              Careers
             </NavLink>
 
             <NavLink
