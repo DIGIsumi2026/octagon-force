@@ -20,7 +20,7 @@ const branches = [
     name: "Grandpass Head Office",
     type: "Head Office",
     address: "445 Sirimavo Bandaranaike Mawatha, Colombo 14",
-    phones: ["+94 11 242 1294", "+94 11 234 4444", "+94 77 766 0021"],
+    phones: ["+94 11 234 4444", "+94 77 766 0021"],
      mapUrl: "https://maps.app.goo.gl/Nw17Q4kt9Z8kUKok9",
   mapEmbed:
     "https://www.google.com/maps?q=445%2F1%20Sirimavo%20Bandaranayaka%20Mw%2C%20Colombo-14&output=embed",
@@ -252,7 +252,7 @@ export default function Contact() {
             </div>
 
             <span>Head Office Hotline</span>
-            <strong>+94 11 242 1294</strong>
+            <strong>+94 11 234 4444</strong>
             <p>Grandpass Head Office, Colombo-14</p>
           </motion.div>
         </div>
