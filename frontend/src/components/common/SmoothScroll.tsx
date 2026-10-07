@@ -14,6 +14,19 @@ export default function SmoothScroll() {
     });
 
     let frameId = 0;
+    let resumeAfterJobModal = false;
+
+    const onJobModalToggle = (event: Event) => {
+      if ((event as CustomEvent<boolean>).detail) {
+        resumeAfterJobModal = !lenis.isStopped;
+        lenis.stop();
+      } else if (resumeAfterJobModal) {
+        lenis.start();
+        resumeAfterJobModal = false;
+      }
+    };
+
+    window.addEventListener("career-job-modal-toggle", onJobModalToggle);
 
     const raf = (time: number) => {
       lenis.raf(time);
@@ -23,6 +36,7 @@ export default function SmoothScroll() {
     frameId = window.requestAnimationFrame(raf);
 
     return () => {
+      window.removeEventListener("career-job-modal-toggle", onJobModalToggle);
       window.cancelAnimationFrame(frameId);
       lenis.destroy();
     };

@@ -50,7 +50,7 @@ export default function Footer() {
             </Link>
 
             <p>
-              Professional security, cleaning, logistics, transport, and facility
+              Professional security, cleaning, transport and facility
               support solutions delivered with discipline and reliability.
             </p>
 

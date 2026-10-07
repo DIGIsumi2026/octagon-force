@@ -66,7 +66,7 @@ const CareersHero = () => {
 
                   <p>
                     Join a disciplined team delivering trusted security, housekeeping
-                    and cash transportservices across Sri Lanka.
+                    and cash transport services across Sri Lanka.
                   </p>
 
                   <div className="careers-hero-actions">
