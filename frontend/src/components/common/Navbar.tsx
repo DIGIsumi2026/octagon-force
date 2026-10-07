@@ -46,6 +46,7 @@ export default function Navbar() {
     typeof window !== "undefined" ? window.innerWidth > 1024 : true
   );
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navHoveredRef = useRef(false);
   const location = useLocation();
 
   const isServicesActive = location.pathname.startsWith("/services");
@@ -66,6 +67,9 @@ export default function Navbar() {
       if (currentScrollY <= 24) {
         setIsVisible(true);
         if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+      } else if (navHoveredRef.current) {
+        setIsVisible(true);
+        if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
       } else {
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
           // Scrolling down
@@ -78,7 +82,7 @@ export default function Navbar() {
           if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
 
           hideTimerRef.current = setTimeout(() => {
-            if (window.scrollY > 24) {
+            if (window.scrollY > 24 && !navHoveredRef.current) {
               setIsVisible(false);
             }
           }, 3500); // 3.5 seconds
@@ -134,6 +138,22 @@ export default function Navbar() {
     <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""} ${!isVisible ? "site-header--hidden" : ""}`}>
       <motion.nav
         className="nav-shell"
+        onPointerEnter={(event) => {
+          if (event.pointerType !== "mouse") return;
+          navHoveredRef.current = true;
+          if (window.scrollY > 24) {
+            if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+            setIsVisible(true);
+          }
+        }}
+        onPointerLeave={(event) => {
+          if (event.pointerType !== "mouse") return;
+          navHoveredRef.current = false;
+          if (window.scrollY > 24) {
+            if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+            setIsVisible(false);
+          }
+        }}
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
