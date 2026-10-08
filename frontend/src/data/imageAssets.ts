@@ -163,7 +163,7 @@ import securityOfficer from "../assets/images/careers/job-openings/security-offi
 import cashTransportSecurityOfficer from "../assets/images/careers/job-openings/cash-transport-officer.webp";
 import houseKeeping from "../assets/images/careers/job-openings/house-keeping.webp";
 import transportDriver from "../assets/images/careers/job-openings/transport-driver.webp";
-import securityOpeartionsCordinator from "../assets/images/careers/job-openings/security-officer.webp";
+import operationsCordinater from "../assets/images/careers/job-openings/security-officer.webp";
 
 
 
@@ -356,7 +356,7 @@ careers: {
   cashTransportSecurityOfficer,
   houseKeeping,
   transportDriver,
-  securityOpeartionsCordinator,
+  operationsCordinater,
 },
 
 },

@@ -114,7 +114,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "operations-coordinator",
-    flyer: images.careers.jobOpenings.securityOperationsCordinator,
+    flyer: images.careers.jobOpenings.operationsCordinater,
     title: "Security Operations Coordinator",
     postedDate: "07 October 2026",
     shortDescription:

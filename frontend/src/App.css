@@ -14230,8 +14230,11 @@ button,
 
 .career-job-modal-flyer {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: min(460px, calc(100% - 32px));
   height: auto;
+  max-height: calc(100dvh - 180px);
+  margin: 16px auto;
   object-fit: contain;
 }
 
