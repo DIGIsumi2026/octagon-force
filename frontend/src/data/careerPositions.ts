@@ -1,5 +1,5 @@
 export type CareerPosition = {
-  id: string;
+  id: string ;
   title: string;
   postedDate: string;
   shortDescription: string;

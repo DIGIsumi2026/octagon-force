@@ -1,7 +1,6 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Link } from "react-router-dom";
 import { images } from "../../data/imageAssets"; 
 import "../../App.css";
 
@@ -70,9 +69,9 @@ const CareersHero = () => {
                   </p>
 
                   <div className="careers-hero-actions">
-                    <Link to="/contact" className="careers-hero-btn primary">
+                    <a href="#career-application" className="careers-hero-btn primary">
                       Apply Now <ArrowRight size={18} />
-                    </Link>
+                    </a>
 
                     <a href="#career-openings" className="careers-hero-btn secondary">
                       View Opportunities
