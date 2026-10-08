@@ -14,7 +14,7 @@ export type CareerPosition = {
 export const careerPositions: CareerPosition[] = [
   {
     id: "security-officer",
-    flyer: images.careers.flyers.securityOfficer,
+    flyer: images.careers.jobOpenings.securityOfficer,
     title: "Security Officer",
     postedDate: "07 October 2026",
     shortDescription:
@@ -39,7 +39,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "cash-transport-officer",
-    flyer: images.careers.flyers.cashTransportOfficer,
+    flyer: images.careers.jobOpenings.cashTransportSecurityOfficer,
     title: "Cash Transport Security Officer",
     postedDate: "07 October 2026",
     shortDescription:
@@ -64,7 +64,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "housekeeping-associate",
-    flyer: images.careers.flyers.housekeeping,
+    flyer: images.careers.jobOpenings.houseKeeping,
     title: "Housekeeping & Janitorial Associate",
     postedDate: "07 October 2026",
     shortDescription:
@@ -89,7 +89,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "transport-driver",
-    flyer: images.careers.flyers.transportDriver,
+    flyer: images.careers.jobOpenings.transportDriver,
     title: "Transport Driver",
     postedDate: "07 October 2026",
     shortDescription:
@@ -114,7 +114,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "operations-coordinator",
-    flyer: images.careers.flyers.securityOperations,
+    flyer: images.careers.jobOpenings.securityOperationsCordinator,
     title: "Security Operations Coordinator",
     postedDate: "07 October 2026",
     shortDescription:

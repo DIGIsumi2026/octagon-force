@@ -14058,7 +14058,7 @@ button,
   font-size: 22px;
   font-weight: 600;
   line-height: 1.3;
-  letter-spacing: 0;
+  letter-spacing: -0.005px;
 }
 
 .career-job-footer {
