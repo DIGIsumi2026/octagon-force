@@ -82,29 +82,35 @@ export default function OpenPositions() {
               key={job.id}
               className="career-job-card"
             >
+              <img
+                className="career-job-flyer"
+                src={job.flyer}
+                alt={`${job.title} vacancy flyer`}
+                loading="lazy"
+                decoding="async"
+              />
               <div className="career-job-main">
                 <div className="career-job-meta">
                   <h3>{job.title}</h3>
-
-                  <span>
-                    Posted {job.postedDate}
-                  </span>
                 </div>
 
                 <p>{job.shortDescription}</p>
+                <div className="career-job-footer">
+                  <span>Posted {job.postedDate}</span>
+                  <button
+                    type="button"
+                    className="career-job-open"
+                    onClick={() => setActiveJob(job)}
+                    aria-label={`View full job description for ${job.title}`}
+                    aria-haspopup="dialog"
+                  >
+                    <ArrowRight
+                      size={22}
+                      strokeWidth={1.6}
+                    />
+                  </button>
+                </div>
               </div>
-
-              <button
-                type="button"
-                className="career-job-open"
-                onClick={() => setActiveJob(job)}
-                aria-label={`View full job description for ${job.title}`}
-              >
-                <ArrowRight
-                  size={22}
-                  strokeWidth={1.6}
-                />
-              </button>
             </article>
           ))}
         </div>
@@ -158,6 +164,11 @@ export default function OpenPositions() {
             </button>
 
             <div className="career-job-modal-scroll" ref={modalScrollRef} tabIndex={-1}>
+              <img
+                className="career-job-modal-flyer"
+                src={activeJob.flyer}
+                alt={`${activeJob.title} vacancy flyer`}
+              />
               <div className="career-job-modal-header">
                 <span className="career-job-modal-kicker">
                   Career opportunity

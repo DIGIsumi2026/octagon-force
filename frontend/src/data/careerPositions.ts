@@ -1,8 +1,11 @@
+import { images } from "./imageAssets";
+
 export type CareerPosition = {
   id: string ;
   title: string;
   postedDate: string;
   shortDescription: string;
+  flyer: string;
   overview: string;
   responsibilities: string[];
   requirements: string[];
@@ -11,6 +14,7 @@ export type CareerPosition = {
 export const careerPositions: CareerPosition[] = [
   {
     id: "security-officer",
+    flyer: images.careers.flyers.securityOfficer,
     title: "Security Officer",
     postedDate: "07 October 2026",
     shortDescription:
@@ -18,13 +22,11 @@ export const careerPositions: CareerPosition[] = [
     overview:
       "Octagon Force is seeking responsible and disciplined individuals to join our security operations. The role involves maintaining a professional security presence, monitoring assigned locations, supporting access control and responding appropriately to operational requirements while maintaining a high standard of conduct.",
     responsibilities: [
-      "Maintain a professional and vigilant security presence at assigned client locations.",
-      "Monitor entrances, exits and designated areas in accordance with site procedures.",
-      "Support access control and visitor management requirements.",
-      "Identify and report unusual activity, safety concerns or security incidents.",
-      "Follow instructions issued by supervisors and the operations team.",
-      "Maintain professional communication with clients, visitors and colleagues.",
-      "Complete assigned records, occurrence reports and shift handovers accurately.",
+      "Maintain a safe and secure environment.",
+      "Monitor premises and prevent security risks.",
+      "Respond to incidents and follow procedures.",
+      "Conduct regular patrols and access control.",
+      "Provide professional customer service and support.",
     ],
     requirements: [
       "Responsible, disciplined and trustworthy attitude.",
@@ -37,6 +39,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "cash-transport-officer",
+    flyer: images.careers.flyers.cashTransportOfficer,
     title: "Cash Transport Security Officer",
     postedDate: "07 October 2026",
     shortDescription:
@@ -44,13 +47,11 @@ export const careerPositions: CareerPosition[] = [
     overview:
       "We are looking for dependable personnel to support Octagon Force cash-in-transit operations. This position requires strong situational awareness, responsible handling practices and close coordination with the assigned transport and security team.",
     responsibilities: [
-      "Support secure transportation and handling activities according to company procedures.",
-      "Maintain awareness of the surrounding environment during assigned operations.",
-      "Work closely with drivers, security personnel and operations supervisors.",
-      "Follow established security and movement procedures at all times.",
-      "Assist with the safe transfer of secured consignments at authorized locations.",
-      "Report operational concerns immediately to the responsible supervisor.",
-      "Maintain confidentiality and professional conduct throughout every assignment.",
+      "Ensure safe and secure movement of cash and valuables.",
+      "Follow established security procedures and protocols.",
+      "Maintain vigilance and monitor for potential risks.",
+      "Work effectively as part of a security team.",
+      "Uphold professional conduct and represent Octagon Force with integrity.",
     ],
     requirements: [
       "High level of responsibility, integrity and discipline.",
@@ -63,6 +64,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "housekeeping-associate",
+    flyer: images.careers.flyers.housekeeping,
     title: "Housekeeping & Janitorial Associate",
     postedDate: "07 October 2026",
     shortDescription:
@@ -70,13 +72,11 @@ export const careerPositions: CareerPosition[] = [
     overview:
       "Octagon Force is seeking reliable and service-oriented individuals for housekeeping and janitorial assignments across client facilities. The role focuses on maintaining cleanliness, hygiene and presentation standards through organized and responsible daily cleaning practices.",
     responsibilities: [
-      "Perform routine cleaning and housekeeping duties at assigned facilities.",
-      "Clean floors, work areas, common spaces and other designated surfaces.",
-      "Support sanitization and hygiene requirements according to site standards.",
-      "Use cleaning tools, equipment and supplies responsibly.",
-      "Maintain assigned areas in a clean, orderly and professional condition.",
-      "Report maintenance, safety or cleaning-related concerns to supervisors.",
-      "Work respectfully around client employees, visitors and the public.",
+      "Maintain clean, hygienic and well-presented premises.",
+      "Follow cleaning and sanitation standards.",
+      "Pay attention to detail and ensure high standards.",
+      "Manage tasks efficiently and meet schedules.",
+      "Work as a team to create a clean and safe environment.",
     ],
     requirements: [
       "Reliable and responsible approach to work.",
@@ -89,6 +89,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "transport-driver",
+    flyer: images.careers.flyers.transportDriver,
     title: "Transport Driver",
     postedDate: "07 October 2026",
     shortDescription:
@@ -96,13 +97,11 @@ export const careerPositions: CareerPosition[] = [
     overview:
       "We are seeking professional drivers to support Octagon Force transport operations. The position requires safe and responsible vehicle operation, punctual service and professional interaction with clients and operational teams.",
     responsibilities: [
-      "Operate assigned vehicles safely and responsibly.",
-      "Follow planned routes, schedules and operational instructions.",
-      "Conduct basic vehicle checks before and after assigned journeys.",
-      "Maintain cleanliness and professional presentation of assigned vehicles.",
-      "Report vehicle concerns, delays or operational issues promptly.",
-      "Maintain professional conduct when dealing with clients and colleagues.",
-      "Follow company safety and transport procedures at all times.",
+      "Drive safely and responsibly at all times.",
+      "Be punctual and follow allocated routes and schedules.",
+      "Ensure safe transportation of staff, visitors and goods.",
+      "Keep the vehicle clean, well-presented and roadworthy.",
+      "Provide professional and courteous service.",
     ],
     requirements: [
       "Valid driving licence appropriate for the assigned vehicle category.",
@@ -115,6 +114,7 @@ export const careerPositions: CareerPosition[] = [
   },
   {
     id: "operations-coordinator",
+    flyer: images.careers.flyers.securityOperations,
     title: "Security Operations Coordinator",
     postedDate: "07 October 2026",
     shortDescription:
@@ -122,13 +122,11 @@ export const careerPositions: CareerPosition[] = [
     overview:
       "Octagon Force is seeking an organized and proactive Operations Coordinator to support the effective deployment and coordination of security personnel. The role requires clear communication, attention to operational details and the ability to work closely with field officers and management.",
     responsibilities: [
-      "Support day-to-day coordination of security personnel and client assignments.",
-      "Maintain clear communication with supervisors and deployed teams.",
-      "Assist with duty schedules, deployment updates and operational records.",
-      "Escalate incidents and operational issues to the relevant management personnel.",
-      "Support accurate shift handovers and internal reporting.",
-      "Coordinate with field teams to maintain service continuity.",
-      "Maintain professional and confidential handling of operational information.",
+      "Coordinate daily security operations and schedules.",
+      "Monitor incidents and ensure timely reporting.",
+      "Manage staff deployments and shift allocations.",
+      "Liaise with clients, security teams and stakeholders.",
+      "Provide operational support to ensure smooth and effective service delivery.",
     ],
     requirements: [
       "Strong organizational and communication skills.",

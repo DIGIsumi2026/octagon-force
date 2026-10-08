@@ -157,6 +157,11 @@ import careersHero1 from "../assets/images/careers/careersHero1.webp";
 import careersHero2 from "../assets/images/careers/careersHero2.webp";
 import careersHero3 from "../assets/images/careers/careersHero3.webp";
 import careersHero4 from "../assets/images/careers/careersHero4.webp";
+import securityOfficerFlyer from "../assets/images/careers/job-openings/security-officer.webp";
+import cashTransportOfficerFlyer from "../assets/images/careers/job-openings/cash-transport-officer.webp";
+import housekeepingFlyer from "../assets/images/careers/job-openings/house-keeping.webp";
+import transportDriverFlyer from "../assets/images/careers/job-openings/transport-driver.webp";
+import securityOperationsFlyer from "../assets/images/careers/job-openings/security-opeartions.webp";
 
 
 //contact page 
@@ -342,6 +347,13 @@ careers: {
   hero2: careersHero2,
   hero3: careersHero3,
   hero4: careersHero4,
+  flyers: {
+    securityOfficer: securityOfficerFlyer,
+    cashTransportOfficer: cashTransportOfficerFlyer,
+    housekeeping: housekeepingFlyer,
+    transportDriver: transportDriverFlyer,
+    securityOperations: securityOperationsFlyer,
+  },
 },
 
   contact: {

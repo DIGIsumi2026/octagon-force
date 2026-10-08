@@ -13989,7 +13989,9 @@ button,
 }
 
 .career-openings-heading {
-  margin-bottom: 38px;
+  margin-bottom: 30px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #dedfe3;
 }
 
 .career-openings-heading h2 {
@@ -14003,15 +14005,21 @@ button,
 
 .career-job-list {
   width: 100%;
-  border-top: 1px solid #dedfe3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
 .career-job-card {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 78px;
-  min-height: 190px;
-  border-bottom: 1px solid #dedfe3;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid #e5e6e9;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
   background: #fff;
   transition: background 0.3s ease;
 }
@@ -14020,47 +14028,68 @@ button,
   background: #fafafa;
 }
 
+.career-job-card:has(.career-job-open:focus-visible) {
+  outline: 2px solid #c89528;
+  outline-offset: 3px;
+}
+
+.career-job-flyer {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+}
+
 .career-job-main {
-  padding: 34px 36px 34px 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px 22px 0;
 }
 
 .career-job-meta {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
+  min-width: 0;
 }
 
 .career-job-meta h3 {
   margin: 0;
   color: #101827;
-  font-size: clamp(21px, 2vw, 28px);
+  font-size: 22px;
   font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 
-.career-job-meta span {
-  flex: 0 0 auto;
-  padding-top: 5px;
+.career-job-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  min-height: 64px;
+}
+
+.career-job-footer > span {
   color: #8b8e96;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 .career-job-main p {
   max-width: 760px;
-  margin: 20px 0 0;
+  margin: 14px 0 22px;
   color: #696d75;
   font-size: 14px;
   line-height: 1.75;
 }
 
 .career-job-open {
-  position: relative;
-  width: 78px;
-  height: 100%;
+  position: static;
+  flex: 0 0 64px;
+  width: 64px;
+  min-height: 64px;
   display: grid;
   place-items: center;
   align-self: stretch;
@@ -14072,6 +14101,17 @@ button,
   transition:
     color 0.3s ease,
     background 0.3s ease;
+}
+
+/* The arrow's hit area covers the entire vacancy card. */
+.career-job-open::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.career-job-open:focus-visible {
+  outline: none;
 }
 
 .career-job-open svg {
@@ -14186,6 +14226,13 @@ button,
   min-height: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
+}
+
+.career-job-modal-flyer {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .career-job-modal-header {
@@ -14306,6 +14353,19 @@ button,
   background: #c89528;
 }
 
+@media (max-width: 1024px) {
+  .career-job-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .career-job-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+}
+
 @media (max-width: 768px) {
   .career-openings {
     padding: 80px 20px;
@@ -14315,30 +14375,16 @@ button,
     margin-bottom: 28px;
   }
 
-  .career-job-card {
-    grid-template-columns: minmax(0, 1fr) 58px;
-    min-height: 175px;
-  }
-
   .career-job-main {
-    padding: 27px 20px 27px 0;
-  }
-
-  .career-job-meta {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .career-job-meta span {
-    padding-top: 0;
+    padding: 20px 20px 0;
   }
 
   .career-job-main p {
-    margin-top: 16px;
     font-size: 13px;
   }
 
   .career-job-open {
+    flex-basis: 58px;
     width: 58px;
   }
 
@@ -14376,6 +14422,18 @@ button,
 
   .career-job-apply {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-job-card,
+  .career-job-open,
+  .career-job-open svg {
+    transition: none;
+  }
+
+  .career-job-modal {
+    animation: none;
   }
 }
 
